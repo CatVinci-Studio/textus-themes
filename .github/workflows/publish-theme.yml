@@ -1,8 +1,10 @@
-# Publishes themes from comments on the gallery issue (any issue labelled
-# theme-gallery): a new or edited comment with the textus-theme template is
-# validated and committed to themes/ and index.json on main; a deleted
-# comment takes its theme down; `/remove <id>` lets the author or a
-# maintainer take one down. The bot answers each comment with the result.
+# Runs the theme gallery from comments on the gallery issue (any issue
+# labelled theme-gallery): a new or edited comment with the textus-theme
+# template is checked and, if it passes, queued in pending/ for review; a
+# maintainer's `/approve <id>` publishes it to themes/ and index.json on
+# main, `/reject <id> <reason>` turns it down; a deleted comment takes its
+# theme down; `/remove <id>` lets the author or a maintainer take one down.
+# The bot answers each comment with the result.
 # See scripts/publish.mjs and scripts/lib/gallery.mjs.
 #
 # Run it by hand (Actions > Publish themes > Run workflow) to resync every

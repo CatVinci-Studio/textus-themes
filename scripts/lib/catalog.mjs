@@ -1,9 +1,10 @@
 // themes/<id>/meta.json -> index.json, the catalog the website reads.
+// Themes waiting for review live in pending/<id>/ and never reach it.
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export async function readThemes(root) {
-  const dir = join(root, "themes");
+export async function readThemes(root, folder = "themes") {
+  const dir = join(root, folder);
   const entries = await readdir(dir, { withFileTypes: true }).catch(() => []);
   const metas = [];
   for (const e of entries) {

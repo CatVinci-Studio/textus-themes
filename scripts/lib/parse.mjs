@@ -1,5 +1,5 @@
 // Reads a comment on the gallery issue: a theme submission (the template),
-// a maintainer command (`/remove <id>`), or anything else (discussion,
+// a command (`/remove`, `/approve` or `/reject <id>`), or anything else (discussion,
 // ignored). Pure: no network, no files.
 
 /** The fenced block that marks a comment as a submission. */
@@ -66,13 +66,13 @@ const unique = (list) => [...new Set(list)];
 /**
  * @returns one of
  *   { kind: "none" }
- *   { kind: "command", command: "remove", id, reason }
+ *   { kind: "command", command: "remove" | "approve" | "reject", id, reason }
  *   { kind: "theme", fields, css: { inline } | { url } | null, images, errors }
  */
 export function parseComment(body) {
   const text = String(body ?? "").replace(/\r\n?/g, "\n");
-  const command = /^\s*\/remove\s+([A-Za-z0-9][A-Za-z0-9-]*)[ \t]*(.*)$/m.exec(text.split("\n").find((l) => l.trim()) ?? "");
-  if (command) return { kind: "command", command: "remove", id: command[1].toLowerCase(), reason: command[2].trim() };
+  const command = /^\s*\/(remove|approve|reject)\s+([A-Za-z0-9][A-Za-z0-9-]*)[ \t]*(.*)$/i.exec(text.split("\n").find((l) => l.trim()) ?? "");
+  if (command) return { kind: "command", command: command[1].toLowerCase(), id: command[2].toLowerCase(), reason: command[3].trim() };
 
   const { blocks, outside } = splitFences(text);
   const template = blocks.find((b) => b.lang === TEMPLATE_LANG);

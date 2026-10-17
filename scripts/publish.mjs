@@ -2,7 +2,7 @@
 // edited or deleted on an issue labelled theme-gallery (and by hand, from
 // the Actions tab, to resync every gallery issue).
 //
-//   1. lib/gallery.mjs reconciles themes/ with the issue's comments
+//   1. lib/gallery.mjs reconciles themes/ and pending/ with the issue's comments
 //   2. index.json is rebuilt, and any change is committed and pushed to main
 //   3. only then are the bot's replies posted, so every link in them works
 //
@@ -41,11 +41,11 @@ for (const issue of issues) {
 }
 
 await writeIndex(root);
-if (git("status", "--porcelain", "--", "themes", "index.json", "removed.json")) {
-  const summary = changes.map((c) => `${c.type} ${c.id}${c.type === "remove" ? "" : ` by @${c.author}`}`).join(", ") || "rebuild index";
+if (git("status", "--porcelain", "--", "themes", "pending", "index.json", "removed.json")) {
+  const summary = changes.map((c) => `${c.type} ${c.id}${["publish", "update", "pending"].includes(c.type) ? ` by @${c.author}` : ""}`).join(", ") || "rebuild index";
   git("config", "user.name", "github-actions[bot]");
   git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com");
-  git("add", "--all", "--", "themes", "index.json", "removed.json");
+  git("add", "--all", "--", "themes", "pending", "index.json", "removed.json");
   git("commit", "--quiet", "-m", `chore(gallery): ${summary}`.slice(0, 200), "-m", changes.map((c) => `- ${c.type}: ${c.name} (${c.id})${c.why ? `, ${c.why}` : ""}`).join("\n") || "index.json");
   // The concurrency group keeps runs apart, but a person may push to main.
   for (let attempt = 1; ; attempt++) {
@@ -62,7 +62,12 @@ if (git("status", "--porcelain", "--", "themes", "index.json", "removed.json")) 
 
 for (const r of pending) {
   if (r.op === "delete") await gh.deleteComment(r.replyId).catch((e) => console.warn(e.message));
-  else if (r.replyId) await gh.updateComment(r.replyId, r.body);
-  else await gh.createComment(r.issue, r.body);
+  else if (r.replyId && !r.fresh) await gh.updateComment(r.replyId, r.body);
+  else {
+    // A fresh reply (a theme waiting for review) is posted anew, not edited
+    // in, so the maintainers it mentions are notified.
+    if (r.replyId) await gh.deleteComment(r.replyId).catch((e) => console.warn(e.message));
+    await gh.createComment(r.issue, r.body);
+  }
 }
 console.log(`${issues.length} gallery issue(s), ${changes.length} change(s), ${pending.length} repl(ies).`);

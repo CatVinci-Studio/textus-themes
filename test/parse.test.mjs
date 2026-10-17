@@ -74,10 +74,12 @@ test("a comment without the template is discussion", () => {
   assert.equal(parseComment(null).kind, "none");
 });
 
-test("/remove commands", () => {
+test("/remove, /approve and /reject commands", () => {
   assert.deepEqual(parseComment("/remove Inkwell-Dark  copies another theme"), { kind: "command", command: "remove", id: "inkwell-dark", reason: "copies another theme" });
   assert.deepEqual(parseComment("\n\n/remove lumen\n"), { kind: "command", command: "remove", id: "lumen", reason: "" });
   assert.equal(parseComment("please /remove lumen").kind, "none");
+  assert.deepEqual(parseComment("/approve Inkwell"), { kind: "command", command: "approve", id: "inkwell", reason: "" });
+  assert.deepEqual(parseComment("/Reject inkwell links are unreadable"), { kind: "command", command: "reject", id: "inkwell", reason: "links are unreadable" });
 });
 
 test("fences: tildes and longer fences nest shorter ones", () => {
