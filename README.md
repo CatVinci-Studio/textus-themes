@@ -4,7 +4,7 @@ Free, open themes for [Textus](https://textus.catvinci.com), the Markdown editor
 Browse them at **[textus.catvinci.com/themes](https://textus.catvinci.com/themes/)**.
 
 Sharing a theme takes one GitHub comment: no fork, no pull request, no review queue.
-Post it on the **[theme gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery)**, a bot checks it, and if it passes it is published here and on the website within a few minutes.
+Post it on the **[theme gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues/1)**, a bot checks it, and if it passes it is published here and on the website within a few minutes.
 
 [中文说明](#中文说明)
 
@@ -17,7 +17,7 @@ Themes are Typora-compatible stylesheets, so most of them also work in Typora.
 
 ## Share a theme
 
-Post a comment on the [gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery) in this shape:
+Post a comment on the [gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues/1) in this shape:
 
 ````markdown
 ```textus-theme
@@ -82,7 +82,7 @@ The code in this repository is MIT-licensed (see [LICENSE](LICENSE)); each theme
 
 **安装主题：** 在主题页点“下载 CSS”，然后在 Textus 里打开 **设置 › 主题 › 导入 CSS…**，选择下载的文件。
 
-**分享主题：** 不需要 fork，也不需要提交 PR。只要在[主题画廊 issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery) 下按上面的模板发一条评论：
+**分享主题：** 不需要 fork，也不需要提交 PR。只要在[主题画廊 issue](https://github.com/CatVinci-Studio/textus-themes/issues/1) 下按上面的模板发一条评论：
 
 1. `textus-theme` 代码块里填写 `Name:`（名称）、`Description:`（一两句介绍）、`License:`（许可证，留空即为 MIT）；
 2. 把整份主题 CSS 粘贴进 ` ```css ` 代码块，或者直接把 `.css` 文件拖进评论框（GitHub 不接受 `.css` 时，改名为 `.css.txt` 即可）；
