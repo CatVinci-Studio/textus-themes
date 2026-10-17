@@ -25,6 +25,11 @@ test("every published theme is valid", async () => {
   }
 });
 
+test("no theme repeats one of Textus's built-in themes", async () => {
+  const builtin = new Set(["default", "paper", "slate", "forest", "parchment"]);
+  for (const m of await readThemes(root)) assert.ok(!builtin.has(m.id) && !builtin.has(m.name.toLowerCase()), m.id);
+});
+
 test("index.json is up to date (run `npm run index`)", async () => {
   const onDisk = JSON.parse(await readFile(join(root, "index.json"), "utf8"));
   assert.deepEqual(onDisk, buildIndex(await readThemes(root)));

@@ -1,0 +1,168 @@
+/*! Lumen - a Textus theme by @CatVinci-Studio
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Lumen: clean, modern and bright. A crisp sans on pure white, tight bold
+   headings with a violet diamond, links underlined by a soft highlighter
+   stroke, a tinted rounded quote and an open table with a violet header
+   rule. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #1d2130;
+  --editor-muted: #677086;
+  --editor-border: #e3e5ee;
+  --editor-quote-border: #6d4aff;
+  --editor-accent: #5b3fe0;
+  --editor-code-bg: #f4f2ff;
+  --editor-highlight-bg: rgba(255, 214, 0, 0.38);
+  --editor-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans",
+    "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  letter-spacing: -0.005em;
+  --token-keyword: #5b3fe0;
+  --token-function: #0b7bbd;
+  --token-string: #23855a;
+  --token-number: #c2410c;
+  --token-tag: #c0306b;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  color: #10131c;
+}
+
+#write h1 {
+  font-size: 2.3em;
+  line-height: 1.15;
+}
+
+#write h2 {
+  font-size: 1.55em;
+}
+
+#write h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  margin-right: 0.5em;
+  border-radius: 2px;
+  background: var(--editor-accent);
+  vertical-align: 0.14em;
+  transform: rotate(45deg);
+}
+
+#write h3 {
+  font-size: 1.2em;
+  color: var(--editor-accent);
+}
+
+#write h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--editor-muted);
+}
+
+#write a {
+  color: var(--editor-accent);
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 62%, rgba(91, 63, 224, 0.16) 0);
+}
+
+#write a:hover {
+  background-image: linear-gradient(transparent 62%, rgba(91, 63, 224, 0.3) 0);
+}
+
+#write strong {
+  font-weight: 650;
+  color: #10131c;
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.8em 1.1em;
+  border: 0;
+  border-radius: 12px;
+  background-color: #f6f4ff;
+  box-shadow: inset 3px 0 0 var(--editor-quote-border);
+  color: #3b3560;
+}
+
+#write code {
+  padding: 0.12em 0.4em;
+  border-radius: 6px;
+  background-color: var(--editor-code-bg);
+  color: #4a2fd0;
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: #f8f8fc;
+  border: 1px solid var(--editor-border);
+  border-radius: 12px;
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.55em 0.9em;
+  border: 0;
+  border-bottom: 1px solid var(--editor-border);
+  text-align: left;
+}
+
+#write th {
+  border-bottom: 2px solid var(--editor-accent);
+  color: #2b1f86;
+  font-size: 0.82em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}

@@ -1,0 +1,158 @@
+/*! Midnight Ink - a Textus theme by @CatVinci-Studio
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Midnight Ink: a dark page for writing at night. Warm off-white text on
+   a deep plum-charcoal, amber links and a lavender quote rule, a bookish
+   serif, and contrast kept comfortable rather than glaring (about 11:1 for
+   body text). One design, so it stays dark in Textus's light appearance
+   too: pick it when you want the dark page whatever the system does. */
+
+:root {
+  --editor-bg: #1b1a21;
+  --editor-text: #ddd6c8;
+  --editor-muted: #958ea1;
+  --editor-border: #36333f;
+  --editor-quote-border: #8b7fc7;
+  --editor-accent: #e3a857;
+  --editor-code-bg: #25232d;
+  --editor-highlight-bg: rgba(227, 168, 87, 0.28);
+  --editor-font: "Charter", "Iowan Old Style", "Palatino Linotype",
+    "Book Antiqua", Palatino, "Noto Serif", "Songti SC", "Noto Serif CJK SC",
+    "Source Han Serif SC", serif;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color-scheme: dark;
+  /* Code and alert colours tuned for the dark page (Textus reads these). */
+  --token-string: #a8c98a;
+  --token-number: #e3a857;
+  --token-keyword: #bba6f2;
+  --token-function: #82b6e9;
+  --token-tag: #ec9089;
+  --md-alert-note: #82b6e9;
+  --md-alert-tip: #93cc8e;
+  --md-alert-important: #bba6f2;
+  --md-alert-warning: #e3a857;
+  --md-alert-caution: #ef8a80;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: #f2ecdf;
+  font-weight: 600;
+}
+
+#write h1 {
+  font-size: 2.1em;
+  letter-spacing: -0.01em;
+}
+
+#write h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid var(--editor-border);
+}
+
+#write h3 {
+  font-size: 1.22em;
+  color: var(--editor-accent);
+}
+
+#write h4 {
+  font-size: 1.05em;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: #cbc3d8;
+}
+
+#write strong {
+  color: #f6f1e6;
+}
+
+#write a {
+  color: var(--editor-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(227, 168, 87, 0.45);
+  text-underline-offset: 0.2em;
+}
+
+#write a:hover {
+  text-decoration-color: currentColor;
+}
+
+#write blockquote {
+  margin-left: 0;
+  padding: 0.15em 1.1em;
+  border-left: 2px solid var(--editor-quote-border);
+  color: #bdb5c9;
+  font-style: italic;
+}
+
+#write code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background-color: var(--editor-code-bg);
+  color: #f0c48a;
+  font-size: 0.9em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--editor-code-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.4em 0.8em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--editor-code-bg);
+  color: #f2ecdf;
+}
+
+#write hr {
+  border: 0;
+  border-top: 1px solid var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: rgba(139, 127, 199, 0.4);
+}

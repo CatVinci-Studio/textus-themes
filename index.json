@@ -4,45 +4,45 @@
   "count": 3,
   "themes": [
     {
-      "id": "paper",
-      "name": "Paper",
+      "id": "lumen",
+      "name": "Lumen",
       "author": "CatVinci-Studio",
-      "description": "Warm cream paper, sepia ink and a serif face: the feel of a printed page.",
+      "description": "Clean and modern: a crisp sans on pure white, tight bold headings, and a violet accent that marks headings, links, quotes and the table header.",
       "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:02Z",
       "updated": "2026-10-17T00:00:02Z",
-      "css": "themes/paper/theme.css",
+      "css": "themes/lumen/theme.css",
       "previews": [
-        "themes/paper/preview.png"
+        "themes/lumen/preview.png"
       ]
     },
     {
-      "id": "slate",
-      "name": "Slate",
+      "id": "manuscript",
+      "name": "Manuscript",
       "author": "CatVinci-Studio",
-      "description": "Cool, minimal and sharp: grey-blue paper with a clear blue accent and a sans-serif face.",
+      "description": "A typewritten draft: typewriter type on off-white paper, a narrow page, uppercase headings with section marks and a ribbon-red accent.",
       "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:01Z",
       "updated": "2026-10-17T00:00:01Z",
-      "css": "themes/slate/theme.css",
+      "css": "themes/manuscript/theme.css",
       "previews": [
-        "themes/slate/preview.png"
+        "themes/manuscript/preview.png"
       ]
     },
     {
-      "id": "forest",
-      "name": "Forest",
+      "id": "midnight-ink",
+      "name": "Midnight Ink",
       "author": "CatVinci-Studio",
-      "description": "Low-saturation greens that are easy on the eyes through a long writing session.",
+      "description": "A dark page for night writing: warm off-white text on plum-charcoal, amber links, a bookish serif and gentle, comfortable contrast.",
       "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:00Z",
       "updated": "2026-10-17T00:00:00Z",
-      "css": "themes/forest/theme.css",
+      "css": "themes/midnight-ink/theme.css",
       "previews": [
-        "themes/forest/preview.png"
+        "themes/midnight-ink/preview.png"
       ]
     }
   ]

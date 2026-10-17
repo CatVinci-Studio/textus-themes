@@ -76,8 +76,8 @@ test("a comment without the template is discussion", () => {
 
 test("/remove commands", () => {
   assert.deepEqual(parseComment("/remove Inkwell-Dark  copies another theme"), { kind: "command", command: "remove", id: "inkwell-dark", reason: "copies another theme" });
-  assert.deepEqual(parseComment("\n\n/remove paper\n"), { kind: "command", command: "remove", id: "paper", reason: "" });
-  assert.equal(parseComment("please /remove paper").kind, "none");
+  assert.deepEqual(parseComment("\n\n/remove lumen\n"), { kind: "command", command: "remove", id: "lumen", reason: "" });
+  assert.equal(parseComment("please /remove lumen").kind, "none");
 });
 
 test("fences: tildes and longer fences nest shorter ones", () => {
