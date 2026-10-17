@@ -1,0 +1,18 @@
+{
+  "id": "forest",
+  "name": "Forest",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Low-saturation greens that are easy on the eyes through a long writing session.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+  "created": "2026-10-17T00:00:00Z",
+  "updated": "2026-10-17T00:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "previews": [
+    "preview.png"
+  ]
+}

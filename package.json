@@ -1,0 +1,17 @@
+{
+  "name": "textus-themes",
+  "private": true,
+  "type": "module",
+  "description": "Community themes for the Textus Markdown editor, published from comments on the gallery issue.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "index": "node scripts/build-index.mjs"
+  },
+  "dependencies": {
+    "postcss": "8.5.28"
+  }
+}

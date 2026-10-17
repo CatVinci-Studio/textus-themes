@@ -1,0 +1,18 @@
+{
+  "id": "paper",
+  "name": "Paper",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Warm cream paper, sepia ink and a serif face: the feel of a printed page.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+  "created": "2026-10-17T00:00:02Z",
+  "updated": "2026-10-17T00:00:02Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "previews": [
+    "preview.png"
+  ]
+}

@@ -1,0 +1,135 @@
+/*! Forest - a Textus theme by @CatVinci-Studio
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css
+ */
+
+/* Forest: Low-saturation greens that are easy on the eyes through a long writing session.
+   Textus's built-in "Forest" theme as an importable stylesheet, to start
+   your own from. #write is the document in both Textus and Typora; the
+   --editor-* variables are what Textus reads for its own parts (source
+   view, find highlights, the window around the page). */
+
+:root {
+  --editor-bg: #f5f7f2;
+  --editor-text: #22301f;
+  --editor-muted: #616d5a;
+  --editor-border: #dbe3d3;
+  --editor-quote-border: #4c7a4c;
+  --editor-accent: #487448;
+  --editor-code-bg: #e9efe3;
+  --editor-font:
+    var(--font-cjk-punct, -apple-system), -apple-system, "Inter",
+    var(--font-text-sans, system-ui, "PingFang SC", "Noto Sans CJK SC"), sans-serif;
+}
+
+body {
+  background-color: var(--editor-bg);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+#write a {
+  color: var(--editor-accent);
+}
+
+#write code,
+#write pre,
+#write .md-fences {
+  background-color: var(--editor-code-bg);
+}
+
+#write :is(th, td),
+#write hr {
+  border-color: var(--editor-border);
+}
+
+/* Textus's ornaments: the h2 rule, the h3 bar, the h4 dot, the tinted
+   quote, the quiet link underline and the rounded table. */
+#write h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--editor-border);
+}
+
+#write h3 {
+  padding-left: 0.6em;
+  border-left: 4px solid var(--editor-accent);
+}
+
+#write h4::before {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: var(--editor-accent);
+  vertical-align: middle;
+}
+
+#write h6 {
+  color: color-mix(in srgb, var(--editor-text) 55%, var(--editor-muted));
+}
+
+#write blockquote {
+  color: var(--editor-muted);
+  padding: 0.55em 1em;
+  border-left: 3px solid var(--editor-quote-border);
+  border-radius: 0 var(--md-radius, 6px) var(--md-radius, 6px) 0;
+  background: var(--editor-code-bg);
+}
+
+#write a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix( in srgb, var(--editor-accent) 45%, transparent );
+  text-underline-offset: 0.2em;
+}
+
+#write a:hover {
+  text-decoration-color: currentColor;
+}
+
+#write table {
+  font-size: 0.95em;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--editor-border);
+  border-radius: var(--md-radius, 6px);
+}
+
+#write :is(th, td) {
+  border-width: 0 1px 1px 0;
+}
+
+#write tr > :is(th, td):last-child {
+  border-right-width: 0;
+}
+
+#write tr:last-child > :is(th, td) {
+  border-bottom-width: 0;
+}
+
+#write tr:first-child > :first-child {
+  border-top-left-radius: calc(var(--md-radius, 6px) - 1px);
+}
+
+#write tr:first-child > :last-child {
+  border-top-right-radius: calc(var(--md-radius, 6px) - 1px);
+}
+
+#write tr:last-child > :first-child {
+  border-bottom-left-radius: calc(var(--md-radius, 6px) - 1px);
+}
+
+#write tr:last-child > :last-child {
+  border-bottom-right-radius: calc(var(--md-radius, 6px) - 1px);
+}
+
+#write th {
+  background: var(--editor-code-bg);
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updated": "2026-10-17T00:00:02Z",
+  "count": 3,
+  "themes": [
+    {
+      "id": "paper",
+      "name": "Paper",
+      "author": "CatVinci-Studio",
+      "description": "Warm cream paper, sepia ink and a serif face: the feel of a printed page.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "created": "2026-10-17T00:00:02Z",
+      "updated": "2026-10-17T00:00:02Z",
+      "css": "themes/paper/theme.css",
+      "previews": [
+        "themes/paper/preview.png"
+      ]
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "author": "CatVinci-Studio",
+      "description": "Cool, minimal and sharp: grey-blue paper with a clear blue accent and a sans-serif face.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "created": "2026-10-17T00:00:01Z",
+      "updated": "2026-10-17T00:00:01Z",
+      "css": "themes/slate/theme.css",
+      "previews": [
+        "themes/slate/preview.png"
+      ]
+    },
+    {
+      "id": "forest",
+      "name": "Forest",
+      "author": "CatVinci-Studio",
+      "description": "Low-saturation greens that are easy on the eyes through a long writing session.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/Textus/blob/main/src/theme/content-themes.css",
+      "created": "2026-10-17T00:00:00Z",
+      "updated": "2026-10-17T00:00:00Z",
+      "css": "themes/forest/theme.css",
+      "previews": [
+        "themes/forest/preview.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+# Textus Themes
+
+Free, open themes for [Textus](https://textus.catvinci.com), the Markdown editor, shared by the people who use it.
+Browse them at **[textus.catvinci.com/themes](https://textus.catvinci.com/themes/)**.
+
+Sharing a theme takes one GitHub comment: no fork, no pull request, no review queue.
+Post it on the **[theme gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery)**, a bot checks it, and if it passes it is published here and on the website within a few minutes.
+
+[中文说明](#中文说明)
+
+## Install a theme
+
+1. On the [gallery](https://textus.catvinci.com/themes/), press **Download CSS** on a theme (or open its `theme.css` in [`themes/`](themes/)).
+2. In Textus, open **Settings › Theme**, choose **Import CSS…** and pick the downloaded file.
+
+Themes are Typora-compatible stylesheets, so most of them also work in Typora.
+
+## Share a theme
+
+Post a comment on the [gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery) in this shape:
+
+````markdown
+```textus-theme
+Name: Inkwell
+Description: A quiet serif theme for long-form writing, with warm paper and dark ink.
+License: MIT
+```
+
+```css
+/* Paste your whole theme here, or delete this block and drag your .css file into the comment. */
+```
+
+<!-- Drag one or two screenshots of the theme below (PNG, JPEG or WebP, up to 2 MB each). -->
+````
+
+- **Name** - shown on the card; it also gives the theme its id (`Inkwell` becomes `inkwell`). First come, first served.
+- **Description** - one or two sentences, in your own words (300 characters at most).
+- **License** - an OSI-approved [SPDX id](https://spdx.org/licenses/) such as `MIT`, `Apache-2.0`, `BSD-3-Clause`, `GPL-3.0-only` or `OFL-1.1`. Leave it blank for MIT.
+- **The CSS** - in a ` ```css ` block, or as an attached file: drag `my-theme.css` into the comment box (if GitHub refuses the `.css` file, rename it to `my-theme.css.txt`).
+- **Screenshots** - one or two images dragged into the comment. The first one is the theme's picture in the gallery; 1280x800 in light appearance looks best.
+
+The bot answers your comment: either a link to the published theme, or a list of what to fix.
+
+**To update** your theme, edit the comment. It is checked again when you save; if the new version has a problem, the published one stays up until you fix it.
+
+**To take it down**, delete the comment, or post `/remove <id>`.
+
+Comments without the `textus-theme` block are ordinary discussion and are left alone.
+
+## Rules
+
+- **License.** By posting, you share the theme under the license in the `License:` field: MIT unless you name another OSI-approved license. Only share what you have the right to share, fonts included.
+- **One self-contained file, no remote resources.** `@import` is not allowed, and every `url()` must be a `data:` URI of an image or a font. Embed what the theme needs, or leave it out. (Textus loads a theme as a single stylesheet; a theme that fetches files would break offline and would tell a server whenever someone opens it.)
+- **No script hooks:** `expression()`, `javascript:` URLs, `behavior` and `-moz-binding` are refused.
+- **Limits:** the CSS up to 200 KB; one or two screenshots, PNG, JPEG or WebP, up to 2 MB each.
+- **The CSS must parse.** The bot reports the line of the first syntax error.
+- Be kind. A theme that copies someone else's work without credit, or that is offensive, is taken down by a maintainer.
+
+## Writing a theme
+
+The fastest start is one of the themes here, or **Settings › Theme › Export** in Textus, which writes the current look out as a stylesheet you can edit and import again.
+
+- `#write` is the document, as in Typora. Plain element selectors (`blockquote`, `table td`) win over Textus's own look.
+- Textus reads these variables for its own parts (source view, find highlights, the window around the page): `--editor-bg`, `--editor-text`, `--editor-muted`, `--editor-accent`, `--editor-border`, `--editor-code-bg`, `--editor-quote-border`, `--editor-highlight-bg`, `--editor-font`.
+- An imported theme keeps one design in both light and dark appearance.
+- Name CJK fonts in your font stacks (`"Songti SC"`, `"Noto Serif CJK SC"`, ...), or Chinese and Japanese text falls back to a system default.
+
+## For maintainers
+
+- `.github/workflows/publish-theme.yml` runs on every comment created, edited or deleted on an issue labelled `theme-gallery`. `scripts/publish.mjs` compares **all** the issue's comments with `themes/`, so a run GitHub skips is caught up by the next; you can also run the workflow by hand from the Actions tab.
+- `/remove <id> [reason]` from anyone with write access (or the theme's author) takes a theme down and records it in `removed.json`; its comment is not published again. To undo, delete the entry from `removed.json` and run the workflow by hand.
+- `themes/<id>/` holds `theme.css`, `preview.*` and `meta.json`; `index.json` is generated from them (`npm run index`) and is what the website reads.
+- `npm test` runs the checks (`node --test`).
+
+The code in this repository is MIT-licensed (see [LICENSE](LICENSE)); each theme carries the license its author chose, in its `meta.json` and at the top of its `theme.css`.
+
+---
+
+## 中文说明
+
+这里收录大家为 [Textus](https://textus.catvinci.com) 制作的主题，全部免费、开放。在 **[textus.catvinci.com/themes](https://textus.catvinci.com/zh/themes/)** 浏览。
+
+**安装主题：** 在主题页点“下载 CSS”，然后在 Textus 里打开 **设置 › 主题 › 导入 CSS…**，选择下载的文件。
+
+**分享主题：** 不需要 fork，也不需要提交 PR。只要在[主题画廊 issue](https://github.com/CatVinci-Studio/textus-themes/issues?q=label%3Atheme-gallery) 下按上面的模板发一条评论：
+
+1. `textus-theme` 代码块里填写 `Name:`（名称）、`Description:`（一两句介绍）、`License:`（许可证，留空即为 MIT）；
+2. 把整份主题 CSS 粘贴进 ` ```css ` 代码块，或者直接把 `.css` 文件拖进评论框（GitHub 不接受 `.css` 时，改名为 `.css.txt` 即可）；
+3. 拖入一到两张主题截图（PNG、JPEG 或 WebP，每张不超过 2 MB）。
+
+机器人会自动检查并回复：通过就发布，几分钟后出现在网站上；没通过会列出需要修改的地方。
+
+**更新**：直接编辑你的评论。**下架**：删除评论，或者回复 `/remove <id>`。
+
+**规则：** 主题默认以 MIT 许可分享（也可以写其他 OSI 认可的许可证）；不能用 `@import`，所有 `url()` 必须是 `data:` 形式内嵌的图片或字体（不允许加载任何远程文件）；CSS 不超过 200 KB，必须能正确解析；不允许 `expression()`、`javascript:`、`behavior`、`-moz-binding`。字体请写上中文字体名（如 `"Songti SC"`、`"Noto Serif CJK SC"`），否则中文会回退到系统默认字体。
