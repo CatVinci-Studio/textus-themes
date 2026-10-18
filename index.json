@@ -1,8 +1,22 @@
 {
   "version": 1,
-  "updated": "2026-10-17T00:00:02Z",
-  "count": 3,
+  "updated": "2026-10-18T04:55:06Z",
+  "count": 4,
   "themes": [
+    {
+      "id": "plain",
+      "name": "Plain",
+      "author": "CatVinci-Studio",
+      "description": "Textus's default look without the heading marks: the same type and colours, with plain level-3 and level-4 headings.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-18T04:55:06Z",
+      "updated": "2026-10-18T04:55:06Z",
+      "css": "themes/plain/theme.css",
+      "previews": [
+        "themes/plain/preview.png"
+      ]
+    },
     {
       "id": "lumen",
       "name": "Lumen",

@@ -58,7 +58,7 @@ Comments without the `textus-theme` block are ordinary discussion and are left a
 
 ## Writing a theme
 
-The fastest start is one of the themes here: the gallery opens with three by CatVinci Studio, [Midnight Ink](themes/midnight-ink/theme.css) (a dark page for night writing), [Manuscript](themes/manuscript/theme.css) (a typewritten draft) and [Lumen](themes/lumen/theme.css) (a modern sans with a violet accent). Or use **Export** in Textus's **Settings › Editor & Appearance**, which writes the current look out as a stylesheet you can edit and import again.
+The fastest start is one of the themes here: the gallery opens with four by CatVinci Studio, [Midnight Ink](themes/midnight-ink/theme.css) (a dark page for night writing), [Manuscript](themes/manuscript/theme.css) (a typewritten draft), [Lumen](themes/lumen/theme.css) (a modern sans with a violet accent) and [Plain](themes/plain/theme.css) (Textus's Default look without the level-3 and level-4 heading marks). Or use **Export** in Textus's **Settings › Editor & Appearance**, which writes the current look out as a stylesheet you can edit and import again.
 
 - `#write` is the document, as in Typora. Plain element selectors (`blockquote`, `table td`) win over Textus's own look.
 - Textus reads these variables for its own parts (source view, find highlights, the window around the page): `--editor-bg`, `--editor-text`, `--editor-muted`, `--editor-accent`, `--editor-border`, `--editor-code-bg`, `--editor-quote-border`, `--editor-highlight-bg`, `--editor-font`.
