@@ -1,0 +1,112 @@
+/*! Plain - a Textus theme by @CatVinci-Studio
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Plain: Textus's Default look, written out with Settings > Theme > Export,
+   minus two heading marks. Level-3 headings lose the accent bar at their
+   left and level-4 headings the accent dot before them, so neither reads
+   as a quote or a list item. Everything else is Default's: the type and
+   its size, the colours, the rule under level-2 headings, the tinted
+   quote, links, code and the rounded table.
+   In Textus the font and corner radius follow the app's own (so Chinese
+   and Japanese punctuation is drawn as Default draws it); elsewhere the
+   fallbacks after the commas apply. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #24272e;
+  --editor-muted: #707070;
+  --editor-accent: #315ed1;
+  --editor-border: #e1e4ea;
+  --editor-code-bg: #f1efe9;
+  --editor-quote-border: #d8d4cc;
+  --editor-highlight-bg: #fbe89a;
+  --editor-font: var(--font-sans, -apple-system, "SF Pro Text", Inter,
+    system-ui, "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC",
+    "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
+    sans-serif);
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+/* Body text */
+#write {
+  font-family: var(--editor-font);
+  font-size: 16.5px;
+  line-height: 1.8;
+}
+
+/* Level-2 headings keep Default's rule beneath them. Level-3 and level-4
+   headings have no ornament: Default's h3 accent bar and h4 dot are the
+   two rules this theme leaves out. */
+#write h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--editor-border);
+}
+
+#write h6 {
+  color: color-mix(in srgb, var(--editor-text) 55%, var(--editor-muted));
+}
+
+#write blockquote {
+  color: var(--editor-muted);
+  padding: 0.55em 1em;
+  border-left: 3px solid var(--editor-quote-border);
+  border-radius: 0 var(--md-radius, 8px) var(--md-radius, 8px) 0;
+  background: var(--editor-code-bg);
+}
+
+#write a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--editor-accent) 45%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+#write a:hover {
+  text-decoration-color: currentColor;
+}
+
+#write table {
+  font-size: 0.95em;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--editor-border);
+  border-radius: var(--md-radius, 8px);
+}
+
+#write :is(th, td) {
+  border-width: 0 1px 1px 0;
+}
+
+#write tr > :is(th, td):last-child {
+  border-right-width: 0;
+}
+
+#write tr:last-child > :is(th, td) {
+  border-bottom-width: 0;
+}
+
+#write tr:first-child > :first-child {
+  border-top-left-radius: calc(var(--md-radius, 8px) - 1px);
+}
+
+#write tr:first-child > :last-child {
+  border-top-right-radius: calc(var(--md-radius, 8px) - 1px);
+}
+
+#write tr:last-child > :first-child {
+  border-bottom-left-radius: calc(var(--md-radius, 8px) - 1px);
+}
+
+#write tr:last-child > :last-child {
+  border-bottom-right-radius: calc(var(--md-radius, 8px) - 1px);
+}
+
+#write th {
+  background: var(--editor-code-bg);
+}
