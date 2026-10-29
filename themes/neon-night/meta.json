@@ -1,0 +1,20 @@
+{
+  "id": "neon-night",
+  "name": "Neon Night",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "City lights: a soft grey page by day and a deep blue one at night, magenta and blue accents, and a coloured heading ladder with a fading rule. On the Tokyo Night palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

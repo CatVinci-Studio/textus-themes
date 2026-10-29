@@ -1,0 +1,20 @@
+{
+  "id": "tidy",
+  "name": "Tidy",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Clean and orderly: a system sans on white, blue, yellow and red headings below level 2, green italic quotes, rounded task boxes and calm code. After Things by colineckert and Stephan Ango.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

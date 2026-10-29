@@ -9,10 +9,12 @@
   "comment_id": null,
   "source": "https://github.com/CatVinci-Studio/textus-themes",
   "created": "2026-10-18T04:55:06Z",
-  "updated": "2026-10-18T04:55:06Z",
+  "updated": "2026-10-29T08:00:00Z",
   "source_updated": null,
   "css": "theme.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "darkCss": "theme-dark.css"
 }

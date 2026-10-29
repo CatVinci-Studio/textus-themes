@@ -1,0 +1,152 @@
+/*! Manuscript (dark) - a Textus theme by @CatVinci-Studio
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Its dark form: the typewritten draft on dark paper with a warm red. Manuscript: a typewritten draft. Typewriter type on off-white bond
+   paper, a narrow page, uppercase headings marked with a section sign, a
+   ribbon-red accent and an indented, double-ruled quote - the look of a
+   manuscript before it goes to the editor. */
+
+:root {
+  --editor-bg: #1f1d1a;
+  --editor-text: #e2dccf;
+  --editor-muted: #a39d90;
+  --editor-border: #3d3a34;
+  --editor-quote-border: #c9c2b4;
+  --editor-accent: #e5675d;
+  --editor-code-bg: #2a2824;
+  --editor-highlight-bg: rgba(229, 103, 93, 0.22);
+  --editor-font: "American Typewriter", "Courier Prime", "Courier New",
+    Courier, "Nimbus Mono PS", "Liberation Mono", ui-monospace, "STFangsong",
+    "FangSong", "Noto Serif CJK SC", "Source Han Serif SC", monospace;
+  --editor-list-gap: 0.25em;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color-scheme: dark;
+  max-width: 44em;
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1rem;
+  line-height: 1.75;
+  /* Ink-and-ribbon code colours (Textus reads these). */
+  --token-string: #9ec27a;
+  --token-number: #d9a35a;
+  --token-keyword: #e5675d;
+  --token-function: #7fb0e0;
+  --token-tag: #e5675d;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--editor-font);
+  font-weight: 700;
+  color: var(--editor-text);
+}
+
+#write h1 {
+  margin-bottom: 1.2em;
+  font-size: 1.55em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#write h2 {
+  font-size: 1.15em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#write h2::before {
+  content: "\00A7\00A0";
+  color: var(--editor-accent);
+}
+
+#write h3 {
+  font-size: 1.05em;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+#write h4 {
+  font-size: 1em;
+  font-style: italic;
+}
+
+#write a {
+  color: var(--editor-accent);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+}
+
+#write strong {
+  color: #f2ece0;
+}
+
+#write blockquote {
+  margin: 1em 0 1em 1.5em;
+  padding: 0 0 0 1em;
+  border-left: 3px double var(--editor-quote-border);
+  color: #c9c2b4;
+}
+
+#write code {
+  padding: 0 0.3em;
+  background-color: var(--editor-code-bg);
+  font-size: 0.95em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--editor-code-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 0;
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.35em 0.8em;
+  border: 1px dashed var(--editor-border);
+}
+
+#write th {
+  border-bottom: 2px solid var(--editor-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#write hr {
+  border: 0;
+  border-top: 1px dashed var(--editor-muted);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}

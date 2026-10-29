@@ -1,0 +1,20 @@
+{
+  "id": "hive",
+  "name": "Hive",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Monospaced and honeyed: a code font throughout, amber accents, and a rule that fades in and out around a small mark. After Wasp by Santi Younger.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

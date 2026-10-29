@@ -1,0 +1,154 @@
+/*! Retro Wood (light) - a Textus theme by @CatVinci-Studio
+ *  Palette: gruvbox by Pavel Pertsev (morhetz) (MIT/X11)
+ *  After Obsidian gruvbox by insanum (MIT)
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Warm and retro: Gruvbox's faded cream and dark wood, a six-hue heading ladder and a yellow bold. */
+
+:root {
+  --editor-bg: #fbf1c7;
+  --editor-text: #3c3836;
+  --editor-muted: #7c6f64;
+  --editor-border: #d5c4a1;
+  --editor-quote-border: #d65d0e;
+  --editor-accent: #af3a03;
+  --editor-code-bg: #ebdbb2;
+  --editor-highlight-bg: rgba(250, 189, 47, 0.45);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #076678;
+  --theme-strong: #b57614;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #7c6f64;
+  --theme-code-text: #3c3836;
+  --theme-pre-bg: #ebdbb2;
+  --theme-th-bg: #ebdbb2;
+  --theme-th-text: #3c3836;
+  --theme-selection: rgba(213, 196, 161, 0.6);
+  --theme-h1: #9d0006;
+  --theme-h2: #b57614;
+  --theme-h3: #79740e;
+  --theme-h4: #427b58;
+  --theme-h5: #076678;
+  --theme-h6: #8f3f71;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: light;
+  --token-keyword: #9d0006;
+  --token-function: #b57614;
+  --token-string: #79740e;
+  --token-number: #8f3f71;
+  --token-tag: #427b58;
+  --token-comment: #928374;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+

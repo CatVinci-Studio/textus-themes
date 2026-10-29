@@ -1,23 +1,22 @@
-/*! Midnight Ink - a Textus theme by @CatVinci-Studio
+/*! Midnight Ink (light) - a Textus theme by @CatVinci-Studio
  *  License: MIT
  *  Source: https://github.com/CatVinci-Studio/textus-themes
  */
 
-/* Midnight Ink: a dark page for writing at night. Warm off-white text on
+/* Its light form: the same bookish design on warm off-white with amber ink. Midnight Ink: a dark page for writing at night. Warm off-white text on
    a deep plum-charcoal, amber links and a lavender quote rule, a bookish
    serif, and contrast kept comfortable rather than glaring (about 11:1 for
-   body text). One design, so it stays dark in Textus's light appearance
-   too: pick it when you want the dark page whatever the system does. */
+   body text). It follows the appearance: light by day, dark at night. */
 
 :root {
-  --editor-bg: #1b1a21;
-  --editor-text: #ddd6c8;
-  --editor-muted: #958ea1;
-  --editor-border: #36333f;
-  --editor-quote-border: #8b7fc7;
-  --editor-accent: #e3a857;
-  --editor-code-bg: #25232d;
-  --editor-highlight-bg: rgba(227, 168, 87, 0.28);
+  --editor-bg: #faf8f4;
+  --editor-text: #2a2730;
+  --editor-muted: #6e6879;
+  --editor-border: #e2ddd3;
+  --editor-quote-border: #6a5bb8;
+  --editor-accent: #a2620f;
+  --editor-code-bg: #f1ede5;
+  --editor-highlight-bg: rgba(162, 98, 15, 0.28);
   --editor-font: "Charter", "Iowan Old Style", "Palatino Linotype",
     "Book Antiqua", Palatino, "Noto Serif", "Songti SC", "Noto Serif CJK SC",
     "Source Han Serif SC", serif;
@@ -33,18 +32,18 @@ body {
   font-family: var(--editor-font);
   font-size: 1.0625rem;
   line-height: 1.85;
-  color-scheme: dark;
+  color-scheme: light;
   /* Code and alert colours tuned for the dark page (Textus reads these). */
-  --token-string: #a8c98a;
-  --token-number: #e3a857;
-  --token-keyword: #bba6f2;
-  --token-function: #82b6e9;
-  --token-tag: #ec9089;
-  --md-alert-note: #82b6e9;
-  --md-alert-tip: #93cc8e;
-  --md-alert-important: #bba6f2;
-  --md-alert-warning: #e3a857;
-  --md-alert-caution: #ef8a80;
+  --token-string: #4f7a2a;
+  --token-number: #a2620f;
+  --token-keyword: #6a4fc4;
+  --token-function: #2e6aa8;
+  --token-tag: #b2453a;
+  --md-alert-note: #2e6aa8;
+  --md-alert-tip: #3f7e3a;
+  --md-alert-important: #6a4fc4;
+  --md-alert-warning: #a2620f;
+  --md-alert-caution: #b23a2e;
 }
 
 #write h1,
@@ -53,7 +52,7 @@ body {
 #write h4,
 #write h5,
 #write h6 {
-  color: #f2ecdf;
+  color: #1d1b22;
   font-weight: 600;
 }
 
@@ -77,17 +76,17 @@ body {
   font-size: 1.05em;
   font-variant: small-caps;
   letter-spacing: 0.04em;
-  color: #cbc3d8;
+  color: #4a4458;
 }
 
 #write strong {
-  color: #f6f1e6;
+  color: #1a181f;
 }
 
 #write a {
   color: var(--editor-accent);
   text-decoration: underline;
-  text-decoration-color: rgba(227, 168, 87, 0.45);
+  text-decoration-color: rgba(162, 98, 15, 0.45);
   text-underline-offset: 0.2em;
 }
 
@@ -99,7 +98,7 @@ body {
   margin-left: 0;
   padding: 0.15em 1.1em;
   border-left: 2px solid var(--editor-quote-border);
-  color: #bdb5c9;
+  color: #5a5466;
   font-style: italic;
 }
 
@@ -107,7 +106,7 @@ body {
   padding: 0.1em 0.35em;
   border-radius: 4px;
   background-color: var(--editor-code-bg);
-  color: #f0c48a;
+  color: #9a5a10;
   font-size: 0.9em;
 }
 
@@ -136,7 +135,7 @@ body {
 
 #write th {
   background-color: var(--editor-code-bg);
-  color: #f2ecdf;
+  color: #1d1b22;
 }
 
 #write hr {
@@ -154,5 +153,5 @@ body {
 }
 
 #write ::selection {
-  background-color: rgba(139, 127, 199, 0.4);
+  background-color: rgba(106, 91, 184, 0.4);
 }

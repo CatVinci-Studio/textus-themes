@@ -1,0 +1,20 @@
+{
+  "id": "fjord",
+  "name": "Fjord",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Arctic and calm: a snow-storm page by day and polar night after dark, frost-blue links, a double quote rule, and aurora-coloured headings at night. On the Nord palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

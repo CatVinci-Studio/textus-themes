@@ -1,0 +1,157 @@
+/*! Cloister (light) - a Textus theme by @CatVinci-Studio
+ *  After Sanctum by José Daniel Mourão (MIT), https://github.com/jdanielmourao/obsidian-sanctum
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Quiet and narrow, after Sanctum: a 40rem measure, em-dash bullets, borderless quotes and tables. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #262626;
+  --editor-muted: #737373;
+  --editor-border: #e8e8e8;
+  --editor-quote-border: transparent;
+  --editor-accent: #3d63dd;
+  --editor-code-bg: #f4f4f4;
+  --editor-highlight-bg: rgba(255, 220, 90, 0.4);
+  --editor-font: "IBM Plex Sans", Inter, -apple-system, "Segoe UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  --theme-heading-font: "IBM Plex Sans", Inter, -apple-system, "Segoe UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #3d63dd;
+  --theme-strong: #262626;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #737373;
+  --theme-code-text: #262626;
+  --theme-pre-bg: #f4f4f4;
+  --theme-th-bg: transparent;
+  --theme-th-text: #262626;
+  --theme-selection: rgba(255, 220, 90, 0.4);
+  --theme-h1: #262626;
+  --theme-h2: #262626;
+  --theme-h3: #262626;
+  --theme-h4: #262626;
+  --theme-h5: #262626;
+  --theme-h6: #262626;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: light;
+  --token-keyword: #8e44ad;
+  --token-function: #3d63dd;
+  --token-string: #2f855a;
+  --token-number: #c05621;
+  --token-tag: #8e44ad;
+  --token-comment: #8c8c8c;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write { max-width: 40rem; }
+#write h1 { font-size: 2em; }
+#write ul ul { list-style-type: "\2014\2002"; }
+#write blockquote { border-left: 0; padding-left: 0; }
+#write th, #write td { border: 0; border-bottom: 1px solid var(--editor-border); padding-left: 0.4em; }

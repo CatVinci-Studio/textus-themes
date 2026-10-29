@@ -1,0 +1,20 @@
+{
+  "id": "cloister",
+  "name": "Cloister",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Quiet and narrow: a short line, plain headings, em-dashes for nested bullets, borderless quotes in muted text and open tables. After Sanctum by José Daniel Mourão.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

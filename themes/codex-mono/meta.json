@@ -1,0 +1,20 @@
+{
+  "id": "codex-mono",
+  "name": "Codex Mono",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "A writer's terminal: every word in a coding font, a centred title, one slate colour for headings, tinted quotes with a coloured bar and outlined highlights. After Drake by liangjingkanji.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

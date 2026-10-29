@@ -1,0 +1,159 @@
+/*! Tidepool (light) - a Textus theme by @CatVinci-Studio
+ *  After Phycat by sumruler (MIT), https://github.com/sumruler/typora-theme-phycat
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Fresh mint, after Phycat: level-2 headings on a mint pill, dotted markers for smaller headings, a dashed rule. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #333333;
+  --editor-muted: #555555;
+  --editor-border: #7aeaf0;
+  --editor-quote-border: transparent;
+  --editor-accent: #089ba3;
+  --editor-code-bg: rgba(122, 234, 240, 0.12);
+  --editor-highlight-bg: rgba(122, 234, 240, 0.4);
+  --editor-font: Optima, "LXGW WenKai", "PingFang SC", Georgia, "Noto Sans CJK SC", sans-serif;
+  --theme-heading-font: Optima, "LXGW WenKai", "PingFang SC", Georgia, "Noto Sans CJK SC", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #089ba3;
+  --theme-strong: #333333;
+  --theme-quote-bg: rgba(122, 234, 240, 0.1);
+  --theme-quote-text: #555555;
+  --theme-code-text: #089ba3;
+  --theme-pre-bg: #f6fbfb;
+  --theme-th-bg: rgba(122, 234, 240, 0.12);
+  --theme-th-text: #333333;
+  --theme-selection: rgba(122, 234, 240, 0.4);
+  --theme-h1: #222222;
+  --theme-h2: #ffffff;
+  --theme-h3: #089ba3;
+  --theme-h4: #089ba3;
+  --theme-h5: #089ba3;
+  --theme-h6: #555555;
+  --theme-band: linear-gradient(90deg, #3db8bf, #7aeaf0);
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: light;
+  --token-keyword: #089ba3;
+  --token-function: #3474b5;
+  --token-string: #5e8f2c;
+  --token-number: #c2591b;
+  --token-tag: #089ba3;
+  --token-comment: #8a9a9b;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write h2 { display: inline-block; padding: 0.15em 0.8em; border-radius: 999px; background: var(--theme-band); }
+#write h3::before { content: "\25A0\2002"; font-size: 0.7em; vertical-align: 0.15em; }
+#write h4::before { content: "\25CF\2002"; font-size: 0.7em; vertical-align: 0.15em; }
+#write h5::before { content: "\25CB\2002"; font-size: 0.7em; vertical-align: 0.15em; }
+#write hr { height: 0; border-top: 3px dashed var(--editor-border); background: transparent; }
+#write blockquote { border-left: 0; border-radius: 8px; }
