@@ -1,0 +1,20 @@
+{
+  "id": "nosferatu",
+  "name": "Nosferatu",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Vivid and nocturnal: the classic dark purple-grey page with neon accents, and a warm cream day page with deeper ones. On the Dracula and Alucard palettes.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

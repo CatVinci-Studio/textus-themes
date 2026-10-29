@@ -1,0 +1,20 @@
+{
+  "id": "tidepool",
+  "name": "Tidepool",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Fresh and lively: level-2 headings on a mint pill, small markers before the smaller headings, a dashed rule and tinted quotes, with a calm sea-dark night. After Phycat by sumruler.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

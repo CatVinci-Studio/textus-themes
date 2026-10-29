@@ -32,6 +32,7 @@ export function buildIndex(metas) {
       created: m.created,
       updated: m.updated,
       css: `themes/${m.id}/${m.css ?? "theme.css"}`,
+      ...(m.darkCss ? { darkCss: `themes/${m.id}/${m.darkCss}` } : {}),
       previews: (m.previews ?? []).map((p) => `themes/${m.id}/${p}`),
     }));
   const updated = themes.reduce((max, t) => (String(t.updated) > max ? String(t.updated) : max), "");

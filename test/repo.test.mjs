@@ -14,8 +14,10 @@ test("every published theme is valid", async () => {
   const metas = await readThemes(root);
   assert.ok(metas.length > 0);
   for (const m of metas) {
-    const css = await readFile(join(root, "themes", m.id, m.css), "utf8");
-    assert.deepEqual(validateCss(css).errors, [], m.id);
+    for (const file of [m.css, m.darkCss].filter(Boolean)) {
+      const css = await readFile(join(root, "themes", m.id, file), "utf8");
+      assert.deepEqual(validateCss(css).errors, [], `${m.id}/${file}`);
+    }
     assert.ok(m.previews.length >= 1 && m.previews.length <= LIMITS.images, m.id);
     for (const p of m.previews) {
       const buf = await readFile(join(root, "themes", m.id, p));

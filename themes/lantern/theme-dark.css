@@ -1,0 +1,157 @@
+/*! Lantern (dark) - a Textus theme by @CatVinci-Studio
+ *  After Shimmering Focus by Chris Grieser (MIT), https://github.com/chrisgrieser/shimmering-focus
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Focused and bright, after Shimmering Focus: boxed headings, a thick tinted quote bar and magenta emphasis. */
+
+:root {
+  --editor-bg: #1f1f22;
+  --editor-text: #dcdcdc;
+  --editor-muted: #9a9a9e;
+  --editor-border: #38383d;
+  --editor-quote-border: #e08ad8;
+  --editor-accent: #e08ad8;
+  --editor-code-bg: #2a2a2e;
+  --editor-highlight-bg: rgba(255, 222, 102, 0.25);
+  --editor-font: "IBM Plex Sans", "iA Writer Quattro", -apple-system, "Segoe UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  --theme-heading-font: Optima, Candara, "Noto Sans", "PingFang SC", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #7fb0ec;
+  --theme-strong: #e08ad8;
+  --theme-quote-bg: rgba(224, 138, 216, 0.08);
+  --theme-quote-text: #9a9a9e;
+  --theme-code-text: #dcdcdc;
+  --theme-pre-bg: #2a2a2e;
+  --theme-th-bg: #2a2a2e;
+  --theme-th-text: #dcdcdc;
+  --theme-selection: rgba(255, 222, 102, 0.25);
+  --theme-h1: #ececec;
+  --theme-h2: #7fb0ec;
+  --theme-h3: #e08ad8;
+  --theme-h4: #7fb0ec;
+  --theme-h5: #e08ad8;
+  --theme-h6: #9a9a9e;
+  --theme-box: #29292d;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: dark;
+  --token-keyword: #e08ad8;
+  --token-function: #7fb0ec;
+  --token-string: #9ccc7a;
+  --token-number: #e0a86a;
+  --token-tag: #e08ad8;
+  --token-comment: #8a8a8e;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write h1, #write h2, #write h3 { padding: 0.15em 0.5em; border: 1px solid var(--editor-border); border-radius: 6px; background: var(--theme-box); letter-spacing: 1.5px; }
+#write em { color: var(--editor-accent); }
+#write blockquote { border-left-width: 8px; border-radius: 4px; }
+#write tr:nth-child(even) td { background-color: var(--theme-box); }

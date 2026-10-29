@@ -1,0 +1,20 @@
+{
+  "id": "retro-wood",
+  "name": "Retro Wood",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Warm and retro: a faded cream page and a dark wood one, a six-colour heading ladder, orange quotes and a golden bold. On the gruvbox palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

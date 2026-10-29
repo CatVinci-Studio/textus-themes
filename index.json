@@ -1,8 +1,264 @@
 {
   "version": 1,
-  "updated": "2026-10-18T04:55:06Z",
-  "count": 4,
+  "updated": "2026-10-29T08:00:00Z",
+  "count": 20,
   "themes": [
+    {
+      "id": "article",
+      "name": "Article",
+      "author": "CatVinci-Studio",
+      "description": "Like a typeset paper: a Computer Modern style serif, numbered sections, booktabs tables and plain links, on white or on black. After LaTeX Typora by shamsghi.",
+      "license": "Apache-2.0",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/article/theme.css",
+      "darkCss": "themes/article/theme-dark.css",
+      "previews": [
+        "themes/article/preview.png",
+        "themes/article/preview-dark.png"
+      ]
+    },
+    {
+      "id": "cloister",
+      "name": "Cloister",
+      "author": "CatVinci-Studio",
+      "description": "Quiet and narrow: a short line, plain headings, em-dashes for nested bullets, borderless quotes in muted text and open tables. After Sanctum by José Daniel Mourão.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/cloister/theme.css",
+      "darkCss": "themes/cloister/theme-dark.css",
+      "previews": [
+        "themes/cloister/preview.png",
+        "themes/cloister/preview-dark.png"
+      ]
+    },
+    {
+      "id": "codex-mono",
+      "name": "Codex Mono",
+      "author": "CatVinci-Studio",
+      "description": "A writer's terminal: every word in a coding font, a centred title, one slate colour for headings, tinted quotes with a coloured bar and outlined highlights. After Drake by liangjingkanji.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/codex-mono/theme.css",
+      "darkCss": "themes/codex-mono/theme-dark.css",
+      "previews": [
+        "themes/codex-mono/preview.png",
+        "themes/codex-mono/preview-dark.png"
+      ]
+    },
+    {
+      "id": "dawn-dusk",
+      "name": "Dawn & Dusk",
+      "author": "CatVinci-Studio",
+      "description": "Soft and literary: a warm dawn page and a muted dusk one, a Georgia serif body, iris accents, a rose quote rule and six gentle heading hues. On the Rosé Pine palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/dawn-dusk/theme.css",
+      "darkCss": "themes/dawn-dusk/theme-dark.css",
+      "previews": [
+        "themes/dawn-dusk/preview.png",
+        "themes/dawn-dusk/preview-dark.png"
+      ]
+    },
+    {
+      "id": "fjord",
+      "name": "Fjord",
+      "author": "CatVinci-Studio",
+      "description": "Arctic and calm: a snow-storm page by day and polar night after dark, frost-blue links, a double quote rule, and aurora-coloured headings at night. On the Nord palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/fjord/theme.css",
+      "darkCss": "themes/fjord/theme-dark.css",
+      "previews": [
+        "themes/fjord/preview.png",
+        "themes/fjord/preview-dark.png"
+      ]
+    },
+    {
+      "id": "hive",
+      "name": "Hive",
+      "author": "CatVinci-Studio",
+      "description": "Monospaced and honeyed: a code font throughout, amber accents, and a rule that fades in and out around a small mark. After Wasp by Santi Younger.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/hive/theme.css",
+      "darkCss": "themes/hive/theme-dark.css",
+      "previews": [
+        "themes/hive/preview.png",
+        "themes/hive/preview-dark.png"
+      ]
+    },
+    {
+      "id": "inkpaper",
+      "name": "Inkpaper",
+      "author": "CatVinci-Studio",
+      "description": "Ink on paper: a warm paper page and a near-black one, headings in ink, cyan links and quiet code. On Flexoki by Steph Ango, https://stephango.com/flexoki.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/inkpaper/theme.css",
+      "darkCss": "themes/inkpaper/theme-dark.css",
+      "previews": [
+        "themes/inkpaper/preview.png",
+        "themes/inkpaper/preview-dark.png"
+      ]
+    },
+    {
+      "id": "lantern",
+      "name": "Lantern",
+      "author": "CatVinci-Studio",
+      "description": "Focused and bright: headings on a soft tinted box, a thick quote bar on a tint, magenta emphasis and striped tables. After Shimmering Focus by Chris Grieser.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/lantern/theme.css",
+      "darkCss": "themes/lantern/theme-dark.css",
+      "previews": [
+        "themes/lantern/preview.png",
+        "themes/lantern/preview-dark.png"
+      ]
+    },
+    {
+      "id": "latte-mocha",
+      "name": "Latte & Mocha",
+      "author": "CatVinci-Studio",
+      "description": "Soft pastels for long sessions: a cool latte page by day and a deep mocha one at night, mauve accents, lavender quotes and a sapphire bold. An unofficial port of the Catppuccin palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/latte-mocha/theme.css",
+      "darkCss": "themes/latte-mocha/theme-dark.css",
+      "previews": [
+        "themes/latte-mocha/preview.png",
+        "themes/latte-mocha/preview-dark.png"
+      ]
+    },
+    {
+      "id": "lazuli",
+      "name": "Lazuli",
+      "author": "CatVinci-Studio",
+      "description": "Indigo and clear: a centred title, level-2 headings on a solid blue band, serif headings over a sans body, blue bold and blue list markers. After Lapis by YiNN.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/lazuli/theme.css",
+      "darkCss": "themes/lazuli/theme-dark.css",
+      "previews": [
+        "themes/lazuli/preview.png",
+        "themes/lazuli/preview-dark.png"
+      ]
+    },
+    {
+      "id": "neon-night",
+      "name": "Neon Night",
+      "author": "CatVinci-Studio",
+      "description": "City lights: a soft grey page by day and a deep blue one at night, magenta and blue accents, and a coloured heading ladder with a fading rule. On the Tokyo Night palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/neon-night/theme.css",
+      "darkCss": "themes/neon-night/theme-dark.css",
+      "previews": [
+        "themes/neon-night/preview.png",
+        "themes/neon-night/preview-dark.png"
+      ]
+    },
+    {
+      "id": "nosferatu",
+      "name": "Nosferatu",
+      "author": "CatVinci-Studio",
+      "description": "Vivid and nocturnal: the classic dark purple-grey page with neon accents, and a warm cream day page with deeper ones. On the Dracula and Alucard palettes.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/nosferatu/theme.css",
+      "darkCss": "themes/nosferatu/theme-dark.css",
+      "previews": [
+        "themes/nosferatu/preview.png",
+        "themes/nosferatu/preview-dark.png"
+      ]
+    },
+    {
+      "id": "retro-wood",
+      "name": "Retro Wood",
+      "author": "CatVinci-Studio",
+      "description": "Warm and retro: a faded cream page and a dark wood one, a six-colour heading ladder, orange quotes and a golden bold. On the gruvbox palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/retro-wood/theme.css",
+      "darkCss": "themes/retro-wood/theme-dark.css",
+      "previews": [
+        "themes/retro-wood/preview.png",
+        "themes/retro-wood/preview-dark.png"
+      ]
+    },
+    {
+      "id": "teal-paper",
+      "name": "Teal Paper",
+      "author": "CatVinci-Studio",
+      "description": "Warm paper with a little colour: a teal accent, a different colour for each heading level, an orange bold and pill-shaped inline code. After OnePage by ivaneye.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/teal-paper/theme.css",
+      "darkCss": "themes/teal-paper/theme-dark.css",
+      "previews": [
+        "themes/teal-paper/preview.png",
+        "themes/teal-paper/preview-dark.png"
+      ]
+    },
+    {
+      "id": "tidepool",
+      "name": "Tidepool",
+      "author": "CatVinci-Studio",
+      "description": "Fresh and lively: level-2 headings on a mint pill, small markers before the smaller headings, a dashed rule and tinted quotes, with a calm sea-dark night. After Phycat by sumruler.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/tidepool/theme.css",
+      "darkCss": "themes/tidepool/theme-dark.css",
+      "previews": [
+        "themes/tidepool/preview.png",
+        "themes/tidepool/preview-dark.png"
+      ]
+    },
+    {
+      "id": "tidy",
+      "name": "Tidy",
+      "author": "CatVinci-Studio",
+      "description": "Clean and orderly: a system sans on white, blue, yellow and red headings below level 2, green italic quotes, rounded task boxes and calm code. After Things by colineckert and Stephan Ango.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-10-29T08:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
+      "css": "themes/tidy/theme.css",
+      "darkCss": "themes/tidy/theme-dark.css",
+      "previews": [
+        "themes/tidy/preview.png",
+        "themes/tidy/preview-dark.png"
+      ]
+    },
     {
       "id": "plain",
       "name": "Plain",
@@ -11,10 +267,12 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-18T04:55:06Z",
-      "updated": "2026-10-18T04:55:06Z",
+      "updated": "2026-10-29T08:00:00Z",
       "css": "themes/plain/theme.css",
+      "darkCss": "themes/plain/theme-dark.css",
       "previews": [
-        "themes/plain/preview.png"
+        "themes/plain/preview.png",
+        "themes/plain/preview-dark.png"
       ]
     },
     {
@@ -25,10 +283,12 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:02Z",
-      "updated": "2026-10-17T00:00:02Z",
+      "updated": "2026-10-29T08:00:00Z",
       "css": "themes/lumen/theme.css",
+      "darkCss": "themes/lumen/theme-dark.css",
       "previews": [
-        "themes/lumen/preview.png"
+        "themes/lumen/preview.png",
+        "themes/lumen/preview-dark.png"
       ]
     },
     {
@@ -39,10 +299,12 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:01Z",
-      "updated": "2026-10-17T00:00:01Z",
+      "updated": "2026-10-29T08:00:00Z",
       "css": "themes/manuscript/theme.css",
+      "darkCss": "themes/manuscript/theme-dark.css",
       "previews": [
-        "themes/manuscript/preview.png"
+        "themes/manuscript/preview.png",
+        "themes/manuscript/preview-dark.png"
       ]
     },
     {
@@ -53,10 +315,12 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-17T00:00:00Z",
-      "updated": "2026-10-17T00:00:00Z",
+      "updated": "2026-10-29T08:00:00Z",
       "css": "themes/midnight-ink/theme.css",
+      "darkCss": "themes/midnight-ink/theme-dark.css",
       "previews": [
-        "themes/midnight-ink/preview.png"
+        "themes/midnight-ink/preview.png",
+        "themes/midnight-ink/preview-dark.png"
       ]
     }
   ]

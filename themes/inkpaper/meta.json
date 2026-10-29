@@ -1,0 +1,20 @@
+{
+  "id": "inkpaper",
+  "name": "Inkpaper",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Ink on paper: a warm paper page and a near-black one, headings in ink, cyan links and quiet code. On Flexoki by Steph Ango, https://stephango.com/flexoki.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

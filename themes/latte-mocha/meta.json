@@ -1,0 +1,20 @@
+{
+  "id": "latte-mocha",
+  "name": "Latte & Mocha",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Soft pastels for long sessions: a cool latte page by day and a deep mocha one at night, mauve accents, lavender quotes and a sapphire bold. An unofficial port of the Catppuccin palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-10-29T08:00:00Z",
+  "updated": "2026-10-29T08:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

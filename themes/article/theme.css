@@ -1,0 +1,164 @@
+/*! Article (light) - a Textus theme by @CatVinci-Studio
+ *  After LaTeX Typora by shamsghi (Apache-2.0), https://github.com/shamsghi/LatexTypora - modified by CatVinci Studio
+ *  License: Apache-2.0
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* A typeset paper: Computer Modern style serif, numbered sections, booktabs tables and plain blue links. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #000000;
+  --editor-muted: #4d4d4d;
+  --editor-border: #000000;
+  --editor-quote-border: rgba(0, 0, 0, 0.28);
+  --editor-accent: #1d12e2;
+  --editor-code-bg: #f7f4ee;
+  --editor-highlight-bg: rgba(255, 230, 0, 0.4);
+  --editor-font: "New Computer Modern", "Latin Modern Roman", "CMU Serif", "Times New Roman", "Songti SC", "Source Han Serif SC", serif;
+  --theme-heading-font: "New Computer Modern", "Latin Modern Roman", "CMU Serif", "Times New Roman", "Songti SC", "Source Han Serif SC", serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #1d12e2;
+  --theme-strong: #000000;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #4d4d4d;
+  --theme-code-text: #000000;
+  --theme-pre-bg: #f7f4ee;
+  --theme-th-bg: transparent;
+  --theme-th-text: #000000;
+  --theme-selection: rgba(255, 230, 0, 0.4);
+  --theme-h1: #000000;
+  --theme-h2: #000000;
+  --theme-h3: #000000;
+  --theme-h4: #000000;
+  --theme-h5: #000000;
+  --theme-h6: #000000;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color-scheme: light;
+  --token-keyword: #1d12e2;
+  --token-function: #000000;
+  --token-string: #2e7d32;
+  --token-number: #8a2be2;
+  --token-tag: #1d12e2;
+  --token-comment: #707070;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write { counter-reset: h2; }
+#write h1 { text-align: center; font-size: 1.9em; }
+#write h2 { counter-reset: h3; }
+#write h3 { counter-reset: h4; }
+#write h2::before { counter-increment: h2; content: counter(h2) "\2002"; }
+#write h3::before { counter-increment: h3; content: counter(h2) "." counter(h3) "\2002"; }
+#write h4::before { counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) "\2002"; }
+#write a { text-decoration: none; }
+#write table { border-top: 2px solid var(--editor-border); border-bottom: 2px solid var(--editor-border); }
+#write th, #write td { border: 0; }
+#write th { border-bottom: 1px solid var(--editor-border); }
+#write blockquote { background: transparent; }
