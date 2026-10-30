@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "城市灯火：白天是柔和的灰色页，夜里是深蓝色页，洋红和蓝色点缀，标题按级别着色，分隔线渐隐。基于 Tokyo Night 配色。"
+    }
+  }
 }

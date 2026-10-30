@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "适合长时间写作的柔和粉彩：白天是清爽的拿铁色，夜里是深摩卡色，淡紫点缀，薰衣草色引用，粗体为宝石蓝。Catppuccin 配色的非官方移植。"
+    }
+  }
 }

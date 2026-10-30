@@ -16,5 +16,10 @@
     "preview.png",
     "preview-dark.png"
   ],
-  "darkCss": "theme-dark.css"
+  "darkCss": "theme-dark.css",
+  "l10n": {
+    "zh": {
+      "description": "夜间写作的深色页：梅子炭色底上的暖白文字，琥珀色链接，书卷气的衬线字体，对比度温和舒适。"
+    }
+  }
 }

@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "带一点颜色的暖纸：青绿色点缀，每级标题颜色不同，橙色粗体，行内代码为胶囊形。参考 ivaneye 的 OnePage。"
+    }
+  }
 }

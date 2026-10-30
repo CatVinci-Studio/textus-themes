@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "温暖复古：褪色的奶油色页和深木色页，六级标题各有颜色，橙色引用，金色粗体。基于 gruvbox 配色。"
+    }
+  }
 }

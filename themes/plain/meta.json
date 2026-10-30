@@ -16,5 +16,10 @@
     "preview.png",
     "preview-dark.png"
   ],
-  "darkCss": "theme-dark.css"
+  "darkCss": "theme-dark.css",
+  "l10n": {
+    "zh": {
+      "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
+    }
+  }
 }

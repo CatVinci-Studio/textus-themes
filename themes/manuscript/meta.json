@@ -16,5 +16,10 @@
     "preview.png",
     "preview-dark.png"
   ],
-  "darkCss": "theme-dark.css"
+  "darkCss": "theme-dark.css",
+  "l10n": {
+    "zh": {
+      "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
+    }
+  }
 }
