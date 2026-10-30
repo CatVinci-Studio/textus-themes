@@ -1,5 +1,6 @@
-// themes/<id>/meta.json -> index.json, the catalog the website reads.
-// Themes waiting for review live in pending/<id>/ and never reach it.
+// themes/<id>/meta.json -> index.json, the catalog the website and Textus
+// read, with each theme's installs. Themes waiting for review live in
+// pending/<id>/ and never reach it.
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -18,8 +19,9 @@ export async function readThemes(root, folder = "themes") {
   return metas;
 }
 
-/** Newest first; the same input always gives the same file. */
-export function buildIndex(metas) {
+/** Newest first; the same input always gives the same file. `installs`:
+ *  each theme's `{installs, installs30}` by id (see stats.mjs). */
+export function buildIndex(metas, installs = {}) {
   const themes = [...metas]
     .sort((a, b) => String(b.created).localeCompare(String(a.created)) || a.id.localeCompare(b.id))
     .map((m) => ({
@@ -34,13 +36,26 @@ export function buildIndex(metas) {
       css: `themes/${m.id}/${m.css ?? "theme.css"}`,
       ...(m.darkCss ? { darkCss: `themes/${m.id}/${m.darkCss}` } : {}),
       previews: (m.previews ?? []).map((p) => `themes/${m.id}/${p}`),
+      ...installs[m.id],
     }));
   const updated = themes.reduce((max, t) => (String(t.updated) > max ? String(t.updated) : max), "");
   return { version: 1, updated: updated || null, count: themes.length, themes };
 }
 
-export async function writeIndex(root) {
-  const index = buildIndex(await readThemes(root));
-  await writeFile(join(root, "index.json"), `${JSON.stringify(index, null, 2)}\n`);
+/** The installs `index` lists, by theme id. */
+export function installsIn(index) {
+  const out = {};
+  for (const t of index?.themes ?? [])
+    if (Number.isInteger(t.installs) && Number.isInteger(t.installs30))
+      out[t.id] = { installs: t.installs, installs30: t.installs30 };
+  return out;
+}
+
+/** Writes index.json, with `installs`, or else the ones it lists now. */
+export async function writeIndex(root, installs) {
+  const file = join(root, "index.json");
+  const kept = await readFile(file, "utf8").then(JSON.parse, () => null);
+  const index = buildIndex(await readThemes(root), installs ?? installsIn(kept));
+  await writeFile(file, `${JSON.stringify(index, null, 2)}\n`);
   return index;
 }

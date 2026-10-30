@@ -1,0 +1,41 @@
+# Once a day, each theme's installs in index.json, from Textus's anonymous
+# install counts (scripts/build-index.mjs). Commits only when they changed;
+# when the counts can't be read, index.json keeps the ones it has.
+name: Install counts
+
+on:
+  schedule:
+    - cron: "37 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# The publisher's group: the two never push to main at once.
+concurrency:
+  group: publish-themes
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/build-index.mjs
+      - run: npm test
+      - name: Commit the counts
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- index.json; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --quiet -m "chore(gallery): install counts" -- index.json
+          git push origin HEAD:main

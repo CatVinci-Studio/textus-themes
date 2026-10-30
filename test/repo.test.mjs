@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildIndex, readThemes } from "../scripts/lib/catalog.mjs";
+import { buildIndex, installsIn, readThemes } from "../scripts/lib/catalog.mjs";
 import { LIMITS, sniffImage, validateCss } from "../scripts/lib/validate.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -34,5 +34,5 @@ test("no theme repeats one of Textus's built-in themes", async () => {
 
 test("index.json is up to date (run `npm run index`)", async () => {
   const onDisk = JSON.parse(await readFile(join(root, "index.json"), "utf8"));
-  assert.deepEqual(onDisk, buildIndex(await readThemes(root)));
+  assert.deepEqual(onDisk, buildIndex(await readThemes(root), installsIn(onDisk)));
 });
