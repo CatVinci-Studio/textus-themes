@@ -1,0 +1,18 @@
+{
+  "id": "misty",
+  "name": "Misty",
+  "author": "myshzzx",
+  "author_id": 2025090,
+  "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK",
+  "license": "MIT",
+  "issue": 1,
+  "comment_id": 6523503165,
+  "source": "https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6523503165",
+  "created": "2026-10-30T13:03:56Z",
+  "updated": "2026-10-30T13:05:26Z",
+  "source_updated": "2026-10-30T13:05:26Z",
+  "css": "theme.css",
+  "previews": [
+    "preview.png"
+  ]
+}

@@ -1,0 +1,700 @@
+/*! Misty - a Textus theme by @myshzzx
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6523503165
+ */
+
+@charset "UTF-8";
+/*!
+ * Textus 主题 · Misty（雾光）
+ * ---------------------------------------------------------------
+ * 由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT）
+ * 目标编辑器：Textus —— https://github.com/CatVinci-Studio/Textus
+ *
+ * 安装：Textus › 设置 › 主题 › 导入主题 › 选中本文件
+ *
+ * 一份文件，深浅随系统
+ *   外观设「系统」时，跟着系统在浅色 / 深色之间切换；外观设「浅色」或
+ *   「深色」时按你选的锁死，不会因为系统换主题而跟着变。
+ *
+ * 怎么做到的
+ *   1. 色板拆成浅、深两份，每份只写 --misty-* 变量。深色那份写两遍：一遍在
+ *      @media (prefers-color-scheme: dark) 里（跟随系统），一遍挂在
+ *      :root[data-theme="dark"] 上（手动锁定深色）。Textus 的内置主题就是
+ *      这个写法 —— 设「系统」时 <html> 上没有 data-theme，媒体查询说了算；
+ *      手动选深色时才挂上 data-theme="dark"。
+ *   2. 文档规则和界面变量只写一遍，全部引用 --misty-*，色板一翻它们跟着翻。
+ *   3. 只有一处要加 !important：Textus 导入主题时会先按「这个主题只有浅色」
+ *      推导一套界面配色，并以 :root { ... !important } 插到文档末尾。所以
+ *      下面的变量映射写成 :root:root { ... !important } —— 多一层 :root 是
+ *      刻意的，用特异性压过那套推导值，否则深色时会是深色正文配浅色侧栏。
+ *
+ * 改造要点（相对原 misty.css）
+ *   1. 配色进了 Textus 的变量体系：--editor-*（写作区）、--token-*（代码）、
+ *      --md-alert-*（提示块）、--revision-*（AI 修订），加上界面变量
+ *      （--bg / --sidebar-* / --chrome-* / --border-color 等）。所以侧栏、
+ *      菜单、设置页都跟着 Misty 走，不只是正文。
+ *   2. 全部正文规则收进 #write，避免误伤设置页、菜单、对话框（原主题是裸
+ *      标签选择器，直接导入会把界面里的标题一起改掉）。
+ *   3. 原主题用 Typora 专有的 <span> 包裹做渐变标题；这里改为直接作用在标题
+ *      元素上，并用 width: fit-content 让渐变只扫过文字本身。标题里的中文输入
+ *      依然可见（文字由渐变背景填充），光标颜色单独指定。
+ *   4. 原主题的 li::marker 着色改为 Textus 的 ::before 标记 —— Textus 不设
+ *      list-style，序号与圆点都是 ::before 画的。
+ *   5. 表头：Milkdown 把表头行放在 <tbody> 里，用 tr[data-is-header] 选中。
+ *   6. 任务清单：Textus 用 li[data-item-type="task"]::before 画方框，这里把
+ *      它调成 Misty 的浅灰方块，勾选后变绿。
+ *
+ * 想微调？看下面「可调参数」两条，或直接改色板里的值。
+ */
+
+/* =============================================================
+   1. 可调参数
+   ============================================================= */
+:root {
+  /* 正文字号与行高（原主题：16px / 1.5；中文长文嫌挤可改 1.65） */
+  --misty-font-size: 16px;
+  --misty-leading: 1.5;
+  /* 正文列宽交给 Textus 的「文本宽度」设置，这里不写 max-width：
+     原主题的 1800px 约等于满宽，在 Textus 里选「宽」更接近原来的观感。 */
+}
+
+/* =============================================================
+   2. 浅色色板
+   ============================================================= */
+:root {
+  /* 页面与文字 */
+  --misty-bg: #ffffff;
+  --misty-ink: #24292e;
+  --misty-heading: #142331;
+  --misty-muted: #6a737d;
+  --misty-accent: #0057b8;
+
+  /* 强调色：绿（引用、勾选）、浅蓝（h2 竖条、h3 圆点）、列表序号 */
+  --misty-green: #42b983;
+  --misty-green-line: #afec9e;
+  --misty-tint: rgba(66, 185, 131, 0.1);
+  --misty-blue-tint: #cce5ff;
+  --misty-dot: #9ed0ff;
+  --misty-marker: #3c95fa;
+
+  /* 面板、线条、代码、表格 */
+  --misty-hairline: #e1e4e8;
+  --misty-rule: #dfe2e5;
+  --misty-panel: #f6f8fa;
+  --misty-block-border: #e7ebef;
+  --misty-code: #e2f0ff;
+  --misty-stripe: #fafafa;
+  --misty-thead: #e6edf3;
+  --misty-check: #eef1f5;
+  --misty-check-border: #d8dfe6;
+  --misty-check-on: #15ac8e;
+  --misty-select: #b5d6fc;
+  --misty-mark: #fff5c2;
+
+  /* 界面：侧栏、主按钮、状态色、查找、遮罩与阴影 */
+  --misty-sidebar: #f6f8fa;
+  --misty-sidebar-hover: #eef1f4;
+  --misty-sidebar-active: #e2ebf5;
+  --misty-sidebar-active-text: #004a9e;
+  --misty-primary: #0057b8;
+  --misty-danger: #cf222e;
+  --misty-danger-fill: #cf222e;
+  --misty-success: #0e7a5c;
+  --misty-warning: #9a6700;
+  --misty-find: #cfe6ff;
+  --misty-find-active: #7db9f5;
+  --misty-overlay: rgb(20 27 40 / 30%);
+  --misty-shadow-popover: 0 4px 16px rgb(20 27 40 / 10%);
+  --misty-shadow-dialog: 0 16px 48px rgb(20 27 40 / 16%);
+  --misty-shadow-sheet: 0 -8px 24px rgb(20 27 40 / 14%);
+  --misty-shadow-drawer: 8px 0 24px rgb(20 27 40 / 16%);
+  --misty-scheme: light;
+
+  /* 代码高亮、提示块 */
+  --misty-alert-tint: 9%;
+  --misty-token-string: #2f7d4f;
+  --misty-token-number: #b4654d;
+  --misty-token-keyword: #6f42c1;
+  --misty-token-function: #0550ae;
+  --misty-token-tag: #a03e2d;
+  --misty-alert-note: #0057b8;
+  --misty-alert-tip: #1a7f37;
+  --misty-alert-important: #6f42c1;
+  --misty-alert-warning: #9a6700;
+  --misty-alert-caution: #cf222e;
+
+  /* AI 修订标记 */
+  --misty-rev-insert-bg: #e6f4ea;
+  --misty-rev-insert-text: #116329;
+  --misty-rev-insert-hover: #ccead4;
+  --misty-rev-delete-bg: #fdecea;
+  --misty-rev-delete-text: #82071e;
+  --misty-rev-delete-strike: #e5908c;
+  --misty-rev-delete-hover: #f9d5d1;
+
+  /* 渐变与等宽字体两套配色共用，深色里不再重复 */
+  --misty-heading-gradient: linear-gradient(135deg, #07c160 25%, #6467ef);
+  --misty-mono:
+    "JetBrains Mono", "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono",
+    Menlo, Courier, monospace, "PingFang SC", "Microsoft YaHei", "微软雅黑";
+}
+
+/* =============================================================
+   3. 深色色板 · 跟随系统
+   ============================================================= */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* 页面与文字 */
+    --misty-bg: #25272a;
+    --misty-ink: #c4cbd3;
+    --misty-heading: #dbe1e7;
+    --misty-muted: #a0a8b2;
+    --misty-accent: #79c0ff;
+
+    /* 强调色 */
+    --misty-green: #42b983;
+    --misty-green-line: #285d3a;
+    --misty-tint: rgba(66, 185, 131, 0.12);
+    --misty-blue-tint: #1f6feb;
+    --misty-dot: #3c95fa;
+    --misty-marker: #58a6ff;
+
+    /* 面板、线条、代码、表格 */
+    --misty-hairline: #41464d;
+    --misty-rule: #474d55;
+    --misty-panel: #2e3135;
+    --misty-block-border: #41464d;
+    --misty-code: #343b44;
+    --misty-stripe: #2e3135;
+    --misty-thead: #3a4047;
+    --misty-check: #383d43;
+    --misty-check-border: #4a5057;
+    --misty-check-on: #15ac8e;
+    --misty-select: rgba(31, 111, 235, 0.4);
+    --misty-mark: #4d4520;
+
+    /* 界面 */
+    --misty-sidebar: #292c30;
+    --misty-sidebar-hover: #34383d;
+    --misty-sidebar-active: #363b41;
+    --misty-sidebar-active-text: #cfe4ff;
+    --misty-primary: #1f6feb;
+    --misty-danger: #f85149;
+    --misty-danger-fill: #da3633;
+    --misty-success: #3fb950;
+    --misty-warning: #d29922;
+    --misty-find: #1f4e7a;
+    --misty-find-active: #2563a8;
+    --misty-overlay: rgb(0 0 0 / 48%);
+    --misty-shadow-popover: 0 4px 16px rgb(0 0 0 / 24%);
+    --misty-shadow-dialog: 0 16px 48px rgb(0 0 0 / 32%);
+    --misty-shadow-sheet: 0 -8px 24px rgb(0 0 0 / 40%);
+    --misty-shadow-drawer: 8px 0 24px rgb(0 0 0 / 40%);
+    --misty-scheme: dark;
+
+    /* 代码高亮、提示块 */
+    --misty-alert-tint: 14%;
+    --misty-token-string: #8fc47a;
+    --misty-token-number: #d6a35c;
+    --misty-token-keyword: #c793e6;
+    --misty-token-function: #6c9bf7;
+    --misty-token-tag: #e08a97;
+    --misty-alert-note: #4493f8;
+    --misty-alert-tip: #3fb950;
+    --misty-alert-important: #ab7df8;
+    --misty-alert-warning: #d29922;
+    --misty-alert-caution: #f85149;
+
+    /* AI 修订标记 */
+    --misty-rev-insert-bg: #12301f;
+    --misty-rev-insert-text: #7ee2a8;
+    --misty-rev-insert-hover: #1b4530;
+    --misty-rev-delete-bg: #3a1d1f;
+    --misty-rev-delete-text: #ffb3b3;
+    --misty-rev-delete-strike: #a3474a;
+    --misty-rev-delete-hover: #522628;
+  }
+}
+
+/* =============================================================
+   4. 深色色板 · 手动锁定深色
+   —— 与上面那段逐字相同，改一处记得改两处
+   ============================================================= */
+:root[data-theme="dark"] {
+    /* 页面与文字 */
+    --misty-bg: #25272a;
+    --misty-ink: #c4cbd3;
+    --misty-heading: #dbe1e7;
+    --misty-muted: #a0a8b2;
+    --misty-accent: #79c0ff;
+
+    /* 强调色 */
+    --misty-green: #42b983;
+    --misty-green-line: #285d3a;
+    --misty-tint: rgba(66, 185, 131, 0.12);
+    --misty-blue-tint: #1f6feb;
+    --misty-dot: #3c95fa;
+    --misty-marker: #58a6ff;
+
+    /* 面板、线条、代码、表格 */
+    --misty-hairline: #41464d;
+    --misty-rule: #474d55;
+    --misty-panel: #2e3135;
+    --misty-block-border: #41464d;
+    --misty-code: #343b44;
+    --misty-stripe: #2e3135;
+    --misty-thead: #3a4047;
+    --misty-check: #383d43;
+    --misty-check-border: #4a5057;
+    --misty-check-on: #15ac8e;
+    --misty-select: rgba(31, 111, 235, 0.4);
+    --misty-mark: #4d4520;
+
+    /* 界面 */
+    --misty-sidebar: #292c30;
+    --misty-sidebar-hover: #34383d;
+    --misty-sidebar-active: #363b41;
+    --misty-sidebar-active-text: #cfe4ff;
+    --misty-primary: #1f6feb;
+    --misty-danger: #f85149;
+    --misty-danger-fill: #da3633;
+    --misty-success: #3fb950;
+    --misty-warning: #d29922;
+    --misty-find: #1f4e7a;
+    --misty-find-active: #2563a8;
+    --misty-overlay: rgb(0 0 0 / 48%);
+    --misty-shadow-popover: 0 4px 16px rgb(0 0 0 / 24%);
+    --misty-shadow-dialog: 0 16px 48px rgb(0 0 0 / 32%);
+    --misty-shadow-sheet: 0 -8px 24px rgb(0 0 0 / 40%);
+    --misty-shadow-drawer: 8px 0 24px rgb(0 0 0 / 40%);
+    --misty-scheme: dark;
+
+    /* 代码高亮、提示块 */
+    --misty-alert-tint: 14%;
+    --misty-token-string: #8fc47a;
+    --misty-token-number: #d6a35c;
+    --misty-token-keyword: #c793e6;
+    --misty-token-function: #6c9bf7;
+    --misty-token-tag: #e08a97;
+    --misty-alert-note: #4493f8;
+    --misty-alert-tip: #3fb950;
+    --misty-alert-important: #ab7df8;
+    --misty-alert-warning: #d29922;
+    --misty-alert-caution: #f85149;
+
+    /* AI 修订标记 */
+    --misty-rev-insert-bg: #12301f;
+    --misty-rev-insert-text: #7ee2a8;
+    --misty-rev-insert-hover: #1b4530;
+    --misty-rev-delete-bg: #3a1d1f;
+    --misty-rev-delete-text: #ffb3b3;
+    --misty-rev-delete-strike: #a3474a;
+    --misty-rev-delete-hover: #522628;
+}
+
+/* =============================================================
+   5. 映射到 Textus 的变量
+   —— 只写一遍，引用 --misty-*，色板翻它就跟着翻
+   —— :root:root 是为了压过 Textus 推导出来的那套 !important 界面配色
+   ============================================================= */
+:root:root {
+  /* 写作区 */
+  --editor-bg: var(--misty-bg) !important;
+  --editor-text: var(--misty-ink) !important;
+  --editor-muted: var(--misty-muted) !important;
+  --editor-accent: var(--misty-accent) !important;
+  --editor-border: var(--misty-hairline) !important;
+  --editor-code-bg: var(--misty-panel) !important;
+  --editor-quote-border: var(--misty-green) !important;
+  --editor-highlight-bg: var(--misty-mark) !important;
+
+  /* 代码高亮 */
+  --token-string: var(--misty-token-string) !important;
+  --token-number: var(--misty-token-number) !important;
+  --token-keyword: var(--misty-token-keyword) !important;
+  --token-function: var(--misty-token-function) !important;
+  --token-tag: var(--misty-token-tag) !important;
+
+  /* AI 修订标记 */
+  --revision-insert-bg: var(--misty-rev-insert-bg) !important;
+  --revision-insert-text: var(--misty-rev-insert-text) !important;
+  --revision-insert-hover-bg: var(--misty-rev-insert-hover) !important;
+  --revision-delete-bg: var(--misty-rev-delete-bg) !important;
+  --revision-delete-text: var(--misty-rev-delete-text) !important;
+  --revision-delete-strike: var(--misty-rev-delete-strike) !important;
+  --revision-delete-hover-bg: var(--misty-rev-delete-hover) !important;
+
+  /* 窗口、菜单、设置页 */
+  --bg: var(--misty-bg) !important;
+  --chrome-text: var(--misty-ink) !important;
+  --chrome-muted: var(--misty-muted) !important;
+  --chrome-subtle: var(--misty-panel) !important;
+  --border-color: var(--misty-hairline) !important;
+  --chrome-accent: var(--misty-accent) !important;
+  --chrome-primary: var(--misty-primary) !important;
+
+  /* 侧栏 */
+  --sidebar-bg: var(--misty-sidebar) !important;
+  --sidebar-text: var(--misty-ink) !important;
+  --sidebar-hover: var(--misty-sidebar-hover) !important;
+  --sidebar-active: var(--misty-sidebar-active) !important;
+  --sidebar-active-text: var(--misty-sidebar-active-text) !important;
+
+  /* 状态、查找、遮罩与阴影 */
+  --danger: var(--misty-danger) !important;
+  --danger-fill: var(--misty-danger-fill) !important;
+  --success-color: var(--misty-success) !important;
+  --warning-color: var(--misty-warning) !important;
+  --on-fill: #ffffff !important;
+  --find-match-bg: var(--misty-find) !important;
+  --find-match-active-bg: var(--misty-find-active) !important;
+  --overlay-bg: var(--misty-overlay) !important;
+  --shadow-popover: var(--misty-shadow-popover) !important;
+  --shadow-dialog: var(--misty-shadow-dialog) !important;
+  --shadow-sheet: var(--misty-shadow-sheet) !important;
+  --shadow-drawer: var(--misty-shadow-drawer) !important;
+  color-scheme: var(--misty-scheme) !important;
+}
+
+/* Textus 没有给这两个推导值，普通声明就够 */
+:root {
+  --editor-font:
+    "PingFang SC", "Microsoft YaHei", "微软雅黑", "SF UI Text", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --editor-list-gap: 0.25em;
+}
+
+/* 提示块的颜色 Textus 定义在 .milkdown 上（不在 :root），这里补一份 */
+.milkdown {
+  --md-alert-note: var(--misty-alert-note) !important;
+  --md-alert-tip: var(--misty-alert-tip) !important;
+  --md-alert-important: var(--misty-alert-important) !important;
+  --md-alert-warning: var(--misty-alert-warning) !important;
+  --md-alert-caution: var(--misty-alert-caution) !important;
+}
+
+::selection {
+  background: var(--misty-select);
+}
+
+/* =============================================================
+   5. 文档：排版底座
+   ============================================================= */
+#write {
+  /* 给列表序号 / 圆点 / 任务框兜一个定位上下文 —— 它们是绝对定位的
+     ::before，没有定位祖先时会跑到页面底部去。 */
+  position: relative;
+  font-family: var(--editor-font);
+  font-size: var(--misty-font-size);
+  line-height: var(--misty-leading);
+  color: var(--misty-ink);
+  background: var(--misty-bg);
+}
+
+#write p {
+  margin: 0.8em 0;
+}
+
+#write b,
+#write strong {
+  font-weight: 600;
+}
+
+#write a {
+  padding: 0 2px;
+  font-weight: 600;
+  color: var(--misty-accent);
+  text-decoration: none;
+}
+
+#write a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+#write hr {
+  height: 0.25em;
+  margin: 24px 0;
+  padding: 0;
+  background: var(--misty-hairline);
+  border: 0;
+}
+
+/* =============================================================
+   6. 标题：居中 h1 + 绿虚线，h2 蓝竖条，h3 圆点，h4 短横
+   ============================================================= */
+#write :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+  margin: 1.8rem 0 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--misty-heading);
+  caret-color: var(--misty-heading);
+}
+
+/* 渐变只扫过文字本身：宽度收到文字长度，长标题照常换行 */
+#write :is(h1, h2, h3, h4, h5) {
+  width: fit-content;
+  max-width: 100%;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  #write :is(h1, h2, h3, h4, h5) {
+    background-image: var(--misty-heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* 标题里的行内代码保留自己的底色与文字色 */
+  #write :is(h1, h2, h3, h4, h5) code {
+    -webkit-text-fill-color: currentColor;
+  }
+}
+
+#write :is(h1, h2, h3, h4, h5, h6) code {
+  font-size: inherit;
+}
+
+#write h1 {
+  margin: 1em auto 1.2em;
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#write h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 0.2em auto 0;
+  border-bottom: 2px dashed var(--misty-green-line);
+}
+
+#write h2 {
+  padding-left: 9px;
+  font-size: 1.75em;
+  line-height: 1.4;
+  border-left: 6px solid var(--misty-blue-tint);
+}
+
+#write h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+#write h3::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  margin-bottom: 0.18em;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: var(--misty-dot);
+}
+
+#write h4 {
+  font-size: 1.25em;
+}
+
+#write h4::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 2px;
+  margin-right: 8px;
+  margin-bottom: 0.18em;
+  vertical-align: middle;
+  background-color: var(--misty-dot);
+}
+
+#write h5 {
+  font-size: 1em;
+}
+
+/* h6 是「最轻」的一级，保留原主题的灰色，不参与渐变 */
+#write h6 {
+  font-size: 1em;
+  color: var(--misty-muted);
+}
+
+/* =============================================================
+   7. 列表
+   ============================================================= */
+#write ul,
+#write ol {
+  margin: 0.8em 0;
+  padding-left: 30px;
+}
+
+#write li > p,
+#write li > ul,
+#write li > ol {
+  margin: 0.2em 0;
+}
+
+/* 序号与圆点由 Textus 的 ::before 绘制，着色改在这里 */
+#write ol > li::before,
+#write ul > li:not([data-item-type="task"])::before {
+  color: var(--misty-marker);
+}
+
+/* 任务清单：浅灰方块，勾选后变绿 */
+#write li[data-item-type="task"]::before {
+  border-color: var(--misty-check-border);
+  border-radius: 3px;
+  background-color: var(--misty-check);
+}
+
+#write li[data-item-type="task"][data-checked="true"]::before {
+  border-color: var(--misty-check-on);
+  background-color: var(--misty-check-on);
+}
+
+/* =============================================================
+   8. 引用与提示块
+   ============================================================= */
+#write blockquote {
+  margin: 0.8em 0;
+  padding: 10px 15px;
+  color: var(--misty-muted);
+  background-color: var(--misty-tint);
+  border-left: 4px solid var(--misty-green);
+  border-radius: 0.3rem;
+}
+
+#write blockquote blockquote {
+  padding-right: 0;
+}
+
+/* 提示块保留各自的强调色，底色淡淡地跟上 */
+#write blockquote.md-alert {
+  border-left-color: var(--md-alert-accent);
+  background-color: color-mix(
+    in srgb,
+    var(--md-alert-accent) var(--misty-alert-tint),
+    var(--misty-bg)
+  );
+}
+
+/* =============================================================
+   9. 表格：细线、条纹、整表居中
+   ============================================================= */
+#write table {
+  width: auto;
+  margin: 0.8em auto;
+  padding: 0;
+  word-break: initial;
+  border-collapse: collapse;
+}
+
+#write tr {
+  border-top: 1px solid var(--misty-rule);
+}
+
+#write thead,
+#write tr[data-is-header] {
+  background-color: var(--misty-thead);
+}
+
+#write tbody tr:nth-child(2n) {
+  background-color: var(--misty-stripe);
+}
+
+/* 单元格里的段落不带正文段距，否则每格都被撑高 */
+#write :is(th, td) p {
+  margin: 0;
+}
+
+#write th,
+#write td {
+  padding: 6px 13px;
+  text-align: left;
+  border: 1px solid var(--misty-rule);
+}
+
+#write th {
+  font-weight: 600;
+}
+
+/* =============================================================
+   10. 代码：行内浅蓝药丸，块级灰面板
+   ============================================================= */
+#write :is(pre, code, kbd, samp, .md-fences) {
+  font-family: var(--misty-mono);
+}
+
+#write code,
+#write tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: var(--misty-ink);
+  background-color: var(--misty-code);
+  border-radius: 3px;
+}
+
+#write .code-block-wrapper {
+  background-color: var(--misty-panel);
+  border: 1px solid var(--misty-block-border);
+  border-radius: 6px;
+}
+
+#write .md-fences {
+  color: var(--misty-ink);
+  background-color: var(--misty-panel);
+}
+
+#write pre {
+  margin: 0;
+  padding: 12px 1em;
+  font-size: 90%;
+  line-height: 1.5;
+}
+
+#write pre code {
+  font-size: 100%;
+}
+
+/* 复制 / 语言按钮压在灰面板上，给个同色底 */
+#write .code-block-copy,
+#write .code-block-select-all,
+#write .code-block-language-select {
+  background-color: var(--misty-panel);
+}
+
+/* =============================================================
+   11. 文档元信息
+   ============================================================= */
+#write .md-meta {
+  color: var(--misty-muted);
+}
+
+#write pre.md-meta-block {
+  margin-top: 0;
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--misty-muted);
+  background-color: var(--misty-panel);
+  border: 0;
+  border-radius: 3px;
+}
+
+@media print {
+  #write b,
+  #write strong {
+    font-weight: 600;
+  }
+
+  #write pre,
+  #write table {
+    page-break-inside: avoid;
+  }
+}
