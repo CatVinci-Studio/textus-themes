@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "安静而窄：行宽短、标题朴素，嵌套列表用破折号，引用无边框、文字偏灰，表格不加框线。参考 José Daniel Mourão 的 Sanctum。"
+    }
+  }
 }

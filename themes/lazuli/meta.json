@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "靛蓝而清爽：标题居中，二级标题衬在纯蓝色带上，标题用衬线、正文用无衬线，粗体和列表符号为蓝色。参考 YiNN 的 Lapis。"
+    }
+  }
 }

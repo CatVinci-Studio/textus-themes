@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "专注而明亮：标题衬着柔和的色块，引用有粗竖条和底色，强调用洋红，表格隔行着色。参考 Chris Grieser 的 Shimmering Focus。"
+    }
+  }
 }

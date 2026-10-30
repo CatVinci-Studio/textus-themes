@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "柔和而有书卷气：温暖的黎明白天页和低调的黄昏夜间页，正文用 Georgia 衬线，鸢尾紫点缀，玫瑰色引用线，六级标题各有柔和的颜色。基于 Rosé Pine 配色。"
+    }
+  }
 }

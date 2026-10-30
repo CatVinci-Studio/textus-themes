@@ -16,5 +16,10 @@
     "preview.png",
     "preview-dark.png"
   ],
-  "darkCss": "theme-dark.css"
+  "darkCss": "theme-dark.css",
+  "l10n": {
+    "zh": {
+      "description": "干净现代：纯白底上的清晰无衬线字体，紧凑的粗体标题，紫罗兰色点缀标题、链接、引用和表头。"
+    }
+  }
 }

@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "干净有序：白底上的系统无衬线字体，二级以下标题依次为蓝、黄、红，引用为绿色斜体，任务框为圆角，代码低调。参考 colineckert 和 Stephan Ango 的 Things。"
+    }
+  }
 }

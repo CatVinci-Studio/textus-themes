@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "等宽又带蜂蜜色：全文用代码字体，琥珀色点缀，分隔线在一个小标记两侧渐隐。参考 Santi Younger 的 Wasp。"
+    }
+  }
 }

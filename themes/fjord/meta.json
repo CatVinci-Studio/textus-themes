@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "极地般平静：白天是雪暴般的浅色页，夜里是极夜，霜蓝色链接，双线引用，夜间标题带极光色。基于 Nord 配色。"
+    }
+  }
 }

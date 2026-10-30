@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "纸上的墨：温暖的纸色页和近黑的夜间页，标题如墨，链接为青色，代码低调。基于 Steph Ango 的 Flexoki，https://stephango.com/flexoki。"
+    }
+  }
 }

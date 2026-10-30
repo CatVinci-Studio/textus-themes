@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
+    }
+  }
 }

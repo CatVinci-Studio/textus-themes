@@ -17,7 +17,12 @@
       "previews": [
         "themes/article/preview.png",
         "themes/article/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
+        }
+      }
     },
     {
       "id": "cloister",
@@ -33,7 +38,12 @@
       "previews": [
         "themes/cloister/preview.png",
         "themes/cloister/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "安静而窄：行宽短、标题朴素，嵌套列表用破折号，引用无边框、文字偏灰，表格不加框线。参考 José Daniel Mourão 的 Sanctum。"
+        }
+      }
     },
     {
       "id": "codex-mono",
@@ -49,7 +59,12 @@
       "previews": [
         "themes/codex-mono/preview.png",
         "themes/codex-mono/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
+        }
+      }
     },
     {
       "id": "dawn-dusk",
@@ -65,7 +80,14 @@
       "previews": [
         "themes/dawn-dusk/preview.png",
         "themes/dawn-dusk/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "柔和而有书卷气：温暖的黎明白天页和低调的黄昏夜间页，正文用 Georgia 衬线，鸢尾紫点缀，玫瑰色引用线，六级标题各有柔和的颜色。基于 Rosé Pine 配色。"
+        }
+      },
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "fjord",
@@ -81,7 +103,14 @@
       "previews": [
         "themes/fjord/preview.png",
         "themes/fjord/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "极地般平静：白天是雪暴般的浅色页，夜里是极夜，霜蓝色链接，双线引用，夜间标题带极光色。基于 Nord 配色。"
+        }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "hive",
@@ -97,7 +126,12 @@
       "previews": [
         "themes/hive/preview.png",
         "themes/hive/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "等宽又带蜂蜜色：全文用代码字体，琥珀色点缀，分隔线在一个小标记两侧渐隐。参考 Santi Younger 的 Wasp。"
+        }
+      }
     },
     {
       "id": "inkpaper",
@@ -113,7 +147,12 @@
       "previews": [
         "themes/inkpaper/preview.png",
         "themes/inkpaper/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "纸上的墨：温暖的纸色页和近黑的夜间页，标题如墨，链接为青色，代码低调。基于 Steph Ango 的 Flexoki，https://stephango.com/flexoki。"
+        }
+      }
     },
     {
       "id": "lantern",
@@ -129,7 +168,12 @@
       "previews": [
         "themes/lantern/preview.png",
         "themes/lantern/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "专注而明亮：标题衬着柔和的色块，引用有粗竖条和底色，强调用洋红，表格隔行着色。参考 Chris Grieser 的 Shimmering Focus。"
+        }
+      }
     },
     {
       "id": "latte-mocha",
@@ -145,7 +189,14 @@
       "previews": [
         "themes/latte-mocha/preview.png",
         "themes/latte-mocha/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "适合长时间写作的柔和粉彩：白天是清爽的拿铁色，夜里是深摩卡色，淡紫点缀，薰衣草色引用，粗体为宝石蓝。Catppuccin 配色的非官方移植。"
+        }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "lazuli",
@@ -161,7 +212,12 @@
       "previews": [
         "themes/lazuli/preview.png",
         "themes/lazuli/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "靛蓝而清爽：标题居中，二级标题衬在纯蓝色带上，标题用衬线、正文用无衬线，粗体和列表符号为蓝色。参考 YiNN 的 Lapis。"
+        }
+      }
     },
     {
       "id": "neon-night",
@@ -177,7 +233,14 @@
       "previews": [
         "themes/neon-night/preview.png",
         "themes/neon-night/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "城市灯火：白天是柔和的灰色页，夜里是深蓝色页，洋红和蓝色点缀，标题按级别着色，分隔线渐隐。基于 Tokyo Night 配色。"
+        }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "nosferatu",
@@ -193,7 +256,12 @@
       "previews": [
         "themes/nosferatu/preview.png",
         "themes/nosferatu/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "鲜明的夜色：经典的深紫灰夜间页配霓虹色点缀，白天是温暖的奶油色页、点缀更深。基于 Dracula 和 Alucard 配色。"
+        }
+      }
     },
     {
       "id": "retro-wood",
@@ -209,7 +277,12 @@
       "previews": [
         "themes/retro-wood/preview.png",
         "themes/retro-wood/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "温暖复古：褪色的奶油色页和深木色页，六级标题各有颜色，橙色引用，金色粗体。基于 gruvbox 配色。"
+        }
+      }
     },
     {
       "id": "teal-paper",
@@ -225,7 +298,12 @@
       "previews": [
         "themes/teal-paper/preview.png",
         "themes/teal-paper/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "带一点颜色的暖纸：青绿色点缀，每级标题颜色不同，橙色粗体，行内代码为胶囊形。参考 ivaneye 的 OnePage。"
+        }
+      }
     },
     {
       "id": "tidepool",
@@ -241,7 +319,12 @@
       "previews": [
         "themes/tidepool/preview.png",
         "themes/tidepool/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "清新活泼：二级标题衬在薄荷色胶囊上，较小的标题前有小标记，虚线分隔，引用带底色，夜间是平静的深海色。参考 sumruler 的 Phycat。"
+        }
+      }
     },
     {
       "id": "tidy",
@@ -257,7 +340,12 @@
       "previews": [
         "themes/tidy/preview.png",
         "themes/tidy/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "干净有序：白底上的系统无衬线字体，二级以下标题依次为蓝、黄、红，引用为绿色斜体，任务框为圆角，代码低调。参考 colineckert 和 Stephan Ango 的 Things。"
+        }
+      }
     },
     {
       "id": "plain",
@@ -273,7 +361,12 @@
       "previews": [
         "themes/plain/preview.png",
         "themes/plain/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
+        }
+      }
     },
     {
       "id": "lumen",
@@ -289,7 +382,12 @@
       "previews": [
         "themes/lumen/preview.png",
         "themes/lumen/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "干净现代：纯白底上的清晰无衬线字体，紧凑的粗体标题，紫罗兰色点缀标题、链接、引用和表头。"
+        }
+      }
     },
     {
       "id": "manuscript",
@@ -305,7 +403,12 @@
       "previews": [
         "themes/manuscript/preview.png",
         "themes/manuscript/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
+        }
+      }
     },
     {
       "id": "midnight-ink",
@@ -321,7 +424,12 @@
       "previews": [
         "themes/midnight-ink/preview.png",
         "themes/midnight-ink/preview-dark.png"
-      ]
+      ],
+      "l10n": {
+        "zh": {
+          "description": "夜间写作的深色页：梅子炭色底上的暖白文字，琥珀色链接，书卷气的衬线字体，对比度温和舒适。"
+        }
+      }
     }
   ]
 }

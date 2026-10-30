@@ -36,6 +36,8 @@ export function buildIndex(metas, installs = {}) {
       css: `themes/${m.id}/${m.css ?? "theme.css"}`,
       ...(m.darkCss ? { darkCss: `themes/${m.id}/${m.darkCss}` } : {}),
       previews: (m.previews ?? []).map((p) => `themes/${m.id}/${p}`),
+      // Words in another UI language (`zh`), over the English ones.
+      ...(m.l10n ? { l10n: m.l10n } : {}),
       ...installs[m.id],
     }));
   const updated = themes.reduce((max, t) => (String(t.updated) > max ? String(t.updated) : max), "");
