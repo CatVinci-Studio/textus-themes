@@ -1,8 +1,22 @@
 {
   "version": 1,
-  "updated": "2026-10-29T08:00:00Z",
-  "count": 20,
+  "updated": "2026-10-31T10:34:28Z",
+  "count": 21,
   "themes": [
+    {
+      "id": "misty",
+      "name": "Misty",
+      "author": "myshzzx",
+      "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6523503165",
+      "created": "2026-10-30T13:03:56Z",
+      "updated": "2026-10-31T10:34:28Z",
+      "css": "themes/misty/theme.css",
+      "previews": [
+        "themes/misty/preview.png"
+      ]
+    },
     {
       "id": "article",
       "name": "Article",
