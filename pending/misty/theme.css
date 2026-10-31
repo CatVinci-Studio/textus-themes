@@ -8,6 +8,7 @@
  * Textus 主题 · Misty（雾光）
  * ---------------------------------------------------------------
  * 由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT）
+ * 参考 VLOOK https://github.com/MadMaxChow/VLOOK
  * 目标编辑器：Textus —— https://github.com/CatVinci-Studio/Textus
  *
  * 安装：Textus › 设置 › 主题 › 导入主题 › 选中本文件
@@ -475,16 +476,22 @@
   border-bottom: 2px dashed var(--misty-green-line);
 }
 
+/* Textus 自带的标题装饰（h2 下划线、h3 左竖条、h4 圆点）在导入主题时本该关掉，
+   部分版本没关干净，会叠在 Misty 自己的标记旁边。下面几处显式抹掉。 */
 #write h2 {
   padding-left: 9px;
+  padding-bottom: 0;
   font-size: 1.75em;
   line-height: 1.4;
   border-left: 6px solid var(--misty-blue-tint);
+  border-bottom: 0;
 }
 
 #write h3 {
+  padding-left: 0;
   font-size: 1.5em;
   line-height: 1.43;
+  border-left: 0;
 }
 
 #write h3::before {
@@ -512,6 +519,7 @@
   margin-bottom: 0.18em;
   vertical-align: middle;
   background-color: var(--misty-dot);
+  border-radius: 0;
 }
 
 #write h5 {
