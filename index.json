@@ -64,7 +64,9 @@
         "zh": {
           "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
         }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "dawn-dusk",
@@ -366,7 +368,9 @@
         "zh": {
           "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
         }
-      }
+      },
+      "installs": 0,
+      "installs30": 0
     },
     {
       "id": "lumen",
@@ -408,7 +412,9 @@
         "zh": {
           "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
         }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "midnight-ink",
