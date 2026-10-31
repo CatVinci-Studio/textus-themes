@@ -3,7 +3,7 @@
   "name": "Misty",
   "author": "myshzzx",
   "author_id": 2025090,
-  "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK",
+  "description": "Misty from Typora, made over for Textus: soft green-to-blue headings, numbered sections and gentle callouts, one file that follows light and dark. After Misty by E-Tiger Studio (MIT), with ideas from VLOOK.",
   "license": "MIT",
   "issue": 1,
   "comment_id": 6523503165,
@@ -16,5 +16,10 @@
     "preview.png"
   ],
   "approved_by": "ChengAoShen",
-  "approved_at": "2026-10-31T13:16:39Z"
+  "approved_at": "2026-10-31T13:16:39Z",
+  "l10n": {
+    "zh": {
+      "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
+    }
+  }
 }
