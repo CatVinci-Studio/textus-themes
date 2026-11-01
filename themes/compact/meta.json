@@ -3,7 +3,7 @@
   "name": "Compact",
   "author": "CatVinci-Studio",
   "author_id": null,
-  "description": "More on a screen without crowding it: a 15 px sans with tight lines and paragraphs, small headings set apart by weight rather than size, and lists that sit close. For lists, logs and quick notes. After Shimmering Focus's density, our own CSS.",
+  "description": "More on a screen without crowding it: a 15 px sans with tight lines and paragraphs on warm Gruvbox paper, headings set apart by colour rather than size. For lists, logs and quick notes. Density and colours after Shimmering Focus, our own CSS.",
   "license": "MIT",
   "issue": null,
   "comment_id": null,

@@ -7,41 +7,41 @@
 /* More on a screen: smaller type, tight lines and paragraphs, small headings - for lists, logs and quick notes. */
 
 :root {
-  --editor-bg: #ffffff;
-  --editor-text: #1d2125;
-  --editor-muted: #5d6670;
-  --editor-border: #e3e6ea;
-  --editor-quote-border: #2563c9;
-  --editor-accent: #2563c9;
-  --editor-code-bg: #f3f5f7;
-  --editor-highlight-bg: rgba(255, 213, 0, 0.35);
+  --editor-bg: #fbf1c7;
+  --editor-text: #3c3836;
+  --editor-muted: #665c54;
+  --editor-border: #e5d5a8;
+  --editor-quote-border: #427b58;
+  --editor-accent: #108189;
+  --editor-code-bg: #f2e5bc;
+  --editor-highlight-bg: rgba(250, 189, 47, 0.35);
   --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
-  --theme-link: #2563c9;
-  --theme-strong: #1d2125;
+  --theme-link: #108189;
+  --theme-strong: #9d0006;
   --theme-quote-bg: transparent;
-  --theme-quote-text: #5d6670;
-  --theme-code-text: #1d2125;
-  --theme-pre-bg: #f3f5f7;
-  --theme-th-bg: #f3f5f7;
-  --theme-th-text: #1d2125;
-  --theme-selection: rgba(255, 213, 0, 0.35);
-  --theme-h1: #1d2125;
-  --theme-h2: #1d2125;
-  --theme-h3: #1d2125;
-  --theme-h4: #2563c9;
-  --theme-h5: #5d6670;
-  --theme-h6: #5d6670;
-  --tone-blue: #2563c9;
-  --tone-green: #24804a;
-  --tone-orange: #b85f12;
-  --tone-purple: #6d4fc0;
-  --tone-red: #c23b3b;
-  --tone-teal: #13817f;
-  --tone-yellow: #977100;
-  --tone-pink: #b0407f;
-  --tone-gray: #646d78;
+  --theme-quote-text: #504945;
+  --theme-code-text: #3c3836;
+  --theme-pre-bg: #f2e5bc;
+  --theme-th-bg: #f2e5bc;
+  --theme-th-text: #3c3836;
+  --theme-selection: rgba(250, 189, 47, 0.35);
+  --theme-h1: #af3a03;
+  --theme-h2: #79740e;
+  --theme-h3: #b57614;
+  --theme-h4: #9d0006;
+  --theme-h5: #427b58;
+  --theme-h6: #076678;
+  --tone-blue: #076678;
+  --tone-green: #79740e;
+  --tone-orange: #af3a03;
+  --tone-purple: #8f3f71;
+  --tone-red: #9d0006;
+  --tone-teal: #427b58;
+  --tone-yellow: #b57614;
+  --tone-pink: #b16286;
+  --tone-gray: #7c6f64;
 }
 
 body {
@@ -55,12 +55,12 @@ body {
   font-size: 15px;
   line-height: 1.5;
   color-scheme: light;
-  --token-keyword: #6d4fc0;
-  --token-function: #2563c9;
-  --token-string: #24804a;
-  --token-number: #b85f12;
-  --token-tag: #c23b3b;
-  --token-comment: #8b949e;
+  --token-keyword: #8f3f71;
+  --token-function: #076678;
+  --token-string: #79740e;
+  --token-number: #af3a03;
+  --token-tag: #9d0006;
+  --token-comment: #928374;
 }
 
 #write h1,

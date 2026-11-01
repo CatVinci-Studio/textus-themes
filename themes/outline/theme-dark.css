@@ -7,41 +7,42 @@
 /* Clean lists and plans: a light sans, blue headings, coloured bullets and roomy list items. */
 
 :root {
-  --editor-bg: #1c1e21;
-  --editor-text: #e6e8eb;
-  --editor-muted: #9aa1a9;
-  --editor-border: #30343a;
-  --editor-quote-border: #6ea4f5;
-  --editor-accent: #6ea4f5;
-  --editor-code-bg: #25282c;
-  --editor-highlight-bg: rgba(255, 220, 60, 0.22);
+  --editor-bg: #1c2126;
+  --editor-text: #dde2e8;
+  --editor-muted: #9aa3ad;
+  --editor-border: #2f353d;
+  --editor-quote-border: #3eb4bf;
+  --editor-accent: #5a9cf5;
+  --editor-code-bg: #252b32;
+  --editor-highlight-bg: hsla(50, 100%, 50%, 0.18);
   --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
-  --theme-link: #6ea4f5;
-  --theme-strong: #e6e8eb;
+  --theme-link: #5a9cf5;
+  --theme-strong: #ff82b2;
   --theme-quote-bg: transparent;
-  --theme-quote-text: #9aa1a9;
-  --theme-code-text: #e6e8eb;
-  --theme-pre-bg: #25282c;
-  --theme-th-bg: #25282c;
-  --theme-th-text: #e6e8eb;
-  --theme-selection: rgba(255, 220, 60, 0.22);
-  --theme-h1: #8ab6f7;
-  --theme-h2: #8ab6f7;
-  --theme-h3: #e6e8eb;
-  --theme-h4: #e6e8eb;
-  --theme-h5: #9aa1a9;
-  --theme-h6: #9aa1a9;
-  --tone-blue: #6ea4f5;
-  --tone-green: #6cc58f;
-  --tone-orange: #f0a865;
-  --tone-purple: #b49af0;
-  --tone-red: #f08c8c;
-  --tone-teal: #5cc8c8;
-  --tone-yellow: #e3c25a;
-  --tone-pink: #ee93c4;
-  --tone-gray: #9aa1a9;
+  --theme-quote-text: #b8c0c9;
+  --theme-code-text: #dde2e8;
+  --theme-pre-bg: #252b32;
+  --theme-th-bg: #252b32;
+  --theme-th-text: #dde2e8;
+  --theme-selection: hsla(50, 100%, 50%, 0.18);
+  --theme-h1: #f2f4f7;
+  --theme-h2: #f2f4f7;
+  --theme-h3: #5a9cf5;
+  --theme-h4: #e5b567;
+  --theme-h5: #f06a6a;
+  --theme-h6: #9aa3ad;
+  --tone-blue: #5a9cf5;
+  --tone-green: #5cc28a;
+  --tone-orange: #f09a63;
+  --tone-purple: #b8a3e0;
+  --tone-red: #f06a6a;
+  --tone-teal: #3eb4bf;
+  --tone-yellow: #e5b567;
+  --tone-pink: #ff82b2;
+  --tone-gray: #9aa3ad;
+  --theme-em: #ff82b2;
 }
 
 body {
@@ -55,11 +56,11 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color-scheme: dark;
-  --token-keyword: #b49af0;
-  --token-function: #6ea4f5;
-  --token-string: #6cc58f;
-  --token-number: #f0a865;
-  --token-tag: #f08c8c;
+  --token-keyword: #b8a3e0;
+  --token-function: #5a9cf5;
+  --token-string: #5cc28a;
+  --token-number: #f09a63;
+  --token-tag: #f06a6a;
   --token-comment: #6e7681;
 }
 
@@ -162,6 +163,7 @@ body {
 #write a { text-decoration: none; border-bottom: 1px solid currentColor; }
 #write li { margin: 0.35em 0; }
 #write li::marker { color: var(--editor-accent); font-weight: 600; }
+#write em { color: var(--theme-em); }
 #write h1 { font-size: 1.9em; }
 #write h2 { font-size: 1.35em; padding-bottom: 0.2em; border-bottom: 1px solid var(--editor-border); }
 #write blockquote { border-left: 3px solid var(--editor-accent); color: var(--theme-quote-text); }

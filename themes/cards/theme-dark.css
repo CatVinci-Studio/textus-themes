@@ -7,41 +7,41 @@
 /* Sections and cards: quotes, code, tables and callouts each in a rounded card, level-2 headings over a rule. */
 
 :root {
-  --editor-bg: #16181c;
-  --editor-text: #e3e6ea;
-  --editor-muted: #9aa3ad;
-  --editor-border: #2b3038;
-  --editor-quote-border: #7aa7f0;
-  --editor-accent: #7aa7f0;
-  --editor-code-bg: #1e2127;
-  --editor-highlight-bg: rgba(250, 204, 21, 0.2);
+  --editor-bg: #1a1a1a;
+  --editor-text: #d3d5de;
+  --editor-muted: #9598a7;
+  --editor-border: #363636;
+  --editor-quote-border: #8591e0;
+  --editor-accent: #8591e0;
+  --editor-code-bg: #262626;
+  --editor-highlight-bg: hsla(48, 100%, 50%, 0.18);
   --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
-  --theme-link: #7aa7f0;
-  --theme-strong: #e3e6ea;
-  --theme-quote-bg: #1e2127;
-  --theme-quote-text: #9aa3ad;
-  --theme-code-text: #e3e6ea;
-  --theme-pre-bg: #1e2127;
-  --theme-th-bg: #23272e;
-  --theme-th-text: #e3e6ea;
-  --theme-selection: rgba(250, 204, 21, 0.2);
-  --theme-h1: #f3f5f7;
-  --theme-h2: #f3f5f7;
-  --theme-h3: #e3e6ea;
-  --theme-h4: #e3e6ea;
-  --theme-h5: #9aa3ad;
-  --theme-h6: #9aa3ad;
-  --tone-blue: #7aa7f0;
-  --tone-green: #6cc794;
-  --tone-orange: #e5a265;
-  --tone-purple: #b39ae8;
-  --tone-red: #ef8a8a;
-  --tone-teal: #5fc4c4;
-  --tone-yellow: #d8b65a;
-  --tone-pink: #e48bbf;
-  --tone-gray: #9aa3ad;
+  --theme-link: #97a2ed;
+  --theme-strong: #d3d5de;
+  --theme-quote-bg: #242424;
+  --theme-quote-text: #9598a7;
+  --theme-code-text: #d3d5de;
+  --theme-pre-bg: #262626;
+  --theme-th-bg: #2a2a2a;
+  --theme-th-text: #d3d5de;
+  --theme-selection: hsla(48, 100%, 50%, 0.18);
+  --theme-h1: #eaebf0;
+  --theme-h2: #eaebf0;
+  --theme-h3: #eaebf0;
+  --theme-h4: #eaebf0;
+  --theme-h5: #9598a7;
+  --theme-h6: #9598a7;
+  --tone-blue: #89bdf4;
+  --tone-green: #7cd37c;
+  --tone-orange: #fbbb83;
+  --tone-purple: #cb9eff;
+  --tone-red: #ff7881;
+  --tone-teal: #86dfe2;
+  --tone-yellow: #ffe88b;
+  --tone-pink: #f2b6de;
+  --tone-gray: #999999;
 }
 
 body {
@@ -55,12 +55,12 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color-scheme: dark;
-  --token-keyword: #b39ae8;
-  --token-function: #7aa7f0;
-  --token-string: #6cc794;
-  --token-number: #e5a265;
-  --token-tag: #ef8a8a;
-  --token-comment: #6e7681;
+  --token-keyword: #cb9eff;
+  --token-function: #89bdf4;
+  --token-string: #7cd37c;
+  --token-number: #fbbb83;
+  --token-tag: #ff7881;
+  --token-comment: #666666;
 }
 
 #write h1,

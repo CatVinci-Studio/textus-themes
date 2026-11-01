@@ -7,42 +7,42 @@
 /* A book on warm paper: a large serif, wide lines, red bold, blue italics and amber links. */
 
 :root {
-  --editor-bg: #f7f1e6;
-  --editor-text: #2d2620;
-  --editor-muted: #6e6254;
-  --editor-border: #e2d7c5;
-  --editor-quote-border: #a8322d;
-  --editor-accent: #a0761c;
-  --editor-code-bg: #efe6d6;
-  --editor-highlight-bg: rgba(214, 160, 40, 0.3);
+  --editor-bg: #f8f5f1;
+  --editor-text: #593e22;
+  --editor-muted: #836b49;
+  --editor-border: #e7ddcf;
+  --editor-quote-border: #bf3f36;
+  --editor-accent: #c08716;
+  --editor-code-bg: #f0e9e0;
+  --editor-highlight-bg: hsla(44, 100%, 50%, 0.25);
   --editor-font: "Charter", "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
   --theme-heading-font: "Charter", "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
   --theme-mono: var(--font-mono, monospace);
-  --theme-link: #a0761c;
-  --theme-strong: #a8322d;
+  --theme-link: #b78115;
+  --theme-strong: #bf3f36;
   --theme-quote-bg: transparent;
-  --theme-quote-text: #5a4f43;
-  --theme-code-text: #2d2620;
-  --theme-pre-bg: #efe6d6;
-  --theme-th-bg: #efe6d6;
-  --theme-th-text: #2d2620;
-  --theme-selection: rgba(214, 160, 40, 0.3);
-  --theme-h1: #2d2620;
-  --theme-h2: #2d2620;
-  --theme-h3: #3d342b;
-  --theme-h4: #3d342b;
-  --theme-h5: #6e6254;
-  --theme-h6: #6e6254;
-  --tone-blue: #2f5f9e;
-  --tone-green: #4f7a32;
-  --tone-orange: #b0601a;
-  --tone-purple: #7a4f9e;
-  --tone-red: #a8322d;
-  --tone-teal: #2f7c78;
-  --tone-yellow: #a0761c;
-  --tone-pink: #a8467a;
-  --tone-gray: #7a6f62;
-  --theme-em: #2f5f9e;
+  --theme-quote-text: #836b49;
+  --theme-code-text: #593e22;
+  --theme-pre-bg: #f0e9e0;
+  --theme-th-bg: #f0e9e0;
+  --theme-th-text: #593e22;
+  --theme-selection: hsla(44, 100%, 50%, 0.25);
+  --theme-h1: #432e14;
+  --theme-h2: #432e14;
+  --theme-h3: #432e14;
+  --theme-h4: #432e14;
+  --theme-h5: #836b49;
+  --theme-h6: #836b49;
+  --tone-blue: #3079b0;
+  --tone-green: #439366;
+  --tone-orange: #cb7a2a;
+  --tone-purple: #7063bb;
+  --tone-red: #c93636;
+  --tone-teal: #3e8e8b;
+  --tone-yellow: #c18a0b;
+  --tone-pink: #bf5a69;
+  --tone-gray: #998466;
+  --theme-em: #22729b;
 }
 
 body {
@@ -56,12 +56,12 @@ body {
   font-size: 19px;
   line-height: 1.9;
   color-scheme: light;
-  --token-keyword: #7a4f9e;
-  --token-function: #2f5f9e;
-  --token-string: #4f7a32;
-  --token-number: #b0601a;
-  --token-tag: #a8322d;
-  --token-comment: #968a7a;
+  --token-keyword: #7063bb;
+  --token-function: #3079b0;
+  --token-string: #439366;
+  --token-number: #cb7a2a;
+  --token-tag: #c93636;
+  --token-comment: #ad9c85;
 }
 
 #write h1,
