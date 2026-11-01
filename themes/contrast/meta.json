@@ -1,0 +1,19 @@
+{
+  "id": "contrast",
+  "name": "Contrast",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Clear for long reading and tired eyes: near-black on white by day and white on near-black at night, 18 px type, links always underlined, a firm rule under top headings and code set apart by a border. Meets WCAG AAA for body text. After ITS's legibility, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}

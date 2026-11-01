@@ -1,0 +1,172 @@
+/*! Compact (dark) - a Textus theme by @CatVinci-Studio
+ *  Density after Shimmering Focus by Chris Grieser (MIT), https://github.com/chrisgrieser/shimmering-focus - our own CSS
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* More on a screen: smaller type, tight lines and paragraphs, small headings - for lists, logs and quick notes. */
+
+:root {
+  --editor-bg: #18191b;
+  --editor-text: #e4e6e9;
+  --editor-muted: #959ea8;
+  --editor-border: #2c2f33;
+  --editor-quote-border: #6f9cf0;
+  --editor-accent: #6f9cf0;
+  --editor-code-bg: #222428;
+  --editor-highlight-bg: rgba(255, 213, 0, 0.2);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #6f9cf0;
+  --theme-strong: #e4e6e9;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #959ea8;
+  --theme-code-text: #e4e6e9;
+  --theme-pre-bg: #222428;
+  --theme-th-bg: #222428;
+  --theme-th-text: #e4e6e9;
+  --theme-selection: rgba(255, 213, 0, 0.2);
+  --theme-h1: #f2f3f5;
+  --theme-h2: #f2f3f5;
+  --theme-h3: #f2f3f5;
+  --theme-h4: #6f9cf0;
+  --theme-h5: #959ea8;
+  --theme-h6: #959ea8;
+  --tone-blue: #6f9cf0;
+  --tone-green: #5cbf86;
+  --tone-orange: #e0975a;
+  --tone-purple: #a993ea;
+  --tone-red: #ec8080;
+  --tone-teal: #4fbdbb;
+  --tone-yellow: #d1b053;
+  --tone-pink: #de86b8;
+  --tone-gray: #959ea8;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 15px;
+  line-height: 1.5;
+  color-scheme: dark;
+  --token-keyword: #a993ea;
+  --token-function: #6f9cf0;
+  --token-string: #5cbf86;
+  --token-number: #e0975a;
+  --token-tag: #ec8080;
+  --token-comment: #6e7681;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write { --doc-gap: 0.45em; --doc-list-gap: 0.15em; }
+#write p { margin: 0.45em 0; }
+#write h1 { font-size: 1.5em; margin: 1em 0 0.4em; }
+#write h2 { font-size: 1.25em; margin: 1em 0 0.35em; }
+#write h3 { font-size: 1.1em; margin: 0.9em 0 0.3em; }
+#write h4, #write h5, #write h6 { font-size: 1em; margin: 0.8em 0 0.25em; }
+#write ul, #write ol { padding-left: 1.3em; }
+#write pre { padding: 0.6em 0.9em; }
+#write blockquote { padding: 0.15em 0.9em; }
+#write th, #write td { padding: 0.3em 0.75em; }
+#write th > p, #write td > p { margin: 0; }

@@ -1,0 +1,172 @@
+/*! Reading Room (dark) - a Textus theme by @CatVinci-Studio
+ *  Mood after Primary by ceciliamay (an idea only; our own CSS)
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* A book on warm paper: a large serif, wide lines, red bold, blue italics and amber links. */
+
+:root {
+  --editor-bg: #211b16;
+  --editor-text: #ece2d2;
+  --editor-muted: #b3a796;
+  --editor-border: #3a3029;
+  --editor-quote-border: #e58f87;
+  --editor-accent: #dcb763;
+  --editor-code-bg: #2b241e;
+  --editor-highlight-bg: rgba(220, 183, 99, 0.25);
+  --editor-font: "Charter", "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --theme-heading-font: "Charter", "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #dcb763;
+  --theme-strong: #e58f87;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #cfc3b1;
+  --theme-code-text: #ece2d2;
+  --theme-pre-bg: #2b241e;
+  --theme-th-bg: #2b241e;
+  --theme-th-text: #ece2d2;
+  --theme-selection: rgba(220, 183, 99, 0.25);
+  --theme-h1: #f5ecdd;
+  --theme-h2: #f5ecdd;
+  --theme-h3: #ece2d2;
+  --theme-h4: #ece2d2;
+  --theme-h5: #b3a796;
+  --theme-h6: #b3a796;
+  --tone-blue: #8fb1e0;
+  --tone-green: #9cc47e;
+  --tone-orange: #e3a26a;
+  --tone-purple: #c0a1e0;
+  --tone-red: #e58f87;
+  --tone-teal: #7fc2bd;
+  --tone-yellow: #dcb763;
+  --tone-pink: #e09ac0;
+  --tone-gray: #b3a796;
+  --theme-em: #8fb1e0;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 19px;
+  line-height: 1.9;
+  color-scheme: dark;
+  --token-keyword: #c0a1e0;
+  --token-function: #8fb1e0;
+  --token-string: #9cc47e;
+  --token-number: #e3a26a;
+  --token-tag: #e58f87;
+  --token-comment: #8a7f71;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write { max-width: 40em; }
+#write p { margin: 0 0 1em; }
+#write li > p { margin: 0; }
+#write li { margin: 0.3em 0; }
+#write em { color: var(--theme-em); }
+#write h1 { font-size: 2em; font-weight: 600; text-align: center; margin-bottom: 1em; }
+#write h2 { font-size: 1.4em; font-style: italic; }
+#write blockquote { border-left: 0; padding: 0 1.5em; font-style: italic; text-align: center; }
+#write hr { border: 0; text-align: center; }
+#write hr::after { content: "\2042"; color: var(--editor-muted); }

@@ -1,0 +1,167 @@
+/*! Outline (light) - a Textus theme by @CatVinci-Studio
+ *  Look after Things by colineckert (MIT), https://github.com/colineckert/obsidian-things - our own CSS
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Clean lists and plans: a light sans, blue headings, coloured bullets and roomy list items. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #26292e;
+  --editor-muted: #7a828c;
+  --editor-border: #e6e8eb;
+  --editor-quote-border: #2f74e0;
+  --editor-accent: #2f74e0;
+  --editor-code-bg: #f4f6f8;
+  --editor-highlight-bg: rgba(255, 220, 60, 0.4);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #2f74e0;
+  --theme-strong: #26292e;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #7a828c;
+  --theme-code-text: #26292e;
+  --theme-pre-bg: #f4f6f8;
+  --theme-th-bg: #f4f6f8;
+  --theme-th-text: #26292e;
+  --theme-selection: rgba(255, 220, 60, 0.4);
+  --theme-h1: #1b5fc6;
+  --theme-h2: #1b5fc6;
+  --theme-h3: #26292e;
+  --theme-h4: #26292e;
+  --theme-h5: #7a828c;
+  --theme-h6: #7a828c;
+  --tone-blue: #2f74e0;
+  --tone-green: #36a160;
+  --tone-orange: #e0832a;
+  --tone-purple: #8a63d2;
+  --tone-red: #df4d4d;
+  --tone-teal: #22a0a0;
+  --tone-yellow: #c79a00;
+  --tone-pink: #d85b9e;
+  --tone-gray: #7a828c;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 16px;
+  line-height: 1.65;
+  color-scheme: light;
+  --token-keyword: #8a63d2;
+  --token-function: #2f74e0;
+  --token-string: #36a160;
+  --token-number: #e0832a;
+  --token-tag: #df4d4d;
+  --token-comment: #9aa1a9;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write a { text-decoration: none; border-bottom: 1px solid currentColor; }
+#write li { margin: 0.35em 0; }
+#write li::marker { color: var(--editor-accent); font-weight: 600; }
+#write h1 { font-size: 1.9em; }
+#write h2 { font-size: 1.35em; padding-bottom: 0.2em; border-bottom: 1px solid var(--editor-border); }
+#write blockquote { border-left: 3px solid var(--editor-accent); color: var(--theme-quote-text); }

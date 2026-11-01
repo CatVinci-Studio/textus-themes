@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-11-01T06:00:00Z",
-  "count": 16,
+  "count": 21,
   "themes": [
     {
       "id": "one-dark",
@@ -65,6 +65,81 @@
       "previews": [
         "themes/tokyo-night/preview.png",
         "themes/tokyo-night/preview-dark.png"
+      ]
+    },
+    {
+      "id": "cards",
+      "name": "Cards",
+      "author": "CatVinci-Studio",
+      "description": "For notes you keep in order: quotes, code, tables and callouts each sit in a rounded card on a softly tinted page, and level-2 headings open a section over a rule. After the Border theme's card layout, our own CSS.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01",
+      "updated": "2026-11-01",
+      "css": "themes/cards/theme.css",
+      "darkCss": "themes/cards/theme-dark.css",
+      "previews": [
+        "themes/cards/preview.png"
+      ]
+    },
+    {
+      "id": "compact",
+      "name": "Compact",
+      "author": "CatVinci-Studio",
+      "description": "More on a screen without crowding it: a 15 px sans with tight lines and paragraphs, small headings set apart by weight rather than size, and lists that sit close. For lists, logs and quick notes. After Shimmering Focus's density, our own CSS.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01",
+      "updated": "2026-11-01",
+      "css": "themes/compact/theme.css",
+      "darkCss": "themes/compact/theme-dark.css",
+      "previews": [
+        "themes/compact/preview.png"
+      ]
+    },
+    {
+      "id": "contrast",
+      "name": "Contrast",
+      "author": "CatVinci-Studio",
+      "description": "Clear for long reading and tired eyes: near-black on white by day and white on near-black at night, 18 px type, links always underlined, a firm rule under top headings and code set apart by a border. Meets WCAG AAA for body text. After ITS's legibility, our own CSS.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01",
+      "updated": "2026-11-01",
+      "css": "themes/contrast/theme.css",
+      "darkCss": "themes/contrast/theme-dark.css",
+      "previews": [
+        "themes/contrast/preview.png"
+      ]
+    },
+    {
+      "id": "outline",
+      "name": "Outline",
+      "author": "CatVinci-Studio",
+      "description": "For plans, to-dos and outlines: a light, open sans, headings in calm blue, bullets and numbers in the accent colour, and list items with room between them so each one reads as a step. After Things' clean look, our own CSS.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01",
+      "updated": "2026-11-01",
+      "css": "themes/outline/theme.css",
+      "darkCss": "themes/outline/theme-dark.css",
+      "previews": [
+        "themes/outline/preview.png"
+      ]
+    },
+    {
+      "id": "reading-room",
+      "name": "Reading Room",
+      "author": "CatVinci-Studio",
+      "description": "Like reading a well-set book: a large serif on warm paper, wide lines and generous paragraphs, bold in deep red, italics in blue and links in amber; a lamp-lit brown page after dark. After Primary's warm palette, our own CSS.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01",
+      "updated": "2026-11-01",
+      "css": "themes/reading-room/theme.css",
+      "darkCss": "themes/reading-room/theme-dark.css",
+      "previews": [
+        "themes/reading-room/preview.png"
       ]
     },
     {
