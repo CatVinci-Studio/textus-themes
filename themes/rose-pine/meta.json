@@ -1,0 +1,20 @@
+{
+  "id": "rose-pine",
+  "name": "Rosé Pine",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Soft and natural: Rosé Pine Dawn's warm paper by day and Rosé Pine's deep night after dark, iris accents, pine links and rose quotes. On the Rosé Pine palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01T06:00:00Z",
+  "updated": "2026-11-01T06:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

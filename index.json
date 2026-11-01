@@ -1,8 +1,72 @@
 {
   "version": 1,
-  "updated": "2026-10-31T10:34:28Z",
-  "count": 21,
+  "updated": "2026-11-01T06:00:00Z",
+  "count": 16,
   "themes": [
+    {
+      "id": "one-dark",
+      "name": "One Dark & One Light",
+      "author": "CatVinci-Studio",
+      "description": "A coder's favourite for writing: One Light by day and One Dark at night, blue links, headings stepping through purple, blue, green and gold, and code in the same colours. On the Atom One palettes.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01T06:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
+      "css": "themes/one-dark/theme.css",
+      "darkCss": "themes/one-dark/theme-dark.css",
+      "previews": [
+        "themes/one-dark/preview.png",
+        "themes/one-dark/preview-dark.png"
+      ]
+    },
+    {
+      "id": "rose-pine",
+      "name": "Rosé Pine",
+      "author": "CatVinci-Studio",
+      "description": "Soft and natural: Rosé Pine Dawn's warm paper by day and Rosé Pine's deep night after dark, iris accents, pine links and rose quotes. On the Rosé Pine palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01T06:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
+      "css": "themes/rose-pine/theme.css",
+      "darkCss": "themes/rose-pine/theme-dark.css",
+      "previews": [
+        "themes/rose-pine/preview.png",
+        "themes/rose-pine/preview-dark.png"
+      ]
+    },
+    {
+      "id": "solarized",
+      "name": "Solarized",
+      "author": "CatVinci-Studio",
+      "description": "Calm, low-glare colours for long reading: Solarized's warm light page by day and its deep blue-green one at night, blue links, cyan and green headings and orange code. On the Solarized palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01T06:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
+      "css": "themes/solarized/theme.css",
+      "darkCss": "themes/solarized/theme-dark.css",
+      "previews": [
+        "themes/solarized/preview.png",
+        "themes/solarized/preview-dark.png"
+      ]
+    },
+    {
+      "id": "tokyo-night",
+      "name": "Tokyo Night",
+      "author": "CatVinci-Studio",
+      "description": "Clear and electric: Tokyo Night Day's pale blue page by day and the Night palette after dark, blue headings, purple and cyan accents, and code in the same colours. On the Tokyo Night palette.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-01T06:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
+      "css": "themes/tokyo-night/theme.css",
+      "darkCss": "themes/tokyo-night/theme-dark.css",
+      "previews": [
+        "themes/tokyo-night/preview.png",
+        "themes/tokyo-night/preview-dark.png"
+      ]
+    },
     {
       "id": "misty",
       "name": "Misty",
@@ -20,7 +84,9 @@
         "zh": {
           "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
         }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "article",
@@ -44,27 +110,6 @@
       }
     },
     {
-      "id": "cloister",
-      "name": "Cloister",
-      "author": "CatVinci-Studio",
-      "description": "Quiet and narrow: a short line, plain headings, em-dashes for nested bullets, borderless quotes in muted text and open tables. After Sanctum by José Daniel Mourão.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/cloister/theme.css",
-      "darkCss": "themes/cloister/theme-dark.css",
-      "previews": [
-        "themes/cloister/preview.png",
-        "themes/cloister/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "安静而窄：行宽短、标题朴素，嵌套列表用破折号，引用无边框、文字偏灰，表格不加框线。参考 José Daniel Mourão 的 Sanctum。"
-        }
-      }
-    },
-    {
       "id": "codex-mono",
       "name": "Codex Mono",
       "author": "CatVinci-Studio",
@@ -84,31 +129,8 @@
           "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
         }
       },
-      "installs": 1,
-      "installs30": 1
-    },
-    {
-      "id": "dawn-dusk",
-      "name": "Dawn & Dusk",
-      "author": "CatVinci-Studio",
-      "description": "Soft and literary: a warm dawn page and a muted dusk one, a Georgia serif body, iris accents, a rose quote rule and six gentle heading hues. On the Rosé Pine palette.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/dawn-dusk/theme.css",
-      "darkCss": "themes/dawn-dusk/theme-dark.css",
-      "previews": [
-        "themes/dawn-dusk/preview.png",
-        "themes/dawn-dusk/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "柔和而有书卷气：温暖的黎明白天页和低调的黄昏夜间页，正文用 Georgia 衬线，鸢尾紫点缀，玫瑰色引用线，六级标题各有柔和的颜色。基于 Rosé Pine 配色。"
-        }
-      },
-      "installs": 2,
-      "installs30": 2
+      "installs": 3,
+      "installs30": 3
     },
     {
       "id": "fjord",
@@ -118,7 +140,7 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
       "css": "themes/fjord/theme.css",
       "darkCss": "themes/fjord/theme-dark.css",
       "previews": [
@@ -134,27 +156,6 @@
       "installs30": 1
     },
     {
-      "id": "hive",
-      "name": "Hive",
-      "author": "CatVinci-Studio",
-      "description": "Monospaced and honeyed: a code font throughout, amber accents, and a rule that fades in and out around a small mark. After Wasp by Santi Younger.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/hive/theme.css",
-      "darkCss": "themes/hive/theme-dark.css",
-      "previews": [
-        "themes/hive/preview.png",
-        "themes/hive/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "等宽又带蜂蜜色：全文用代码字体，琥珀色点缀，分隔线在一个小标记两侧渐隐。参考 Santi Younger 的 Wasp。"
-        }
-      }
-    },
-    {
       "id": "inkpaper",
       "name": "Inkpaper",
       "author": "CatVinci-Studio",
@@ -162,7 +163,7 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
       "css": "themes/inkpaper/theme.css",
       "darkCss": "themes/inkpaper/theme-dark.css",
       "previews": [
@@ -176,27 +177,6 @@
       }
     },
     {
-      "id": "lantern",
-      "name": "Lantern",
-      "author": "CatVinci-Studio",
-      "description": "Focused and bright: headings on a soft tinted box, a thick quote bar on a tint, magenta emphasis and striped tables. After Shimmering Focus by Chris Grieser.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/lantern/theme.css",
-      "darkCss": "themes/lantern/theme-dark.css",
-      "previews": [
-        "themes/lantern/preview.png",
-        "themes/lantern/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "专注而明亮：标题衬着柔和的色块，引用有粗竖条和底色，强调用洋红，表格隔行着色。参考 Chris Grieser 的 Shimmering Focus。"
-        }
-      }
-    },
-    {
       "id": "latte-mocha",
       "name": "Latte & Mocha",
       "author": "CatVinci-Studio",
@@ -204,7 +184,7 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
       "css": "themes/latte-mocha/theme.css",
       "darkCss": "themes/latte-mocha/theme-dark.css",
       "previews": [
@@ -216,8 +196,8 @@
           "description": "适合长时间写作的柔和粉彩：白天是清爽的拿铁色，夜里是深摩卡色，淡紫点缀，薰衣草色引用，粗体为宝石蓝。Catppuccin 配色的非官方移植。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 3,
+      "installs30": 3
     },
     {
       "id": "lazuli",
@@ -241,29 +221,6 @@
       }
     },
     {
-      "id": "neon-night",
-      "name": "Neon Night",
-      "author": "CatVinci-Studio",
-      "description": "City lights: a soft grey page by day and a deep blue one at night, magenta and blue accents, and a coloured heading ladder with a fading rule. On the Tokyo Night palette.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/neon-night/theme.css",
-      "darkCss": "themes/neon-night/theme-dark.css",
-      "previews": [
-        "themes/neon-night/preview.png",
-        "themes/neon-night/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "城市灯火：白天是柔和的灰色页，夜里是深蓝色页，洋红和蓝色点缀，标题按级别着色，分隔线渐隐。基于 Tokyo Night 配色。"
-        }
-      },
-      "installs": 1,
-      "installs30": 1
-    },
-    {
       "id": "nosferatu",
       "name": "Nosferatu",
       "author": "CatVinci-Studio",
@@ -271,7 +228,7 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
       "css": "themes/nosferatu/theme.css",
       "darkCss": "themes/nosferatu/theme-dark.css",
       "previews": [
@@ -292,7 +249,7 @@
       "license": "MIT",
       "source": "https://github.com/CatVinci-Studio/textus-themes",
       "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
+      "updated": "2026-11-01T06:00:00Z",
       "css": "themes/retro-wood/theme.css",
       "darkCss": "themes/retro-wood/theme-dark.css",
       "previews": [
@@ -302,27 +259,6 @@
       "l10n": {
         "zh": {
           "description": "温暖复古：褪色的奶油色页和深木色页，六级标题各有颜色，橙色引用，金色粗体。基于 gruvbox 配色。"
-        }
-      }
-    },
-    {
-      "id": "teal-paper",
-      "name": "Teal Paper",
-      "author": "CatVinci-Studio",
-      "description": "Warm paper with a little colour: a teal accent, a different colour for each heading level, an orange bold and pill-shaped inline code. After OnePage by ivaneye.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/teal-paper/theme.css",
-      "darkCss": "themes/teal-paper/theme-dark.css",
-      "previews": [
-        "themes/teal-paper/preview.png",
-        "themes/teal-paper/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "带一点颜色的暖纸：青绿色点缀，每级标题颜色不同，橙色粗体，行内代码为胶囊形。参考 ivaneye 的 OnePage。"
         }
       }
     },
@@ -345,28 +281,9 @@
         "zh": {
           "description": "清新活泼：二级标题衬在薄荷色胶囊上，较小的标题前有小标记，虚线分隔，引用带底色，夜间是平静的深海色。参考 sumruler 的 Phycat。"
         }
-      }
-    },
-    {
-      "id": "tidy",
-      "name": "Tidy",
-      "author": "CatVinci-Studio",
-      "description": "Clean and orderly: a system sans on white, blue, yellow and red headings below level 2, green italic quotes, rounded task boxes and calm code. After Things by colineckert and Stephan Ango.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-29T08:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/tidy/theme.css",
-      "darkCss": "themes/tidy/theme-dark.css",
-      "previews": [
-        "themes/tidy/preview.png",
-        "themes/tidy/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "干净有序：白底上的系统无衬线字体，二级以下标题依次为蓝、黄、红，引用为绿色斜体，任务框为圆角，代码低调。参考 colineckert 和 Stephan Ango 的 Things。"
-        }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "plain",
@@ -388,29 +305,8 @@
           "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
         }
       },
-      "installs": 0,
-      "installs30": 0
-    },
-    {
-      "id": "lumen",
-      "name": "Lumen",
-      "author": "CatVinci-Studio",
-      "description": "Clean and modern: a crisp sans on pure white, tight bold headings, and a violet accent that marks headings, links, quotes and the table header.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-17T00:00:02Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/lumen/theme.css",
-      "darkCss": "themes/lumen/theme-dark.css",
-      "previews": [
-        "themes/lumen/preview.png",
-        "themes/lumen/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "干净现代：纯白底上的清晰无衬线字体，紧凑的粗体标题，紫罗兰色点缀标题、链接、引用和表头。"
-        }
-      }
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "manuscript",
@@ -434,27 +330,6 @@
       },
       "installs": 1,
       "installs30": 1
-    },
-    {
-      "id": "midnight-ink",
-      "name": "Midnight Ink",
-      "author": "CatVinci-Studio",
-      "description": "A dark page for night writing: warm off-white text on plum-charcoal, amber links, a bookish serif and gentle, comfortable contrast.",
-      "license": "MIT",
-      "source": "https://github.com/CatVinci-Studio/textus-themes",
-      "created": "2026-10-17T00:00:00Z",
-      "updated": "2026-10-29T08:00:00Z",
-      "css": "themes/midnight-ink/theme.css",
-      "darkCss": "themes/midnight-ink/theme-dark.css",
-      "previews": [
-        "themes/midnight-ink/preview.png",
-        "themes/midnight-ink/preview-dark.png"
-      ],
-      "l10n": {
-        "zh": {
-          "description": "夜间写作的深色页：梅子炭色底上的暖白文字，琥珀色链接，书卷气的衬线字体，对比度温和舒适。"
-        }
-      }
     }
   ]
 }

@@ -34,6 +34,15 @@
   --theme-h4: #427b58;
   --theme-h5: #076678;
   --theme-h6: #8f3f71;
+  --tone-blue: #076678;
+  --tone-green: #79740e;
+  --tone-orange: #af3a03;
+  --tone-purple: #8f3f71;
+  --tone-red: #9d0006;
+  --tone-teal: #427b58;
+  --tone-yellow: #b57614;
+  --tone-pink: #b0466a;
+  --tone-gray: #7c6f64;
 }
 
 body {

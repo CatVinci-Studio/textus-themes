@@ -1,0 +1,20 @@
+{
+  "id": "one-dark",
+  "name": "One Dark & One Light",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "A coder's favourite for writing: One Light by day and One Dark at night, blue links, headings stepping through purple, blue, green and gold, and code in the same colours. On the Atom One palettes.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01T06:00:00Z",
+  "updated": "2026-11-01T06:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}
