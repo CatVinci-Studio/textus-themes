@@ -1,0 +1,19 @@
+{
+  "id": "reading-room",
+  "name": "Reading Room",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Like reading a well-set book: a large serif on warm paper in brown ink, wide lines and generous paragraphs, bold in red, italics in blue and links in gold; a lamp-lit page after dark. Colours after Primary, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}

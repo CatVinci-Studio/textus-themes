@@ -1,39 +1,47 @@
 /*! Retro Wood (dark) - a Textus theme by @CatVinci-Studio
- *  Palette: gruvbox by Pavel Pertsev (morhetz) (MIT/X11)
- *  After Obsidian gruvbox by insanum (MIT)
+ *  Palette: Kanagawa by rebelot (MIT), https://github.com/rebelot/kanagawa.nvim - our own CSS
  *  License: MIT
  *  Source: https://github.com/CatVinci-Studio/textus-themes
  */
 
-/* Warm and retro: Gruvbox's faded cream and dark wood, a six-hue heading ladder and a yellow bold. */
+/* Woodblock colours: Kanagawa's lotus paper by day and wave ink at night, indigo and violet headings. */
 
 :root {
-  --editor-bg: #282828;
-  --editor-text: #ebdbb2;
-  --editor-muted: #a89984;
-  --editor-border: #504945;
-  --editor-quote-border: #fe8019;
-  --editor-accent: #fe8019;
-  --editor-code-bg: #3c3836;
-  --editor-highlight-bg: rgba(250, 189, 47, 0.3);
+  --editor-bg: #1f1f28;
+  --editor-text: #dcd7ba;
+  --editor-muted: #727169;
+  --editor-border: #363646;
+  --editor-quote-border: #957fb8;
+  --editor-accent: #7e9cd8;
+  --editor-code-bg: #2a2a37;
+  --editor-highlight-bg: rgba(230, 195, 132, 0.2);
   --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
-  --theme-link: #83a598;
-  --theme-strong: #fabd2f;
+  --theme-link: #7fb4ca;
+  --theme-strong: #e46876;
   --theme-quote-bg: transparent;
-  --theme-quote-text: #a89984;
-  --theme-code-text: #ebdbb2;
-  --theme-pre-bg: #3c3836;
-  --theme-th-bg: #3c3836;
-  --theme-th-text: #ebdbb2;
-  --theme-selection: rgba(146, 131, 116, 0.35);
-  --theme-h1: #fb4934;
-  --theme-h2: #fabd2f;
-  --theme-h3: #b8bb26;
-  --theme-h4: #8ec07c;
-  --theme-h5: #83a598;
-  --theme-h6: #d3869b;
+  --theme-quote-text: #a6a69c;
+  --theme-code-text: #dcd7ba;
+  --theme-pre-bg: #2a2a37;
+  --theme-th-bg: #2a2a37;
+  --theme-th-text: #dcd7ba;
+  --theme-selection: rgba(126, 156, 216, 0.25);
+  --theme-h1: #e6c384;
+  --theme-h2: #7e9cd8;
+  --theme-h3: #957fb8;
+  --theme-h4: #98bb6c;
+  --theme-h5: #a6a69c;
+  --theme-h6: #a6a69c;
+  --tone-blue: #7e9cd8;
+  --tone-green: #98bb6c;
+  --tone-orange: #ffa066;
+  --tone-purple: #957fb8;
+  --tone-red: #e46876;
+  --tone-teal: #7aa89f;
+  --tone-yellow: #e6c384;
+  --tone-pink: #d27e99;
+  --tone-gray: #727169;
 }
 
 body {
@@ -47,12 +55,12 @@ body {
   font-size: 1.0625rem;
   line-height: 1.75;
   color-scheme: dark;
-  --token-keyword: #fb4934;
-  --token-function: #fabd2f;
-  --token-string: #b8bb26;
-  --token-number: #d3869b;
-  --token-tag: #8ec07c;
-  --token-comment: #928374;
+  --token-keyword: #957fb8;
+  --token-function: #7e9cd8;
+  --token-string: #98bb6c;
+  --token-number: #ffa066;
+  --token-tag: #e46876;
+  --token-comment: #727169;
 }
 
 #write h1,

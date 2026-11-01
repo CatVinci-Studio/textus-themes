@@ -1,0 +1,20 @@
+{
+  "id": "tokyo-night",
+  "name": "Tokyo Night",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Clear and electric: Tokyo Night Day's pale blue page by day and the Night palette after dark, blue headings, purple and cyan accents, and code in the same colours. On the Tokyo Night palette.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01T06:00:00Z",
+  "updated": "2026-11-01T06:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ]
+}

@@ -1,0 +1,163 @@
+/*! One Dark & One Light (dark) - a Textus theme by @CatVinci-Studio
+ *  Palette: Atom One Dark / One Light (MIT), https://github.com/atom/atom; One Dark Pro by Binaryify (MIT)
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* The Atom One palettes: One Light by day and One Dark at night, blue links and purple, green and gold accents. */
+
+:root {
+  --editor-bg: #282c34;
+  --editor-text: #abb2bf;
+  --editor-muted: #8a919d;
+  --editor-border: #3e4451;
+  --editor-quote-border: #61afef;
+  --editor-accent: #61afef;
+  --editor-code-bg: #21252b;
+  --editor-highlight-bg: rgba(229, 192, 123, 0.25);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #61afef;
+  --theme-strong: #abb2bf;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #8a919d;
+  --theme-code-text: #abb2bf;
+  --theme-pre-bg: #21252b;
+  --theme-th-bg: #21252b;
+  --theme-th-text: #abb2bf;
+  --theme-selection: rgba(229, 192, 123, 0.25);
+  --theme-h1: #d7dae0;
+  --theme-h2: #c678dd;
+  --theme-h3: #61afef;
+  --theme-h4: #98c379;
+  --theme-h5: #e5c07b;
+  --theme-h6: #8a919d;
+  --tone-blue: #61afef;
+  --tone-green: #98c379;
+  --tone-orange: #d19a66;
+  --tone-purple: #c678dd;
+  --tone-red: #e06c75;
+  --tone-teal: #56b6c2;
+  --tone-yellow: #e5c07b;
+  --tone-pink: #e86f9f;
+  --tone-gray: #7f848e;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: dark;
+  --token-keyword: #c678dd;
+  --token-function: #61afef;
+  --token-string: #98c379;
+  --token-number: #d19a66;
+  --token-tag: #e06c75;
+  --token-comment: #7f848e;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write blockquote { border-left-width: 3px; }
+#write code { border-radius: 4px; }

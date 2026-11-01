@@ -1,0 +1,171 @@
+/*! Cards (light) - a Textus theme by @CatVinci-Studio
+ *  Layout after Border by Akifyss (MIT), https://github.com/Akifyss/obsidian-border - our own CSS
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Sections and cards: quotes, code, tables and callouts each in a rounded card, level-2 headings over a rule. */
+
+:root {
+  --editor-bg: #f4f4f6;
+  --editor-text: #1d1d20;
+  --editor-muted: #545664;
+  --editor-border: #e3e3e6;
+  --editor-quote-border: #4b63fb;
+  --editor-accent: #4b63fb;
+  --editor-code-bg: #ffffff;
+  --editor-highlight-bg: hsla(48, 100%, 50%, 0.3);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #3e55ea;
+  --theme-strong: #1d1d20;
+  --theme-quote-bg: #ffffff;
+  --theme-quote-text: #545664;
+  --theme-code-text: #1d1d20;
+  --theme-pre-bg: #ffffff;
+  --theme-th-bg: #f7f7f9;
+  --theme-th-text: #1d1d20;
+  --theme-selection: hsla(48, 100%, 50%, 0.3);
+  --theme-h1: #131416;
+  --theme-h2: #131416;
+  --theme-h3: #131416;
+  --theme-h4: #131416;
+  --theme-h5: #545664;
+  --theme-h6: #545664;
+  --tone-blue: #1775d9;
+  --tone-green: #1da51d;
+  --tone-orange: #de7417;
+  --tone-purple: #8f47e1;
+  --tone-red: #dd2c38;
+  --tone-teal: #16a6ab;
+  --tone-yellow: #c09c0c;
+  --tone-pink: #dd1399;
+  --tone-gray: #707070;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1rem;
+  line-height: 1.7;
+  color-scheme: light;
+  --token-keyword: #8f47e1;
+  --token-function: #1775d9;
+  --token-string: #1da51d;
+  --token-number: #de7417;
+  --token-tag: #dd2c38;
+  --token-comment: #9a9aa3;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write h2 { margin-top: 2em; padding-top: 0.9em; border-top: 1px solid var(--editor-border); }
+#write blockquote, #write pre, #write table, #write .md-alert {
+  background: var(--theme-quote-bg); border: 1px solid var(--editor-border); border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+#write blockquote { border-left: 1px solid var(--editor-border); padding: 0.8em 1.1em; color: var(--editor-text); }
+#write pre { padding: 1em 1.2em; }
+#write table { border-collapse: separate; border-spacing: 0; overflow: hidden; }
+#write table th, #write table td { border: 0; border-bottom: 1px solid var(--editor-border); }
+#write table tr:last-child td { border-bottom: 0; }

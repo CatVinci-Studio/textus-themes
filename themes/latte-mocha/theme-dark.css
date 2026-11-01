@@ -5,7 +5,7 @@
  *  Source: https://github.com/CatVinci-Studio/textus-themes
  */
 
-/* Soft pastels: Catppuccin's Latte by day and Mocha by night, mauve accents, lavender quotes and peach highlights. */
+/* Soft pastels: Catppuccin's Latte by day and Mocha by night, a mauve title, blue section heads and a rosewater bold. */
 
 :root {
   --editor-bg: #1e1e2e;
@@ -20,7 +20,7 @@
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
   --theme-link: #89b4fa;
-  --theme-strong: #74c7ec;
+  --theme-strong: #f5e0dc;
   --theme-quote-bg: rgba(180, 190, 254, 0.06);
   --theme-quote-text: #a6adc8;
   --theme-code-text: #cba6f7;
@@ -29,11 +29,20 @@
   --theme-th-text: #cdd6f4;
   --theme-selection: rgba(147, 153, 178, 0.25);
   --theme-h1: #cba6f7;
-  --theme-h2: #89b4fa;
-  --theme-h3: #94e2d5;
-  --theme-h4: #f9e2af;
-  --theme-h5: #eba0ac;
-  --theme-h6: #cdd6f4;
+  --theme-h2: #cdd6f4;
+  --theme-h3: #89b4fa;
+  --theme-h4: #cdd6f4;
+  --theme-h5: #a6adc8;
+  --theme-h6: #a6adc8;
+  --tone-blue: #89b4fa;
+  --tone-green: #a6e3a1;
+  --tone-orange: #fab387;
+  --tone-purple: #cba6f7;
+  --tone-red: #f38ba8;
+  --tone-teal: #94e2d5;
+  --tone-yellow: #f9e2af;
+  --tone-pink: #f5c2e7;
+  --tone-gray: #9399b2;
 }
 
 body {

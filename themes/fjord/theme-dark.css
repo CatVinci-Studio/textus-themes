@@ -5,7 +5,7 @@
  *  Source: https://github.com/CatVinci-Studio/textus-themes
  */
 
-/* Arctic and calm: Nord's snow storm by day and polar night after dark, frost-blue links and aurora headings at night. */
+/* Arctic and calm: Nord's snow storm by day and polar night after dark, frost-blue headings and links. */
 
 :root {
   --editor-bg: #2e3440;
@@ -20,7 +20,7 @@
   --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --theme-mono: var(--font-mono, monospace);
   --theme-link: #88c0d0;
-  --theme-strong: #ebcb8b;
+  --theme-strong: #eceff4;
   --theme-quote-bg: transparent;
   --theme-quote-text: #a1a9b8;
   --theme-code-text: #d8dee9;
@@ -28,12 +28,21 @@
   --theme-th-bg: #3b4252;
   --theme-th-text: #d8dee9;
   --theme-selection: rgba(136, 192, 208, 0.25);
-  --theme-h1: #bf616a;
-  --theme-h2: #ebcb8b;
-  --theme-h3: #a3be8c;
+  --theme-h1: #88c0d0;
+  --theme-h2: #81a1c1;
+  --theme-h3: #8fbcbb;
   --theme-h4: #b48ead;
-  --theme-h5: #8fbcbb;
-  --theme-h6: #81a1c1;
+  --theme-h5: #a1a9b8;
+  --theme-h6: #a1a9b8;
+  --tone-blue: #81a1c1;
+  --tone-green: #a3be8c;
+  --tone-orange: #d08770;
+  --tone-purple: #b48ead;
+  --tone-red: #bf616a;
+  --tone-teal: #8fbcbb;
+  --tone-yellow: #ebcb8b;
+  --tone-pink: #c895bf;
+  --tone-gray: #7b88a1;
 }
 
 body {

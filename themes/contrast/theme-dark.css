@@ -1,0 +1,166 @@
+/*! Contrast (dark) - a Textus theme by @CatVinci-Studio
+ *  Legibility after ITS Theme by SlRvb (an idea only; our own CSS)
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* High contrast for long reading: near-black on white or white on near-black, underlined links, a rule under each top heading. */
+
+:root {
+  --editor-bg: #1a1e24;
+  --editor-text: #e1e8f0;
+  --editor-muted: #a8b3c4;
+  --editor-border: #4a5361;
+  --editor-quote-border: #e57373;
+  --editor-accent: #e57373;
+  --editor-code-bg: #232831;
+  --editor-highlight-bg: rgba(255, 213, 0, 0.28);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #61afef;
+  --theme-strong: #e1e8f0;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #a8b3c4;
+  --theme-code-text: #e1e8f0;
+  --theme-pre-bg: #232831;
+  --theme-th-bg: #232831;
+  --theme-th-text: #e1e8f0;
+  --theme-selection: rgba(255, 213, 0, 0.28);
+  --theme-h1: #e57373;
+  --theme-h2: #7fa6e0;
+  --theme-h3: #d0765b;
+  --theme-h4: #e1e8f0;
+  --theme-h5: #a8b3c4;
+  --theme-h6: #a8b3c4;
+  --tone-blue: #61afef;
+  --tone-green: #7ccf94;
+  --tone-orange: #e8a066;
+  --tone-purple: #b49af0;
+  --tone-red: #e57373;
+  --tone-teal: #56c2c9;
+  --tone-yellow: #e5c07b;
+  --tone-pink: #e48bbf;
+  --tone-gray: #97a1b9;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 18px;
+  line-height: 1.75;
+  color-scheme: dark;
+  --token-keyword: #b49af0;
+  --token-function: #61afef;
+  --token-string: #7ccf94;
+  --token-number: #e8a066;
+  --token-tag: #e57373;
+  --token-comment: #7a8496;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write a { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+#write h1, #write h2 { padding-bottom: 0.25em; border-bottom: 3px solid currentColor; }
+#write blockquote { border-left: 4px solid var(--editor-quote-border); color: var(--editor-text); }
+#write code, #write pre { border: 1px solid var(--editor-border); }
+#write strong { font-weight: 800; }

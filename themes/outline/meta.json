@@ -1,0 +1,19 @@
+{
+  "id": "outline",
+  "name": "Outline",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "For plans, to-dos and outlines: a clean sans on a cool white page, headings that change colour by level, pink bold and teal quotes, and roomy list items. Colours after Things, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}

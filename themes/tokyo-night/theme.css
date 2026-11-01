@@ -1,0 +1,162 @@
+/*! Tokyo Night (light) - a Textus theme by @CatVinci-Studio
+ *  Palette: Tokyo Night by enkia (MIT), https://github.com/enkia/tokyo-night-vscode-theme
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* The lights of downtown Tokyo at night: Tokyo Night Day by day and Night after dark, blue, purple and cyan. */
+
+:root {
+  --editor-bg: #e1e2e7;
+  --editor-text: #3760bf;
+  --editor-muted: #5a6aa8;
+  --editor-border: #c4c8da;
+  --editor-quote-border: #2e7de9;
+  --editor-accent: #2e7de9;
+  --editor-code-bg: #d5d6db;
+  --editor-highlight-bg: rgba(140, 108, 62, 0.2);
+  --editor-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #007197;
+  --theme-strong: #3760bf;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #5a6aa8;
+  --theme-code-text: #3760bf;
+  --theme-pre-bg: #d5d6db;
+  --theme-th-bg: #d5d6db;
+  --theme-th-text: #3760bf;
+  --theme-selection: rgba(140, 108, 62, 0.2);
+  --theme-h1: #3760bf;
+  --theme-h2: #2e7de9;
+  --theme-h3: #9854f1;
+  --theme-h4: #007197;
+  --theme-h5: #587539;
+  --theme-h6: #5a6aa8;
+  --tone-blue: #2e7de9;
+  --tone-green: #587539;
+  --tone-orange: #b15c00;
+  --tone-purple: #9854f1;
+  --tone-red: #f52a65;
+  --tone-teal: #118c74;
+  --tone-yellow: #8c6c3e;
+  --tone-pink: #c53b8a;
+  --tone-gray: #6172b0;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color-scheme: light;
+  --token-keyword: #9854f1;
+  --token-function: #2e7de9;
+  --token-string: #587539;
+  --token-number: #b15c00;
+  --token-tag: #f52a65;
+  --token-comment: #848cb5;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write code { border-radius: 4px; }

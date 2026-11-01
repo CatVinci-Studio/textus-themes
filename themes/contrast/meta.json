@@ -1,0 +1,19 @@
+{
+  "id": "contrast",
+  "name": "Contrast",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Clear for long reading and research notes: near-black on a cool white page, 18 px type, red and navy headings, links always underlined, a firm rule under top headings and code set apart by a border. Body text meets WCAG AAA. Colours after ITS, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}

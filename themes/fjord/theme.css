@@ -5,7 +5,7 @@
  *  Source: https://github.com/CatVinci-Studio/textus-themes
  */
 
-/* Arctic and calm: Nord's snow storm by day and polar night after dark, frost-blue links and aurora headings at night. */
+/* Arctic and calm: Nord's snow storm by day and polar night after dark, frost-blue headings and links. */
 
 :root {
   --editor-bg: #eceff4;
@@ -34,6 +34,15 @@
   --theme-h4: #8c6a9e;
   --theme-h5: #46807e;
   --theme-h6: #4c566a;
+  --tone-blue: #5e81ac;
+  --tone-green: #6f8f4f;
+  --tone-orange: #c0603f;
+  --tone-purple: #9a6f94;
+  --tone-red: #bf616a;
+  --tone-teal: #5b9a9a;
+  --tone-yellow: #b8902f;
+  --tone-pink: #a86f9a;
+  --tone-gray: #616e88;
 }
 
 body {

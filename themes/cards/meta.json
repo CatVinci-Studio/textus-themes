@@ -1,0 +1,19 @@
+{
+  "id": "cards",
+  "name": "Cards",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "For notes you keep in order: quotes, code, tables and callouts each sit in a rounded card on a soft grey page, with an indigo accent, and level-2 headings open a section over a rule. Layout and colours after Border, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}

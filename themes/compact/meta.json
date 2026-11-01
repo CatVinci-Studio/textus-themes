@@ -1,0 +1,19 @@
+{
+  "id": "compact",
+  "name": "Compact",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "More on a screen without crowding it: a 15 px sans with tight lines and paragraphs on warm Gruvbox paper, headings set apart by colour rather than size. For lists, logs and quick notes. Density and colours after Shimmering Focus, our own CSS.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-01",
+  "updated": "2026-11-01",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png"
+  ]
+}
