@@ -22,6 +22,5 @@ License: MIT
 - By posting, you share the theme under the license you name (MIT if blank; any OSI-approved license).
 - Questions and feedback are welcome here too: comments without the `textus-theme` block are left alone.
 
-分享你的 Textus 主题：按上面的模板发一条评论，机器人自动检查，维护者审核通过后发布到网站。
 
-Full guide: [README](https://github.com/CatVinci-Studio/textus-themes#readme) · 中文说明：[README › 中文说明](https://github.com/CatVinci-Studio/textus-themes#中文说明)
+Full guide: [README](https://github.com/CatVinci-Studio/textus-themes#readme)
