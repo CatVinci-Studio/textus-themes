@@ -17,7 +17,9 @@
       "previews": [
         "themes/one-dark/preview.png",
         "themes/one-dark/preview-dark.png"
-      ]
+      ],
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "rose-pine",
@@ -33,7 +35,9 @@
       "previews": [
         "themes/rose-pine/preview.png",
         "themes/rose-pine/preview-dark.png"
-      ]
+      ],
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "solarized",
@@ -49,7 +53,9 @@
       "previews": [
         "themes/solarized/preview.png",
         "themes/solarized/preview-dark.png"
-      ]
+      ],
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "tokyo-night",
@@ -140,7 +146,9 @@
       "darkCss": "themes/reading-room/theme-dark.css",
       "previews": [
         "themes/reading-room/preview.png"
-      ]
+      ],
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "misty",
@@ -160,8 +168,8 @@
           "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 3,
+      "installs30": 3
     },
     {
       "id": "article",
@@ -182,7 +190,9 @@
         "zh": {
           "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
         }
-      }
+      },
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "codex-mono",
@@ -249,7 +259,9 @@
         "zh": {
           "description": "纸上的墨：温暖的纸色页和近黑的夜间页，标题如墨，链接为青色，代码低调。基于 Steph Ango 的 Flexoki，https://stephango.com/flexoki。"
         }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "latte-mocha",
@@ -314,7 +326,9 @@
         "zh": {
           "description": "鲜明的夜色：经典的深紫灰夜间页配霓虹色点缀，白天是温暖的奶油色页、点缀更深。基于 Dracula 和 Alucard 配色。"
         }
-      }
+      },
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "retro-wood",
@@ -380,8 +394,8 @@
           "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "manuscript",
