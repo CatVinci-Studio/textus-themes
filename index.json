@@ -18,8 +18,8 @@
         "themes/one-dark/preview.png",
         "themes/one-dark/preview-dark.png"
       ],
-      "installs": 2,
-      "installs30": 2
+      "installs": 9,
+      "installs30": 9
     },
     {
       "id": "rose-pine",
@@ -36,8 +36,8 @@
         "themes/rose-pine/preview.png",
         "themes/rose-pine/preview-dark.png"
       ],
-      "installs": 1,
-      "installs30": 1
+      "installs": 4,
+      "installs30": 4
     },
     {
       "id": "solarized",
@@ -54,8 +54,8 @@
         "themes/solarized/preview.png",
         "themes/solarized/preview-dark.png"
       ],
-      "installs": 1,
-      "installs30": 1
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "tokyo-night",
@@ -86,7 +86,9 @@
       "darkCss": "themes/cards/theme-dark.css",
       "previews": [
         "themes/cards/preview.png"
-      ]
+      ],
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "compact",
@@ -116,7 +118,9 @@
       "darkCss": "themes/contrast/theme-dark.css",
       "previews": [
         "themes/contrast/preview.png"
-      ]
+      ],
+      "installs": 1,
+      "installs30": 1
     },
     {
       "id": "outline",
@@ -131,7 +135,9 @@
       "darkCss": "themes/outline/theme-dark.css",
       "previews": [
         "themes/outline/preview.png"
-      ]
+      ],
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "reading-room",
@@ -147,8 +153,8 @@
       "previews": [
         "themes/reading-room/preview.png"
       ],
-      "installs": 1,
-      "installs30": 1
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "misty",
@@ -168,8 +174,8 @@
           "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
         }
       },
-      "installs": 3,
-      "installs30": 3
+      "installs": 11,
+      "installs30": 11
     },
     {
       "id": "article",
@@ -191,8 +197,8 @@
           "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
         }
       },
-      "installs": 2,
-      "installs30": 2
+      "installs": 5,
+      "installs30": 5
     },
     {
       "id": "codex-mono",
@@ -214,8 +220,8 @@
           "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
         }
       },
-      "installs": 3,
-      "installs30": 3
+      "installs": 7,
+      "installs30": 7
     },
     {
       "id": "fjord",
@@ -260,8 +266,8 @@
           "description": "纸上的墨：温暖的纸色页和近黑的夜间页，标题如墨，链接为青色，代码低调。基于 Steph Ango 的 Flexoki，https://stephango.com/flexoki。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "latte-mocha",
@@ -283,8 +289,8 @@
           "description": "适合长时间写作的柔和粉彩：白天是清爽的拿铁色，夜里是深摩卡色，淡紫点缀，薰衣草色引用，粗体为宝石蓝。Catppuccin 配色的非官方移植。"
         }
       },
-      "installs": 3,
-      "installs30": 3
+      "installs": 6,
+      "installs30": 6
     },
     {
       "id": "lazuli",
@@ -305,7 +311,9 @@
         "zh": {
           "description": "靛蓝而清爽：标题居中，二级标题衬在纯蓝色带上，标题用衬线、正文用无衬线，粗体和列表符号为蓝色。参考 YiNN 的 Lapis。"
         }
-      }
+      },
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "nosferatu",
@@ -327,8 +335,8 @@
           "description": "鲜明的夜色：经典的深紫灰夜间页配霓虹色点缀，白天是温暖的奶油色页、点缀更深。基于 Dracula 和 Alucard 配色。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 2,
+      "installs30": 2
     },
     {
       "id": "retro-wood",
@@ -371,8 +379,8 @@
           "description": "清新活泼：二级标题衬在薄荷色胶囊上，较小的标题前有小标记，虚线分隔，引用带底色，夜间是平静的深海色。参考 sumruler 的 Phycat。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 6,
+      "installs30": 6
     },
     {
       "id": "plain",
@@ -394,8 +402,8 @@
           "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
         }
       },
-      "installs": 2,
-      "installs30": 2
+      "installs": 6,
+      "installs30": 6
     },
     {
       "id": "manuscript",
@@ -417,8 +425,8 @@
           "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
         }
       },
-      "installs": 1,
-      "installs30": 1
+      "installs": 3,
+      "installs30": 3
     }
   ]
 }
