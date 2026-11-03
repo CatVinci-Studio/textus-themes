@@ -14,6 +14,12 @@
   "css": "theme.css",
   "darkCss": "theme-dark.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "长文阅读和研究笔记都清晰：冷白底上的近黑文字，18 px 字号，红色与藏青标题，链接始终带下划线，一级标题下有实线，代码用边框隔开。正文对比度达到 WCAG AAA。配色参考 ITS，CSS 为我们自己编写。"
+    }
+  }
 }

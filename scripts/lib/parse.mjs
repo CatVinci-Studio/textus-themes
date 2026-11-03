@@ -5,7 +5,7 @@
 /** The fenced block that marks a comment as a submission. */
 export const TEMPLATE_LANG = "textus-theme";
 
-const FIELD_KEYS = ["name", "description", "license"];
+const FIELD_KEYS = ["name", "description", "chinese", "license"];
 
 // Where GitHub puts what is dragged into a comment. Files keep their name in
 // the URL; images get an opaque id (older comments used the other hosts).

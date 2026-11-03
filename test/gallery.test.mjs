@@ -16,8 +16,8 @@ const BOB = { login: "bob", id: 202, type: "User" };
 const MAINTAINER = { login: "chengao", id: 1, type: "User" };
 const BOT = { login: "github-actions[bot]", id: 41898282, type: "Bot" };
 
-const submission = ({ name = "Inkwell", description = "A quiet serif theme.", license = "MIT", css = "#write { color: #222; }", images = [IMG(1)] } = {}) =>
-  `\`\`\`textus-theme\nName: ${name}\nDescription: ${description}\nLicense: ${license}\n\`\`\`\n\n\`\`\`css\n${css}\n\`\`\`\n\n${images.map((u) => `![shot](${u})`).join("\n")}\n`;
+const submission = ({ name = "Inkwell", description = "A quiet serif theme.", chinese = "", license = "MIT", css = "#write { color: #222; }", images = [IMG(1)] } = {}) =>
+  `\`\`\`textus-theme\nName: ${name}\nDescription: ${description}\n${chinese ? `Chinese: ${chinese}\n` : ""}License: ${license}\n\`\`\`\n\n\`\`\`css\n${css}\n\`\`\`\n\n${images.map((u) => `![shot](${u})`).join("\n")}\n`;
 
 /** A pretend issue: comments, the bot's replies, and the files behind URLs. */
 function world({ permissions = { chengao: "admin" }, files = {} } = {}) {
@@ -111,6 +111,18 @@ test("a submission that passes waits for review, mentions the maintainers once, 
   assert.deepEqual(again, { changes: [], replies: [] });
   assert.deepEqual(w.downloads, []);
   assert.equal(w.created, 1);
+});
+
+test("the reply suggests a dark screenshot and a Chinese description until both are there", async () => {
+  const root = await fresh();
+  const w = world();
+  const c = w.post(ALICE, submission());
+  await w.sync(root);
+  assert.match(w.replyTo(c), /a second screenshot in dark appearance .* and a `Chinese:` line/);
+  w.edit(c, submission({ chinese: "安静的衬线主题。", images: [IMG(1), IMG(2)] }));
+  await w.sync(root);
+  assert.doesNotMatch(w.replyTo(c), /To make the card better/);
+  assert.deepEqual((await meta(root, "inkwell", "pending")).l10n, { zh: { description: "安静的衬线主题。" } });
 });
 
 test("/approve publishes exactly the reviewed version", async () => {

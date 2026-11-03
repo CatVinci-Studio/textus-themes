@@ -14,6 +14,12 @@
   "css": "theme.css",
   "darkCss": "theme-dark.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "一屏放下更多内容又不显拥挤：15 px 无衬线字体，行距和段距收紧，底色是 Gruvbox 的暖色纸面，标题靠颜色而不是字号区分。适合清单、日志和速记。密度与配色参考 Shimmering Focus，CSS 为我们自己编写。"
+    }
+  }
 }

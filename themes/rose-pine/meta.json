@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "柔和自然：白天是 Rosé Pine Dawn 的暖色纸面，夜里换成 Rosé Pine 的深色，鸢尾紫点缀、松绿链接、玫瑰色引用。基于 Rosé Pine 配色。"
+    }
+  }
 }

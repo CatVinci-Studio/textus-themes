@@ -63,9 +63,13 @@ export function validateFields(raw) {
   if (!description) errors.push("`Description:` is empty: say in a sentence what the theme is like.");
   else if ([...description].length > LIMITS.description) errors.push(`\`Description:\` is longer than ${LIMITS.description} characters.`);
   else if (CONTROL.test(description)) errors.push("`Description:` can't contain control characters.");
+  // Optional: the description in Chinese, shown to Chinese readers.
+  const chinese = String(raw.chinese ?? "").trim();
+  if ([...chinese].length > LIMITS.description) errors.push(`\`Chinese:\` is longer than ${LIMITS.description} characters.`);
+  else if (CONTROL.test(chinese)) errors.push("`Chinese:` can't contain control characters.");
   const license = normalizeLicense(raw.license);
   if (!license) errors.push(`\`License:\` "${String(raw.license).trim()}" isn't an OSI-approved SPDX id we know (for example MIT, Apache-2.0, BSD-3-Clause, GPL-3.0-only, OFL-1.1). Leave it blank for MIT.`);
-  return { fields: { name, description, license }, errors };
+  return { fields: { name, description, chinese, license }, errors };
 }
 
 // Resolves CSS escapes (`\75 rl(` is `url(`) so a check can't be dodged by

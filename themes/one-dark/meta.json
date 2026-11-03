@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "写代码的人最爱的写作配色：白天 One Light，夜里 One Dark，蓝色链接，标题依次为紫、蓝、绿、金，代码也用同一套颜色。基于 Atom One 配色。"
+    }
+  }
 }

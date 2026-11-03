@@ -21,6 +21,7 @@ Post a comment on the [gallery issue](https://github.com/CatVinci-Studio/textus-
 ```textus-theme
 Name: Inkwell
 Description: A quiet serif theme for long-form writing, with warm paper and dark ink.
+Chinese: 适合长文写作的安静衬线主题，暖色纸面配深色墨迹。
 License: MIT
 ```
 
@@ -28,14 +29,15 @@ License: MIT
 /* Paste your whole theme here, or delete this block and drag your .css file into the comment. */
 ```
 
-<!-- Drag one or two screenshots of the theme below (PNG, JPEG or WebP, up to 2 MB each). -->
+<!-- Drag two screenshots of the theme below, light appearance first, then dark (PNG, JPEG or WebP, up to 2 MB each). -->
 ````
 
 - **Name** - shown on the card; it also gives the theme its id (`Inkwell` becomes `inkwell`). First come, first served.
 - **Description** - one or two sentences, in your own words (300 characters at most).
+- **Chinese** - optional: the description in Chinese, which Chinese readers see instead. Leave it blank if you'd rather not.
 - **License** - an OSI-approved [SPDX id](https://spdx.org/licenses/) such as `MIT`, `Apache-2.0`, `BSD-3-Clause`, `GPL-3.0-only` or `OFL-1.1`. Leave it blank for MIT.
 - **The CSS** - in a ` ```css ` block, or as an attached file: drag `my-theme.css` into the comment box (if GitHub refuses the `.css` file, rename it to `my-theme.css.txt`).
-- **Screenshots** - one or two images dragged into the comment. The first one is the theme's picture in the gallery; 1280x800 in light appearance looks best.
+- **Screenshots** - two images dragged into the comment: the theme in light appearance first, then in dark. The gallery shows the one that matches the reader's appearance, and both when enlarged; 1280x800 looks best. One is enough for a theme with a single look.
 
 The bot answers your comment within a minute or two: either a list of what to fix, or word that the theme passed the checks and is **waiting for a maintainer's review**. A maintainer looks at it (usually within a few days) and approves it, and it appears on the website; if it isn't accepted, the bot tells you why.
 

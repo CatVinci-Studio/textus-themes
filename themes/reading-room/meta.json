@@ -14,6 +14,12 @@
   "css": "theme.css",
   "darkCss": "theme-dark.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "像在读一本排得很好的书：暖色纸上的大号衬线字，棕色墨迹，行距宽、段落舒展，粗体为红、斜体为蓝、链接为金；夜里是灯下的书页。配色参考 Primary，CSS 为我们自己编写。"
+    }
+  }
 }

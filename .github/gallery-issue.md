@@ -6,6 +6,7 @@ Share your Textus theme here: **one comment = one theme.** A bot checks it right
 ```textus-theme
 Name: 
 Description: 
+Chinese: 
 License: MIT
 ```
 
@@ -13,7 +14,7 @@ License: MIT
 /* Paste your whole theme here, or delete this block and drag your .css file into the comment. */
 ```
 
-<!-- Drag one or two screenshots of the theme below (PNG, JPEG or WebP, up to 2 MB each). -->
+<!-- Drag two screenshots of the theme below, light appearance first, then dark (PNG, JPEG or WebP, up to 2 MB each). -->
 ````
 
 - **Update** your theme by editing your comment (each new version is reviewed again; the live one stays up meanwhile); **take it down** by deleting the comment or posting `/remove <id>`.
