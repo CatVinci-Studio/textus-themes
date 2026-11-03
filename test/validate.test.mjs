@@ -85,7 +85,9 @@ test("ids from names", () => {
 });
 
 test("fields", () => {
-  assert.deepEqual(validateFields({ name: "Inkwell", description: "Quiet.", license: "" }), { fields: { name: "Inkwell", description: "Quiet.", license: "MIT" }, errors: [] });
+  assert.deepEqual(validateFields({ name: "Inkwell", description: "Quiet.", license: "" }), { fields: { name: "Inkwell", description: "Quiet.", chinese: "", license: "MIT" }, errors: [] });
+  assert.equal(validateFields({ name: "Inkwell", description: "Quiet.", chinese: " 安静。 " }).fields.chinese, "安静。");
+  assert.match(validateFields({ name: "x", description: "d", chinese: "字".repeat(301) }).errors[0], /`Chinese:` is longer/);
   const r = validateFields({ name: "", description: "", license: "CC-BY-NC-4.0" });
   assert.equal(r.errors.length, 3);
   assert.match(validateFields({ name: "<b>x</b>", description: "d" }).errors[0], /can't contain/);

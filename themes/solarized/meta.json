@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "低眩光的平静配色，适合长时间阅读：白天是 Solarized 的暖色浅底，夜里是深蓝绿底，蓝色链接、青绿标题、橙色代码。基于 Solarized 配色。"
+    }
+  }
 }

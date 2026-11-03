@@ -14,6 +14,12 @@
   "css": "theme.css",
   "darkCss": "theme-dark.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "适合计划、待办和大纲：冷白底上的简洁无衬线字体，标题按级别换色，粉色粗体、青绿引用，列表项留白宽松。配色参考 Things，CSS 为我们自己编写。"
+    }
+  }
 }

@@ -179,8 +179,17 @@ export async function syncIssue({ root, repo, issue, comments, gh, botLogin = "g
     await runSubmission(c, parsed, version, live_, queued);
   }
 
+  /** What would make the card better, without holding the theme back. */
+  function suggestions(meta) {
+    const tips = [];
+    if (meta.previews.length < 2)
+      tips.push("a second screenshot in dark appearance (light first, then dark): the gallery shows the one that matches the reader's appearance");
+    if (!meta.l10n?.zh) tips.push("a `Chinese:` line with the description in Chinese, for Chinese readers");
+    return tips.length ? `\n\nTo make the card better, you can edit the comment to add ${tips.join(", and ")}.` : "";
+  }
+
   function pendingText(c, meta, isLive) {
-    return `@${c.user.login} **${meta.name}** passed the automatic checks and is waiting for a maintainer's review ([\`pending/${meta.id}\`](${treeUrl("pending", meta.id)})). It goes live on ${GALLERY_URL} once it is approved.${isLive ? " The version that is live now stays up until then." : ""}
+    return `@${c.user.login} **${meta.name}** passed the automatic checks and is waiting for a maintainer's review ([\`pending/${meta.id}\`](${treeUrl("pending", meta.id)})). It goes live on ${GALLERY_URL} once it is approved.${isLive ? " The version that is live now stays up until then." : ""}${suggestions(meta)}
 
 ${maintainers.map((m) => `@${m}`).join(" ")}: reply \`/approve ${meta.id}\` to publish it, or \`/reject ${meta.id} <reason>\` to turn it down.`;
   }
@@ -315,6 +324,7 @@ Edit your comment to submit a new version.`);
       source_updated: version,
       css: "theme.css",
       previews: images.map((im) => im.file),
+      ...(fields.chinese ? { l10n: { zh: { description: fields.chinese } } } : {}),
     };
     await writeFile(join(dir, "theme.css"), withHeader(css, { name: next.name, author: login, license: next.license, source: next.source }));
     for (const im of images) await writeFile(join(dir, im.file), im.buf);

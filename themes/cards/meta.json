@@ -14,6 +14,12 @@
   "css": "theme.css",
   "darkCss": "theme-dark.css",
   "previews": [
-    "preview.png"
-  ]
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "适合整理笔记：引用、代码、表格和提示块各自放在圆角卡片里，浅灰底色配靛蓝点缀，二级标题下方有分隔线另起一节。版式与配色参考 Border，CSS 为我们自己编写。"
+    }
+  }
 }

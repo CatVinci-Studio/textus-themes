@@ -16,5 +16,10 @@
   "previews": [
     "preview.png",
     "preview-dark.png"
-  ]
+  ],
+  "l10n": {
+    "zh": {
+      "description": "清爽而明亮：白天是 Tokyo Night Day 的浅蓝页面，夜里换成 Night 配色，蓝色标题、紫与青点缀，代码也用同一套颜色。基于 Tokyo Night 配色。"
+    }
+  }
 }
