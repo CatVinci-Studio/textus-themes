@@ -77,29 +77,29 @@
 
   /* 强调色：绿（引用、勾选）、浅蓝（h2 竖条、h3 圆点）、列表序号 */
   --misty-green: #42b983;
-  --misty-green-line: #afec9e;
+  --misty-green-line: #7ac95f; /* h1 下方那条虚线（对白 2.03，原 #afec9e 只有 1.37 近乎隐形） */
   --misty-tint: rgba(66, 185, 131, 0.1);
   --misty-blue-tint: #cce5ff;
   --misty-dot: #9ed0ff;
   --misty-marker: #3c95fa;
 
-  /* 标题 h2–h6：每级一组「起始色 → 末尾色」，下划线 = 末尾色 70% 不透明度
-     （配色取自 Trilium Blue 主题的标题分级） */
+  /* 标题 h2–h6：每级一组「起始色 → 末尾色」，下划线一律取该级末尾色，
+     把色标压到 70% 不透明度（配色取自 Trilium Blue 主题的标题分级） */
   --misty-h2-from: #2a8ce6; /* 亮蓝 */
   --misty-h2-to: #8a4ff0; /* → 紫 */
   --misty-h2-rule: #8a4ff0b3;
-  --misty-h3-from: #0fa878; /* 翠绿 */
-  --misty-h3-to: #2f6fe8; /* → 宝蓝 */
-  --misty-h3-rule: #2f6fe8b3;
-  --misty-h4-from: #c48a52; /* 陶土 */
-  --misty-h4-to: #c94a6e; /* → 玫红 */
-  --misty-h4-rule: #c94a6eb3;
-  --misty-h5-from: #cf4fa0; /* 品红 */
-  --misty-h5-to: #7f5fdc; /* → 紫罗兰 */
+  --misty-h3-from: #c48a52; /* 陶土（色相 30°） */
+  --misty-h3-to: #c94a6e; /* → 玫红（跨度 47°） */
+  --misty-h3-rule: #c94a6eb3;
+  --misty-h4-from: #12a878; /* 茵绿（色相 161°，压暗一档，对白 3.04） */
+  --misty-h4-to: #2f6fe8; /* → 宝蓝（跨度 59°） */
+  --misty-h4-rule: #2f6fe8b3;
+  --misty-h5-from: #cf4fa0; /* 品红（色相 322°） */
+  --misty-h5-to: #7f5fdc; /* → 紫罗兰（跨度 67°） */
   --misty-h5-rule: #7f5fdcb3;
-  --misty-h6-from: #757f88; /* 中性灰 */
-  --misty-h6-to: #96673c; /* → 棕 */
-  --misty-h6-rule: #96673cb3;
+  --misty-h6-from: #7aad22; /* 青柠（色相 82°） */
+  --misty-h6-to: #3d9f5a; /* → 翠绿（跨度 56°） */
+  --misty-h6-rule: #3d9f5ab3;
 
   /* 面板、线条、代码、表格 */
   --misty-hairline: #e1e4e8;
@@ -158,8 +158,15 @@
   --misty-rev-delete-strike: #e5908c;
   --misty-rev-delete-hover: #f9d5d1;
 
-  /* 渐变与等宽字体两套配色共用，深色里不再重复 */
-  --misty-heading-gradient: linear-gradient(135deg, #07c160 25%, #6467ef);
+  /* 等宽字体两套配色共用；h1 渐变则深浅各一份（深色那份见下面两块深色板） */
+  /* h1 渐变：绿 → 青 → 紫（三色标。中间那点是为了把 sRGB 插值出来的灰青
+     #3594a7 换成饱和的青蓝 #1d8fbf，长标题中段不再发脏） */
+  --misty-heading-gradient: linear-gradient(
+    135deg,
+    #05a050 25%,
+    #1d8fbf 55%,
+    #6467ef
+  );
   --misty-mono:
     "JetBrains Mono", "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono",
     Menlo, Courier, monospace, "PingFang SC", "Microsoft YaHei", "微软雅黑";
@@ -182,7 +189,7 @@
 
     /* 强调色 */
     --misty-green: #42b983;
-    --misty-green-line: #285d3a;
+    --misty-green-line: #4e9a63; /* h1 虚线，深底 4.37（原 #285d3a 只有 1.94） */
     --misty-tint: rgba(66, 185, 131, 0.12);
     --misty-blue-tint: #1f6feb;
     --misty-dot: #3c95fa;
@@ -192,18 +199,18 @@
     --misty-h2-from: #4aa8f8;
     --misty-h2-to: #b27dff;
     --misty-h2-rule: #b27dffb3;
-    --misty-h3-from: #2fd39b;
-    --misty-h3-to: #5b9cf5;
-    --misty-h3-rule: #5b9cf5b3;
-    --misty-h4-from: #d09565;
-    --misty-h4-to: #e87a9c;
-    --misty-h4-rule: #e87a9cb3;
+    --misty-h3-from: #d09565;
+    --misty-h3-to: #e87a9c;
+    --misty-h3-rule: #e87a9cb3;
+    --misty-h4-from: #35c99b;
+    --misty-h4-to: #6b98ff;
+    --misty-h4-rule: #6b98ffb3;
     --misty-h5-from: #e870b8;
     --misty-h5-to: #a98cf0;
     --misty-h5-rule: #a98cf0b3;
-    --misty-h6-from: #9aa3ab;
-    --misty-h6-to: #c99a6e;
-    --misty-h6-rule: #c99a6eb3;
+    --misty-h6-from: #a8d455;
+    --misty-h6-to: #6fc08a;
+    --misty-h6-rule: #6fc08ab3;
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -261,6 +268,14 @@
     --misty-rev-delete-text: #ffb3b3;
     --misty-rev-delete-strike: #a3474a;
     --misty-rev-delete-hover: #522628;
+
+    /* h1 渐变（深色版：两端提亮，中间换成亮青蓝） */
+    --misty-heading-gradient: linear-gradient(
+      135deg,
+      #37d97e 25%,
+      #4fb8d8 55%,
+      #8a8cff
+    );
   }
 }
 
@@ -281,7 +296,7 @@
 
     /* 强调色 */
     --misty-green: #42b983;
-    --misty-green-line: #285d3a;
+    --misty-green-line: #4e9a63; /* h1 虚线，深底 4.37（原 #285d3a 只有 1.94） */
     --misty-tint: rgba(66, 185, 131, 0.12);
     --misty-blue-tint: #1f6feb;
     --misty-dot: #3c95fa;
@@ -291,18 +306,18 @@
     --misty-h2-from: #4aa8f8;
     --misty-h2-to: #b27dff;
     --misty-h2-rule: #b27dffb3;
-    --misty-h3-from: #2fd39b;
-    --misty-h3-to: #5b9cf5;
-    --misty-h3-rule: #5b9cf5b3;
-    --misty-h4-from: #d09565;
-    --misty-h4-to: #e87a9c;
-    --misty-h4-rule: #e87a9cb3;
+    --misty-h3-from: #d09565;
+    --misty-h3-to: #e87a9c;
+    --misty-h3-rule: #e87a9cb3;
+    --misty-h4-from: #35c99b;
+    --misty-h4-to: #6b98ff;
+    --misty-h4-rule: #6b98ffb3;
     --misty-h5-from: #e870b8;
     --misty-h5-to: #a98cf0;
     --misty-h5-rule: #a98cf0b3;
-    --misty-h6-from: #9aa3ab;
-    --misty-h6-to: #c99a6e;
-    --misty-h6-rule: #c99a6eb3;
+    --misty-h6-from: #a8d455;
+    --misty-h6-to: #6fc08a;
+    --misty-h6-rule: #6fc08ab3;
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -360,6 +375,14 @@
     --misty-rev-delete-text: #ffb3b3;
     --misty-rev-delete-strike: #a3474a;
     --misty-rev-delete-hover: #522628;
+
+    /* h1 渐变（深色版：两端提亮，中间换成亮青蓝） */
+    --misty-heading-gradient: linear-gradient(
+      135deg,
+      #37d97e 25%,
+      #4fb8d8 55%,
+      #8a8cff
+    );
 }
 
 /* =============================================================
@@ -497,7 +520,10 @@
 
 /* =============================================================
    6. 标题
-   —— h1：居中 + 绿虚线，文字绿→紫渐变（Misty 原样，未改动）
+   —— h1：居中 + 绿虚线，文字绿→青→紫渐变（135deg 斜扫，深浅各有
+      一份色标：浅色 #05a050 / #1d8fbf / #6467ef，深色提亮成
+      #37d97e / #4fb8d8 / #8a8cff；中间那个色标是给 sRGB 插值补的
+      「青色锚点」，否则中段会滑到灰青）
    —— h2–h6：改用 Trilium Blue 主题的分级标题写法
         1) 每级一组「起始色 → 末尾色」（--misty-h*-from / -to），
            同一段文字横向渐变，一级一个色系，扫一眼就知道层级；
@@ -539,9 +565,9 @@
   content: "";
   display: block;
   width: 100px;
-  height: 2px;
+  height: 0;
   margin: 0.2em auto 0;
-  border-bottom: 2px dashed var(--misty-green-line);
+  border-bottom: 3px dashed var(--misty-green-line);
 }
 
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
@@ -593,7 +619,8 @@
   );
 }
 
-/* h3：翠绿 → 宝蓝，左侧圆点（Textus 自带的左竖条显式抹掉） */
+/* h3：陶土 → 玫红，跨度 47°（下划线随末尾色），左侧圆点
+   （Textus 自带的左竖条显式抹掉） */
 #write h3 {
   padding: 0.35em 0 0.15em 0;
   font-size: 1.5em;
@@ -607,7 +634,8 @@
   );
 }
 
-/* h4：陶土 → 玫红，左侧短横 */
+/* h4：茵绿 → 宝蓝（起点 #12a878，色相 161° → 219°），左侧短横，
+   下划线随末尾色 */
 #write h4 {
   padding: 0.3em 0 0.1em 0;
   font-size: 1.25em;
@@ -619,7 +647,7 @@
   );
 }
 
-/* h5：品红 → 紫罗兰，左侧小圆点 */
+/* h5：品红 → 紫罗兰，跨度 67°（下划线随末尾色），左侧小圆点 */
 #write h5 {
   padding: 0.25em 0 0.1em 0;
   font-size: 1em;
@@ -631,7 +659,8 @@
   );
 }
 
-/* h6：灰 → 棕，左侧细横（不再退回纯灰，跟其他级同一套写法） */
+/* h6：青柠 → 翠绿，跨度 56°，左侧细横（色环 82°–138° 这一段前面各级都没占，
+   比原来那组橄榄 / 苔绿更亮更饱和，1em 小标题也读得清） */
 #write h6 {
   padding: 0.2em 0 0.1em 0;
   font-size: 1em;
@@ -865,5 +894,21 @@
   #write pre,
   #write table {
     page-break-inside: avoid;
+  }
+
+  /* 渐变文字的兜底：标题靠 background-clip: text + 透明文字填充实现，
+     PDF 导出、部分排版引擎、或「打印背景图形」被关掉时，透明文字会连
+     底一起消失（标题整条不见，或塌成黑块）。打印时退回实色，统一取
+     --misty-heading（深墨色），不再按级取起始色 —— h3 的亮湖青、h6 的
+     青柠在白纸上都太淡，逐级配色反而看不清层级。下划线是 border-bottom，
+     不受影响。 */
+  #write :is(h1, h2, h3, h4, h5, h6) {
+    background-image: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: var(--misty-heading) !important;
+  }
+
+  #write :is(h1, h2, h3, h4, h5, h6) code {
+    -webkit-text-fill-color: currentColor !important;
   }
 }
