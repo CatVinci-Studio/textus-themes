@@ -37,10 +37,10 @@
  *   2. 全部正文规则收进 #write，避免误伤设置页、菜单、对话框（原主题是裸
  *      标签选择器，直接导入会把界面里的标题一起改掉）。
  *   3. 原主题用 Typora 专有的 <span> 包裹做渐变标题；这里改为直接作用在标题
- *      元素上。h1 用 width: fit-content 让渐变只扫过文字本身；h2–h6 参照
- *      Trilium Blue 主题改为「每级一组起止色 + 彩色下划线 + 左侧装饰」，
- *      渐变按固定 em 长度收敛，标题里的中文输入依然可见（文字由渐变背景填充），
- *      光标颜色单独指定。
+ *      元素上。h1 / h2–h6 都用 width: fit-content 让渐变正好铺满文字本身；
+ *      h2–h6 参照 Trilium Blue 主题改为「每级一组起止色 + 彩色下划线 +
+ *      左侧装饰」，色标用 0% → 100%（下划线随文字收窄），标题里的中文输入
+ *      依然可见（文字由渐变背景填充），光标颜色单独指定。
  *   4. 原主题的 li::marker 着色改为 Textus 的 ::before 标记 —— Textus 不设
  *      list-style，序号与圆点都是 ::before 画的。
  *   5. 表头：Milkdown 把表头行放在 <tbody> 里，用 tr[data-is-header] 选中。
@@ -83,23 +83,23 @@
   --misty-dot: #9ed0ff;
   --misty-marker: #3c95fa;
 
-  /* 标题 h2–h6：每级一组「起始色 → 末尾色」，下划线一律取该级末尾色，
-     把色标压到 70% 不透明度（配色取自 Trilium Blue 主题的标题分级） */
+  /* 标题 h2–h6：每级一组「起始色 → 末尾色」，下划线一律取该级起始色，
+     压到 70% 不透明度（配色取自 Trilium Blue 主题的标题分级） */
   --misty-h2-from: #2a8ce6; /* 亮蓝 */
   --misty-h2-to: #8a4ff0; /* → 紫 */
-  --misty-h2-rule: #8a4ff0b3;
-  --misty-h3-from: #c48a52; /* 陶土（色相 30°） */
-  --misty-h3-to: #c94a6e; /* → 玫红（跨度 47°） */
-  --misty-h3-rule: #c94a6eb3;
-  --misty-h4-from: #12a878; /* 茵绿（色相 161°，压暗一档，对白 3.04） */
-  --misty-h4-to: #2f6fe8; /* → 宝蓝（跨度 59°） */
-  --misty-h4-rule: #2f6fe8b3;
-  --misty-h5-from: #cf4fa0; /* 品红（色相 322°） */
-  --misty-h5-to: #7f5fdc; /* → 紫罗兰（跨度 67°） */
+  --misty-h2-rule: #2a8ce6b3;
+  --misty-h3-from: #b0451b; /* 铜橙（色相 17°，对白 5.66） */
+  --misty-h3-to: #bd8312; /* → 琥珀（跨度 23°，对白 3.27） */
+  --misty-h3-rule: #b0451bb3;
+  --misty-h4-from: #0ea48e; /* 青绿（色相 171°，对白 3.13） */
+  --misty-h4-to: #3899dd; /* → 浅蓝（色相 205°，跨度 34°，对白 3.10） */
+  --misty-h4-rule: #0ea48eb3;
+  --misty-h5-from: #7f5fdc; /* 紫罗兰（色相 255°） */
+  --misty-h5-to: #cf4fa0; /* → 品红（跨度 67°） */
   --misty-h5-rule: #7f5fdcb3;
-  --misty-h6-from: #7aad22; /* 青柠（色相 82°） */
-  --misty-h6-to: #3d9f5a; /* → 翠绿（跨度 56°） */
-  --misty-h6-rule: #3d9f5ab3;
+  --misty-h6-from: #4e7d0f; /* 深青柠（色相 86°，对白 4.92） */
+  --misty-h6-to: #2aab21; /* → 草绿（色相 116°，跨度 30°，对白 3.02） */
+  --misty-h6-rule: #4e7d0fb3;
 
   /* 面板、线条、代码、表格 */
   --misty-hairline: #e1e4e8;
@@ -198,19 +198,19 @@
     /* 标题 h2–h6（深色版：整体提亮，色相与浅色版一致） */
     --misty-h2-from: #4aa8f8;
     --misty-h2-to: #b27dff;
-    --misty-h2-rule: #b27dffb3;
-    --misty-h3-from: #d09565;
-    --misty-h3-to: #e87a9c;
-    --misty-h3-rule: #e87a9cb3;
-    --misty-h4-from: #35c99b;
-    --misty-h4-to: #6b98ff;
-    --misty-h4-rule: #6b98ffb3;
-    --misty-h5-from: #e870b8;
-    --misty-h5-to: #a98cf0;
+    --misty-h2-rule: #4aa8f8b3;
+    --misty-h3-from: #e0703a;
+    --misty-h3-to: #e6a43c;
+    --misty-h3-rule: #e0703ab3;
+    --misty-h4-from: #35cfb4;
+    --misty-h4-to: #7cc4f0;
+    --misty-h4-rule: #35cfb4b3;
+    --misty-h5-from: #a98cf0;
+    --misty-h5-to: #e870b8;
     --misty-h5-rule: #a98cf0b3;
-    --misty-h6-from: #a8d455;
-    --misty-h6-to: #6fc08a;
-    --misty-h6-rule: #6fc08ab3;
+    --misty-h6-from: #86c93a;
+    --misty-h6-to: #80d97d;
+    --misty-h6-rule: #86c93ab3;
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -305,19 +305,19 @@
     /* 标题 h2–h6（深色版：整体提亮，色相与浅色版一致） */
     --misty-h2-from: #4aa8f8;
     --misty-h2-to: #b27dff;
-    --misty-h2-rule: #b27dffb3;
-    --misty-h3-from: #d09565;
-    --misty-h3-to: #e87a9c;
-    --misty-h3-rule: #e87a9cb3;
-    --misty-h4-from: #35c99b;
-    --misty-h4-to: #6b98ff;
-    --misty-h4-rule: #6b98ffb3;
-    --misty-h5-from: #e870b8;
-    --misty-h5-to: #a98cf0;
+    --misty-h2-rule: #4aa8f8b3;
+    --misty-h3-from: #e0703a;
+    --misty-h3-to: #e6a43c;
+    --misty-h3-rule: #e0703ab3;
+    --misty-h4-from: #35cfb4;
+    --misty-h4-to: #7cc4f0;
+    --misty-h4-rule: #35cfb4b3;
+    --misty-h5-from: #a98cf0;
+    --misty-h5-to: #e870b8;
     --misty-h5-rule: #a98cf0b3;
-    --misty-h6-from: #a8d455;
-    --misty-h6-to: #6fc08a;
-    --misty-h6-rule: #6fc08ab3;
+    --misty-h6-from: #86c93a;
+    --misty-h6-to: #80d97d;
+    --misty-h6-rule: #86c93ab3;
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -527,10 +527,11 @@
    —— h2–h6：改用 Trilium Blue 主题的分级标题写法
         1) 每级一组「起始色 → 末尾色」（--misty-h*-from / -to），
            同一段文字横向渐变，一级一个色系，扫一眼就知道层级；
-        2) 渐变按固定 em 长度收敛（h2 8em / h3 7em / h4 6.5em /
-           h5 6em / h6 5.5em），而不是铺满整行 —— 长标题尾巴落在末尾色，
-           短标题只看得到起始色，不会因为文字长短把渐变拉糊；
-        3) 每级 1px 下划线，颜色 = 该级末尾色 70% 不透明（--misty-h*-rule）；
+        2) 渐变贴着文字长度铺开：宽度收到文字（width: fit-content），色标用
+           0% → 100%，所以短标题不会只剩一片起色、长标题也不会在尾巴上塌成
+           纯末尾色。代价是每级那条下划线也跟着收到文字宽度（这是刻意的：
+           标题更像「标签」，不再横贯整行）；
+        3) 每级 1px 下划线，颜色 = 该级起始色 70% 不透明（--misty-h*-rule）；
         4) 左侧装饰：h2 浅蓝竖条、h3 圆点、h4 短横、h5 小圆点、h6 细横，
            统一用 --misty-dot 上色，尺寸随级别递减。
       间距没有跟着 Trilium 收紧（那边 .3rem 是笔记应用的密度），
@@ -585,8 +586,11 @@
 
 /* ---------- h2–h6 公共基底：粗体 + 渐变文字容器 ---------- */
 #write :is(h2, h3, h4, h5, h6) {
-  /* 刻意不设 fit-content：下划线要拉满整行，渐变长度由各级的
-     linear-gradient 色标（em）决定，跟文字长短无关。 */
+  /* 宽度收到文字长度：这样「0% → 100%」的渐变正好铺满整段文字，跟标题
+     长短无关。副作用是下面那条下划线也只剩文字宽度 —— 这是接受的取舍；
+     想恢复满行线只能靠 JS 量宽度，纯 CSS 拿不到文本宽度。 */
+  width: fit-content;
+  max-width: 100%;
   font-weight: 700;
   background-repeat: no-repeat;
 }
@@ -614,13 +618,13 @@
   border-bottom: 1px solid var(--misty-h2-rule);
   background-image: linear-gradient(
     90deg,
-    var(--misty-h2-from) 0,
-    var(--misty-h2-to) 8em
+    var(--misty-h2-from) 0%,
+    var(--misty-h2-to) 100%
   );
 }
 
-/* h3：陶土 → 玫红，跨度 47°（下划线随末尾色），左侧圆点
-   （Textus 自带的左竖条显式抹掉） */
+/* h3：铜橙 → 琥珀（色相 17° → 40°，跨度 23°，整支停在橙色区），
+   左侧圆点（Textus 自带的左竖条显式抹掉），下划线取起始色 */
 #write h3 {
   padding: 0.35em 0 0.15em 0;
   font-size: 1.5em;
@@ -629,46 +633,47 @@
   border-bottom: 1px solid var(--misty-h3-rule);
   background-image: linear-gradient(
     90deg,
-    var(--misty-h3-from) 0,
-    var(--misty-h3-to) 7em
+    var(--misty-h3-from) 0%,
+    var(--misty-h3-to) 100%
   );
 }
 
-/* h4：茵绿 → 宝蓝（起点 #12a878，色相 161° → 219°），左侧短横，
-   下划线随末尾色 */
+/* h4：青绿 → 浅蓝（两点渐变，171° → 205°，跨度 34°，整支仍在青到蓝的
+   过渡段里），左侧短横，下划线取起始色 */
 #write h4 {
   padding: 0.3em 0 0.1em 0;
   font-size: 1.25em;
   border-bottom: 1px solid var(--misty-h4-rule);
   background-image: linear-gradient(
     90deg,
-    var(--misty-h4-from) 0,
-    var(--misty-h4-to) 6.5em
+    var(--misty-h4-from) 0%,
+    var(--misty-h4-to) 100%
   );
 }
 
-/* h5：品红 → 紫罗兰，跨度 67°（下划线随末尾色），左侧小圆点 */
+/* h5：紫罗兰 → 品红，跨度 67°（下划线取起始色），左侧小圆点 */
 #write h5 {
   padding: 0.25em 0 0.1em 0;
   font-size: 1em;
   border-bottom: 1px solid var(--misty-h5-rule);
   background-image: linear-gradient(
     90deg,
-    var(--misty-h5-from) 0,
-    var(--misty-h5-to) 6em
+    var(--misty-h5-from) 0%,
+    var(--misty-h5-to) 100%
   );
 }
 
-/* h6：青柠 → 翠绿，跨度 56°，左侧细横（色环 82°–138° 这一段前面各级都没占，
-   比原来那组橄榄 / 苔绿更亮更饱和，1em 小标题也读得清） */
+/* h6：深青柠 → 草绿（色相 86° → 116°，跨度 30°，整支都在绿色区；末色明度
+   40% 比起始色 27.5% 明显更浅，但压到对白刚好 3.02），
+   左侧细横（色环 86°–116° 这一段前面各级都没占） */
 #write h6 {
   padding: 0.2em 0 0.1em 0;
   font-size: 1em;
   border-bottom: 1px solid var(--misty-h6-rule);
   background-image: linear-gradient(
     90deg,
-    var(--misty-h6-from) 0,
-    var(--misty-h6-to) 5.5em
+    var(--misty-h6-from) 0%,
+    var(--misty-h6-to) 100%
   );
 }
 
