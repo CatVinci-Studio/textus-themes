@@ -101,6 +101,20 @@
   --misty-h6-to: #2aab21; /* → 草绿（色相 116°，跨度 30°，对白 3.02） */
   --misty-h6-rule: #4e7d0fb3;
 
+  /* 标题立体感的第二层背景：横向色相渐变之上盖一层「上亮、下暗」的遮罩。
+     用 multiply 混合时白色是中性值，只有黑会生效。30% 处仍是透明，到 40%
+     才开始出现一点黑（交界因此是渐变的，不是硬边），此后一路加深到 100%
+     为最强 —— 关键是「加深不再中途归零」：英文字母 g/y/p 的下伸部落在
+     元素高度的 80% 之后，若像早先那样在 82% 抹回透明，descender 就会露出
+     一段浅色。写在字形内部，不占外面一个像素，所以不会像投影那样塞灰。 */
+  --misty-heading-shade: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(0, 0, 0, 0.08) 40%,
+    rgba(0, 0, 0, 0.52) 100%
+  );
+
   /* 面板、线条、代码、表格 */
   --misty-hairline: #e1e4e8;
   --misty-rule: #d6d8db;
@@ -211,6 +225,14 @@
     --misty-h6-from: #86c93a;
     --misty-h6-to: #80d97d;
     --misty-h6-rule: #86c93ab3;
+    /* 深色版明暗遮罩：底色本就深，黑压过头会糊，所以比浅色版收一档 */
+    --misty-heading-shade: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(0, 0, 0, 0.08) 40%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -318,6 +340,14 @@
     --misty-h6-from: #86c93a;
     --misty-h6-to: #80d97d;
     --misty-h6-rule: #86c93ab3;
+    /* 深色版明暗遮罩：底色本就深，黑压过头会糊，所以比浅色版收一档 */
+    --misty-heading-shade: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(0, 0, 0, 0.08) 40%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
 
     /* 面板、线条、代码、表格 */
     --misty-hairline: #41464d;
@@ -533,7 +563,13 @@
            标题更像「标签」，不再横贯整行）；
         3) 每级 1px 下划线，颜色 = 该级起始色 70% 不透明（--misty-h*-rule）；
         4) 左侧装饰：h2 浅蓝竖条、h3 圆点、h4 短横、h5 小圆点、h6 细横，
-           统一用 --misty-dot 上色，尺寸随级别递减。
+           统一用 --misty-dot 上色，尺寸随级别递减；
+        5) 立体感放在字形内部，不借外部阴影：横向色相渐变之上再铺一层
+           --misty-heading-shade（上亮、下暗的遮罩），用 multiply 混合时只有
+           底部那段黑会生效，字形下半段自然加深，像被上方光照亮的柱体。
+           不用文字投影 —— 白底上的彩色渐变字，深色阴影是往字和纸之间塞一层
+           灰，反而压扁辨识度（Trilium Blue 的 2px 2px 3px #222 成立，是因为
+           它下面垫着实色彩块）。遮罩压暗只会抬高对比，不会降。
       间距没有跟着 Trilium 收紧（那边 .3rem 是笔记应用的密度），
       仍沿用 1.8rem / 1rem，长文读起来段落感更强。
    ============================================================= */
@@ -593,6 +629,11 @@
   max-width: 100%;
   font-weight: 700;
   background-repeat: no-repeat;
+  /* 两层背景：上层是上下明暗遮罩，下层是横向色相渐变。遮罩走 multiply
+     （白对 multiply 是中性，只让底部的黑压暗字形下半段）；万一某个渲染
+     环境不认 background-blend-mode，遮罩退化成普通半透明叠加，照样是
+     上亮下暗，不会整个失效。 */
+  background-blend-mode: multiply, normal;
 }
 
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
@@ -616,11 +657,12 @@
   line-height: 1.4;
   border-left: 6px solid var(--misty-blue-tint);
   border-bottom: 1px solid var(--misty-h2-rule);
-  background-image: linear-gradient(
-    90deg,
-    var(--misty-h2-from) 0%,
-    var(--misty-h2-to) 100%
-  );
+  background-image: var(--misty-heading-shade),
+    linear-gradient(
+      90deg,
+      var(--misty-h2-from) 0%,
+      var(--misty-h2-to) 100%
+    );
 }
 
 /* h3：铜橙 → 琥珀（色相 17° → 40°，跨度 23°，整支停在橙色区），
@@ -631,11 +673,12 @@
   line-height: 1.43;
   border-left: 0;
   border-bottom: 1px solid var(--misty-h3-rule);
-  background-image: linear-gradient(
-    90deg,
-    var(--misty-h3-from) 0%,
-    var(--misty-h3-to) 100%
-  );
+  background-image: var(--misty-heading-shade),
+    linear-gradient(
+      90deg,
+      var(--misty-h3-from) 0%,
+      var(--misty-h3-to) 100%
+    );
 }
 
 /* h4：青绿 → 浅蓝（两点渐变，171° → 205°，跨度 34°，整支仍在青到蓝的
@@ -644,11 +687,12 @@
   padding: 0.3em 0 0.1em 0;
   font-size: 1.25em;
   border-bottom: 1px solid var(--misty-h4-rule);
-  background-image: linear-gradient(
-    90deg,
-    var(--misty-h4-from) 0%,
-    var(--misty-h4-to) 100%
-  );
+  background-image: var(--misty-heading-shade),
+    linear-gradient(
+      90deg,
+      var(--misty-h4-from) 0%,
+      var(--misty-h4-to) 100%
+    );
 }
 
 /* h5：紫罗兰 → 品红，跨度 67°（下划线取起始色），左侧小圆点 */
@@ -656,11 +700,12 @@
   padding: 0.25em 0 0.1em 0;
   font-size: 1em;
   border-bottom: 1px solid var(--misty-h5-rule);
-  background-image: linear-gradient(
-    90deg,
-    var(--misty-h5-from) 0%,
-    var(--misty-h5-to) 100%
-  );
+  background-image: var(--misty-heading-shade),
+    linear-gradient(
+      90deg,
+      var(--misty-h5-from) 0%,
+      var(--misty-h5-to) 100%
+    );
 }
 
 /* h6：深青柠 → 草绿（色相 86° → 116°，跨度 30°，整支都在绿色区；末色明度
@@ -670,11 +715,12 @@
   padding: 0.2em 0 0.1em 0;
   font-size: 1em;
   border-bottom: 1px solid var(--misty-h6-rule);
-  background-image: linear-gradient(
-    90deg,
-    var(--misty-h6-from) 0%,
-    var(--misty-h6-to) 100%
-  );
+  background-image: var(--misty-heading-shade),
+    linear-gradient(
+      90deg,
+      var(--misty-h6-from) 0%,
+      var(--misty-h6-to) 100%
+    );
 }
 
 /* ---------- h3–h6 左侧装饰：内联伪元素，不占下划线、不改字号 ---------- */
