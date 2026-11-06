@@ -1,0 +1,25 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "author": "CatVinci-Studio",
+  "author_id": null,
+  "description": "Markdown the way GitHub shows a README: a system sans on white or GitHub's dark page, ruled level-1 and level-2 headings, grey quotes, striped tables and GitHub's own code colours. Written by us after github-markdown-css; not affiliated with GitHub.",
+  "license": "MIT",
+  "issue": null,
+  "comment_id": null,
+  "source": "https://github.com/CatVinci-Studio/textus-themes",
+  "created": "2026-11-05T22:00:00Z",
+  "updated": "2026-11-05T22:00:00Z",
+  "source_updated": null,
+  "css": "theme.css",
+  "darkCss": "theme-dark.css",
+  "previews": [
+    "preview.png",
+    "preview-dark.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "像 GitHub 显示 README 那样排版：系统无衬线字体，白底或 GitHub 的深色页面，一、二级标题带分隔线，灰色引用，隔行底色的表格，代码用 GitHub 自己的配色。参照 github-markdown-css 编写，与 GitHub 官方无关。"
+    }
+  }
+}
