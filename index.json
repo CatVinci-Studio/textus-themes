@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated": "2026-11-01T06:00:00Z",
-  "count": 21,
+  "updated": "2026-11-05T22:00:00Z",
+  "count": 22,
   "themes": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "author": "CatVinci-Studio",
+      "description": "Markdown the way GitHub shows a README: a system sans on white or GitHub's dark page, ruled level-1 and level-2 headings, grey quotes, striped tables and GitHub's own code colours. Written by us after github-markdown-css; not affiliated with GitHub.",
+      "license": "MIT",
+      "source": "https://github.com/CatVinci-Studio/textus-themes",
+      "created": "2026-11-05T22:00:00Z",
+      "updated": "2026-11-05T22:00:00Z",
+      "css": "themes/github/theme.css",
+      "darkCss": "themes/github/theme-dark.css",
+      "previews": [
+        "themes/github/preview.png",
+        "themes/github/preview-dark.png"
+      ],
+      "l10n": {
+        "zh": {
+          "description": "像 GitHub 显示 README 那样排版：系统无衬线字体，白底或 GitHub 的深色页面，一、二级标题带分隔线，灰色引用，隔行底色的表格，代码用 GitHub 自己的配色。参照 github-markdown-css 编写，与 GitHub 官方无关。"
+        }
+      }
+    },
     {
       "id": "one-dark",
       "name": "One Dark & One Light",
@@ -23,8 +44,8 @@
           "description": "写代码的人最爱的写作配色：白天 One Light，夜里 One Dark，蓝色链接，标题依次为紫、蓝、绿、金，代码也用同一套颜色。基于 Atom One 配色。"
         }
       },
-      "installs": 49,
-      "installs30": 49
+      "installs": 50,
+      "installs30": 50
     },
     {
       "id": "rose-pine",
@@ -251,8 +272,8 @@
           "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
         }
       },
-      "installs": 19,
-      "installs30": 19
+      "installs": 20,
+      "installs30": 20
     },
     {
       "id": "codex-mono",

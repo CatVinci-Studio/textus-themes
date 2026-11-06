@@ -1,0 +1,230 @@
+/*! GitHub (light) - a Textus theme by @CatVinci-Studio
+ *  After github-markdown-css by Sindre Sorhus (MIT), https://github.com/sindresorhus/github-markdown-css
+ *  Colours: GitHub Primer primitives (MIT), https://github.com/primer/primitives - unofficial, not affiliated with GitHub
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes
+ */
+
+/* Markdown the way GitHub shows it: a system sans, ruled level-1 and level-2 headings, grey quotes, striped tables and GitHub's code colours. */
+
+:root {
+  --editor-bg: #ffffff;
+  --editor-text: #1f2328;
+  --editor-muted: #59636e;
+  --editor-border: #d1d9e0;
+  --editor-quote-border: #d1d9e0;
+  --editor-accent: #0969da;
+  --editor-code-bg: rgba(129, 139, 152, 0.12);
+  --editor-highlight-bg: #fff8c5;
+  --editor-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --theme-mono: var(--font-mono, monospace);
+  --theme-link: #0969da;
+  --theme-strong: #1f2328;
+  --theme-quote-bg: transparent;
+  --theme-quote-text: #59636e;
+  --theme-code-text: #1f2328;
+  --theme-pre-bg: #f6f8fa;
+  --theme-th-bg: transparent;
+  --theme-th-text: #1f2328;
+  --theme-selection: rgba(9, 105, 218, 0.2);
+  --theme-h1: #1f2328;
+  --theme-h2: #1f2328;
+  --theme-h3: #1f2328;
+  --theme-h4: #1f2328;
+  --theme-h5: #1f2328;
+  --theme-h6: #59636e;
+  --tone-blue: #0969da;
+  --tone-green: #1a7f37;
+  --tone-orange: #bc4c00;
+  --tone-purple: #8250df;
+  --tone-red: #d1242f;
+  --tone-teal: #1b7c83;
+  --tone-yellow: #9a6700;
+  --tone-pink: #bf3989;
+  --tone-gray: #59636e;
+  --theme-stripe: #f6f8fa;
+}
+
+body {
+  background-color: var(--editor-bg);
+  color: var(--editor-text);
+}
+
+#write {
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color-scheme: light;
+  --token-keyword: #cf222e;
+  --token-function: #6639ba;
+  --token-string: #0a3069;
+  --token-number: #0550ae;
+  --token-tag: #0550ae;
+  --token-comment: #59636e;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: var(--theme-heading-font);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+#write h1 { font-size: 2.1em; color: var(--theme-h1); }
+#write h2 { font-size: 1.55em; color: var(--theme-h2); }
+#write h3 { font-size: 1.25em; color: var(--theme-h3); }
+#write h4 { font-size: 1.08em; color: var(--theme-h4); }
+#write h5 { font-size: 1em; color: var(--theme-h5); }
+#write h6 { font-size: 0.92em; color: var(--theme-h6); }
+
+#write a {
+  color: var(--theme-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#write strong {
+  color: var(--theme-strong);
+}
+
+#write blockquote {
+  margin: 1.2em 0;
+  padding: 0.5em 1.1em;
+  border: 0;
+  border-left: 3px solid var(--editor-quote-border);
+  background-color: var(--theme-quote-bg);
+  color: var(--theme-quote-text);
+}
+
+#write code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background-color: var(--editor-code-bg);
+  color: var(--theme-code-text);
+  font-family: var(--theme-mono);
+  font-size: 0.88em;
+}
+
+#write pre,
+#write .md-fences {
+  background-color: var(--theme-pre-bg);
+  border: 1px solid var(--editor-border);
+  border-radius: 8px;
+  font-family: var(--theme-mono);
+}
+
+#write pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--editor-text);
+}
+
+#write table {
+  border-collapse: collapse;
+}
+
+#write th,
+#write td {
+  padding: 0.5em 0.85em;
+  border: 1px solid var(--editor-border);
+}
+
+#write th {
+  background-color: var(--theme-th-bg);
+  color: var(--theme-th-text);
+  font-weight: 600;
+}
+
+#write hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--editor-border);
+}
+
+#write mark {
+  background-color: var(--editor-highlight-bg);
+  color: inherit;
+}
+
+#write input[type="checkbox"] {
+  accent-color: var(--editor-accent);
+}
+
+#write ::selection {
+  background-color: var(--theme-selection);
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  margin: 1.5em 0 1em;
+  line-height: 1.25;
+}
+
+#write h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid var(--editor-border); }
+#write h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid var(--editor-border); }
+#write h3 { font-size: 1.25em; }
+#write h4 { font-size: 1em; }
+#write h5 { font-size: 0.875em; }
+#write h6 { font-size: 0.85em; }
+
+#write a { text-decoration: none; }
+#write a:hover { text-decoration: underline; }
+
+#write blockquote {
+  margin: 0 0 1em;
+  padding: 0 1em;
+  border-left: 0.25em solid var(--editor-quote-border);
+}
+
+/* GitHub's alerts: the rule in the alert's colour, the text at full strength. */
+#write blockquote.md-alert {
+  border-left-color: var(--doc-alert-accent, var(--editor-quote-border));
+  color: var(--editor-text);
+}
+
+#write code {
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-size: 85%;
+}
+
+#write pre,
+#write .md-fences {
+  border: 0;
+  border-radius: 6px;
+}
+
+#write pre {
+  font-size: 85%;
+  line-height: 1.45;
+}
+
+#write pre code {
+  font-size: 100%;
+}
+
+#write th,
+#write td {
+  padding: 6px 13px;
+  border: 1px solid var(--editor-border);
+}
+
+#write tr:nth-child(2n + 1):not([data-is-header]) {
+  background-color: var(--theme-stripe);
+}
+
+#write hr {
+  height: 0.25em;
+  margin: 1.5em 0;
+}
