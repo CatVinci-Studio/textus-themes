@@ -1,6 +1,6 @@
 // Each theme's installs, ever and in the last 30 days, from Textus's
 // anonymous install counts (the app's services/ext-stats).
-const EXT_STATS = "https://textus.catvinci.com/api/ext/stats";
+const EXT_STATS = "https://textus.md/api/ext/stats";
 
 /** `{installs, installs30}` by theme id, or null when the counts can't be
  *  read: index.json then keeps the ones it has. */

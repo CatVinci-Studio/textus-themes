@@ -35,7 +35,7 @@ import { parseComment } from "./parse.mjs";
 import { LIMITS, sniffImage, slugify, validateCss, validateFields, withHeader } from "./validate.mjs";
 import { readThemes } from "./catalog.mjs";
 
-export const GALLERY_URL = "https://textus.catvinci.com/themes/";
+export const GALLERY_URL = "https://textus.md/themes/";
 /** Mentioned when a theme starts waiting for review. */
 export const MAINTAINERS = ["ChengAoShen", "jzzzzh"];
 const WRITE_ROLES = new Set(["admin", "maintain", "write"]);
