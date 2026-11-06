@@ -1,4 +1,4 @@
-Share your Textus theme here: **one comment = one theme.** A bot checks it right away and replies; once a maintainer has reviewed and approved it, it appears on [textus.catvinci.com/themes](https://textus.catvinci.com/themes/).
+Share your Textus theme here: **one comment = one theme.** A bot checks it right away and replies; once a maintainer has reviewed and approved it, it appears on [textus.md/themes](https://textus.md/themes/).
 
 **Copy this into a new comment and fill it in:**
 

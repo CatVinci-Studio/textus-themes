@@ -1,14 +1,14 @@
 # Textus Themes
 
-Free, open themes for [Textus](https://textus.catvinci.com), the Markdown editor, shared by the people who use it.
-Browse them at **[textus.catvinci.com/themes](https://textus.catvinci.com/themes/)**.
+Free, open themes for [Textus](https://textus.md), the Markdown editor, shared by the people who use it.
+Browse them at **[textus.md/themes](https://textus.md/themes/)**.
 
 Sharing a theme takes one GitHub comment: no fork, no pull request.
 Post it on the **[theme gallery issue](https://github.com/CatVinci-Studio/textus-themes/issues/1)**. A bot checks it right away; once a maintainer has reviewed it, it is published here and on the website.
 
 ## Install a theme
 
-1. On the [gallery](https://textus.catvinci.com/themes/), press **Download CSS** on a theme (or open its `theme.css` in [`themes/`](themes/)).
+1. On the [gallery](https://textus.md/themes/), press **Download CSS** on a theme (or open its `theme.css` in [`themes/`](themes/)).
 2. In Textus, open **Settings › Editor & Appearance**, choose **Import CSS…** and pick the downloaded file.
 
 Themes are Typora-compatible stylesheets, so most of them also work in Typora.
