@@ -1,0 +1,79 @@
+/*! Washi - a Textus theme by @AkiraYuki587
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6724129924
+ */
+
+/*! 手帐 Washi - a Textus theme
+ *  牛皮方格纸、胶带与马克笔渐变：原创配色与实现。
+ *  Textus 导入主题时会推导一套界面色，以 :root{...!important} 追加到文档末尾；
+ *  下面用 :root:root 把窗口底色钉住，靠特异性压过推导值。这个压法参照 Misty
+ *  （myshzzx 投稿，改编自 E-Tiger Studio 的 Typora Misty，MIT）。
+ *  License: MIT
+ */
+:root{
+  --editor-bg:#fbf6e9;
+  --editor-text:#4b4134;
+  --editor-muted:#968a76;
+  --editor-accent:#e08a6b;
+  --editor-border:#e5d9c2;
+  --editor-code-bg:#f3ead7;
+  --editor-quote-border:#e8b04b;
+  --editor-highlight-bg:rgba(240,192,74,.45);
+  --editor-font:"Kaiti SC","STKaiti","KaiTi","Noto Serif CJK SC","Songti SC",serif;
+  --g1:#f28b7e; --g2:#f0c04a; --g3:#8fd0b0; --g4:#8ab6e0;
+  --washi-tape:linear-gradient(135deg,rgba(242,139,126,.62),rgba(240,192,74,.60) 38%,rgba(143,208,176,.62) 70%,rgba(138,182,224,.58));
+  --washi-paper:repeating-linear-gradient(0deg,transparent 0 27px,rgba(150,138,118,.085) 27px 28px),repeating-linear-gradient(90deg,transparent 0 27px,rgba(150,138,118,.085) 27px 28px);
+  --washi-marker:linear-gradient(180deg,transparent 0 58%,rgba(240,192,74,.55) 58% 92%,transparent 92%);
+  --washi-sticker:radial-gradient(120% 140% at 0% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 60%),linear-gradient(135deg,rgba(242,139,126,.11),rgba(138,182,224,.13));
+  --washi-soft:radial-gradient(700px 420px at 92% 2%,rgba(240,192,74,.11),transparent 64%);
+  --token-keyword:#b06a8f; --token-function:#5b8fb5; --token-string:#6a9e7d;
+  --token-number:#c48a3c; --token-tag:#d0746b;
+}
+/* 推导色是 :root{...!important}；这里多一层 :root 才能压住窗口底色。 */
+:root:root{--editor-bg:#fbf6e9 !important}
+body{background-color:var(--doc-bg);color:var(--editor-text)}
+:root{background-color:var(--doc-bg);background-image:var(--washi-soft),var(--washi-paper)}
+.milkdown{background-color:var(--doc-bg);background-image:var(--washi-soft),var(--washi-paper)}
+#write{font-family:var(--editor-font);font-size:18px;line-height:2;color:var(--editor-text);color-scheme:light;background:none}
+#write h1,#write h2,#write h3,#write h4,#write h5,#write h6{font-family:var(--editor-font);font-weight:700;line-height:1.4;margin:1.7em 0 .7em}
+#write h1{font-size:2.05em;margin-top:1.1em;color:var(--g1);text-align:center;position:relative}
+#write h1::before{content:"";position:absolute;left:32%;top:-.5em;width:36%;height:15px;background:var(--washi-tape);border-radius:2px;box-shadow:0 1px 3px rgba(90,70,40,.10);transform:rotate(-1.4deg)}
+#write h2{font-size:1.45em;display:inline-block;background:var(--washi-marker);padding:0 .2em .12em;border-radius:3px}
+#write h3{font-size:1.2em;color:var(--g2)}
+#write h3::before{content:"";display:inline-block;width:.42em;height:.42em;border-radius:50%;background:var(--washi-tape);margin-right:.5em;vertical-align:.12em}
+#write h4{font-size:1.05em;color:var(--editor-muted)}
+#write h5,#write h6{font-size:.95em;color:var(--editor-muted)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  #write h1{background:linear-gradient(100deg,var(--g1),var(--g2) 38%,var(--g3) 70%,var(--g4));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+/* 渐变标题靠 background-clip:text + 透明填充实现；导出 PDF 时若关闭背景图形，
+   标题会整条消失。打印媒体退回实色。 */
+@media print{
+  #write h1{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:currentColor!important;color:var(--editor-text)!important}
+  #write h1 code{-webkit-text-fill-color:currentColor!important}
+}
+#write p{margin:0 0 1.05em}
+#write strong{color:#c4674f;font-weight:700}
+#write em{color:var(--g3)}
+#write del{color:var(--editor-muted)}
+#write a{color:#5b8fb5;text-decoration:none;background:var(--washi-marker);padding:.05em .2em;border-radius:2px}
+#write mark{background:var(--washi-marker);color:inherit;border-radius:2px;padding:.05em .2em}
+#write code{font-family:var(--font-mono,ui-monospace,Consolas,"Noto Sans Mono CJK SC",monospace);font-size:.85em;padding:.13em .4em;border-radius:5px;background:var(--editor-code-bg);border:1px dashed var(--editor-border);color:#a46a4e}
+#write blockquote{margin:1.5em 0;padding:1em 1.25em;border:1.5px dashed var(--editor-border);border-radius:9px;background:var(--washi-sticker);box-shadow:2px 3px 0 rgba(150,138,118,.13);color:var(--editor-text);position:relative}
+#write blockquote::before{content:"";position:absolute;left:14px;top:-9px;width:64px;height:16px;background:var(--washi-tape);border-radius:2px;transform:rotate(-2deg)}
+#write blockquote p{margin:.3em 0}
+#write pre,#write .md-fences{margin:1.4em 0;padding:1.1em 1.2em;border:1.5px dashed var(--editor-border);border-radius:9px;background-color:var(--editor-code-bg);background-image:var(--washi-tape);background-size:100% 5px;background-repeat:no-repeat;background-position:0 0;overflow:auto}
+#write pre code,#write .md-fences code{padding:0;background:transparent;border:0;color:var(--editor-text);font-size:.85em;line-height:1.75}
+#write table{width:100%;border-collapse:collapse;margin:1.4em 0;font-size:.94em}
+#write th,#write td{padding:.58em .8em;border:1px dashed var(--editor-border)}
+#write th{background:var(--washi-marker);color:var(--editor-text);font-weight:700}
+#write tr:nth-child(even) td{background:rgba(240,192,74,.055)}
+#write hr{height:5px;border:0;margin:2em 0;background:var(--washi-tape);border-radius:2px}
+#write ul,#write ol{padding-left:1.6em}
+#write li{margin:.36em 0}
+#write ol > li::before,
+#write ul > li:not([data-item-type="task"])::before{color:var(--g1)}
+#write li[data-item-type="task"]::before{border-color:var(--editor-border);background-color:var(--editor-code-bg)}
+#write li[data-item-type="task"][data-checked="true"]::before{border-color:var(--editor-accent);background-color:var(--editor-accent)}
+#write sup{color:var(--g2)}
+#write ::selection{background:var(--editor-highlight-bg)}

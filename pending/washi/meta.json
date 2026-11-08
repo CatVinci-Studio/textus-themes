@@ -1,0 +1,23 @@
+{
+  "id": "washi",
+  "name": "Washi",
+  "author": "AkiraYuki587",
+  "author_id": 31276408,
+  "description": "Washi is a warm paper-collage Textus theme: ruled kraft paper, diagonal washi tape, highlighter gradients on headings and links, and sticky-note callouts. Original palette; the :root:root window-color pin is adapted from Misty (myshzzx / E-Tiger Studio, MIT) with thanks.",
+  "license": "MIT",
+  "issue": 1,
+  "comment_id": 6724129924,
+  "source": "https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6724129924",
+  "created": "2026-11-08T16:38:27Z",
+  "updated": "2026-11-08T16:38:27Z",
+  "source_updated": "2026-11-08T16:38:27Z",
+  "css": "theme.css",
+  "previews": [
+    "preview.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "手帐 Washi：牛皮方格纸底、斜贴纸胶带、马克笔/荧光笔渐变标题与链接下划线、便利贴式引用与任务框。原创配色与实现；仅借 Misty（myshzzx 投稿 / E-Tiger Studio / Typora Misty，MIT）的 :root:root 钉色技巧并致谢。单一浅色外观，仅一张渲染预览图。"
+    }
+  }
+}
