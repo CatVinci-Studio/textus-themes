@@ -1,0 +1,82 @@
+/*! Atelier - a Textus theme by @AkiraYuki587
+ *  License: MIT
+ *  Source: https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6724172611
+ */
+
+/*! 格构 Atelier - a Textus theme
+ *  包豪斯原色、硬边色标与几何网格：原创配色与实现。
+ *  Textus 导入主题时会推导一套界面色，以 :root{...!important} 追加到文档末尾；
+ *  下面用 :root:root 把窗口底色钉住，靠特异性压过推导值。这个压法参照 Misty
+ *  （myshzzx 投稿，改编自 E-Tiger Studio 的 Typora Misty，MIT）。
+ *  License: MIT
+ */
+:root{
+  --editor-bg:#f4f0e6;
+  --editor-text:#1a1a1a;
+  --editor-muted:#6b675e;
+  --editor-accent:#e03a2f;
+  --editor-border:#1a1a1a;
+  --editor-code-bg:#f2d24b;
+  --editor-quote-border:#2b5fb8;
+  --editor-highlight-bg:rgba(242,180,29,.55);
+  --editor-font:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;
+  --g1:#e03a2f; --g2:#f2b41d; --g3:#2b5fb8; --g4:#1a1a1a;
+  --atelier-hard:linear-gradient(90deg,var(--g1) 0 34%,var(--g2) 34% 67%,var(--g3) 67% 100%);
+  --atelier-wheel:conic-gradient(var(--g1) 0 33%,var(--g2) 33% 66%,var(--g3) 66% 100%);
+  --atelier-stripe:repeating-linear-gradient(45deg,var(--g1) 0 8px,var(--g2) 8px 16px,var(--g3) 16px 24px);
+  --atelier-dot:radial-gradient(circle at 50% 50%,var(--g1) 0 42%,transparent 43%);
+  --atelier-wash:linear-gradient(120deg,rgba(224,58,47,.12),rgba(242,180,29,.10) 50%,rgba(43,95,184,.10));
+  --atelier-grid:repeating-linear-gradient(0deg,transparent 0 39px,rgba(26,26,26,.028) 39px 40px);
+  --atelier-paper:#fffdf7;
+  --token-keyword:#2b5fb8; --token-function:#6f5aa8; --token-string:#3f8c63;
+  --token-number:#e0662f; --token-tag:#e03a2f;
+}
+/* 推导色是 :root{...!important}；这里多一层 :root 才能压住窗口底色。 */
+:root:root{--editor-bg:#f4f0e6 !important}
+body{background-color:var(--doc-bg);color:var(--editor-text)}
+:root{background-color:var(--doc-bg);background-image:radial-gradient(760px 440px at 100% 0%,rgba(242,180,29,.13),transparent 64%),var(--atelier-grid)}
+.milkdown{background-color:var(--doc-bg);background-image:radial-gradient(760px 440px at 100% 0%,rgba(242,180,29,.13),transparent 64%),var(--atelier-grid)}
+#write{font-family:var(--editor-font);font-size:17px;line-height:1.85;color:var(--editor-text);color-scheme:light;background:none}
+#write h1,#write h2,#write h3,#write h4,#write h5,#write h6{font-family:var(--editor-font);font-weight:900;line-height:1.25;margin:1.7em 0 .7em;letter-spacing:-.01em}
+#write h1{font-size:2.45em;margin-top:0;color:var(--g4);padding-bottom:.18em;text-align:center}
+#write h1::after{content:"";display:block;height:8px;margin-top:.18em;background:var(--atelier-hard)}
+#write h2{font-size:1.5em}
+#write h2::before{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--atelier-wheel);border:2px solid var(--g4);margin-right:.55em;vertical-align:.06em}
+#write h3{font-size:1.2em}
+#write h3::before{content:"";display:inline-block;width:.42em;height:.42em;background:var(--atelier-dot);margin-right:.5em;vertical-align:.12em}
+#write h4{font-size:1.05em}
+#write h5,#write h6{font-size:.95em;color:var(--editor-muted)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  #write h1{background:linear-gradient(90deg,var(--g1) 0 34%,var(--g2) 34% 67%,var(--g3) 67% 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+/* 渐变标题靠 background-clip:text + 透明填充实现；导出 PDF 时若关闭背景图形，
+   标题会整条消失。打印媒体退回实色。 */
+@media print{
+  #write h1{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:currentColor!important;color:var(--editor-text)!important}
+  #write h1 code{-webkit-text-fill-color:currentColor!important}
+}
+#write p{margin:0 0 1em}
+#write strong{color:var(--g1);font-weight:900}
+#write em{color:var(--g3)}
+#write del{color:var(--editor-muted)}
+#write a{color:var(--g1);text-decoration:none;border-bottom:3px solid var(--g1)}
+#write a:hover{background:var(--g2)}
+#write mark{background:var(--g2);color:var(--g4);border-radius:0;padding:.05em .2em}
+#write code{font-family:var(--font-mono,ui-monospace,Consolas,"Noto Sans Mono CJK SC",monospace);font-size:.85em;padding:.1em .35em;border-radius:0;background:var(--editor-code-bg);border:1.5px solid var(--g4);color:var(--g4)}
+#write blockquote{margin:1.5em 0;padding:.9em 1.2em;border:2px solid var(--g4);border-radius:0;background:var(--atelier-paper);box-shadow:6px 6px 0 var(--g4);color:var(--editor-text)}
+#write blockquote p{margin:.25em 0}
+#write pre,#write .md-fences{margin:1.5em 0;padding:1.1em 1.2em;border:2px solid var(--g4);border-radius:0;background-color:var(--atelier-paper);background-image:var(--atelier-hard);background-size:100% 6px;background-repeat:no-repeat;background-position:0 0;box-shadow:5px 5px 0 var(--g4);overflow:auto}
+#write pre code,#write .md-fences code{padding:0;background:transparent;border:0;color:var(--editor-text);font-size:.85em;line-height:1.7}
+#write table{width:100%;border-collapse:collapse;margin:1.5em 0;font-size:.94em;border:2px solid var(--g4)}
+#write th,#write td{padding:.58em .8em;border:1px solid var(--g4)}
+#write th{background:var(--g2);color:var(--g4);font-weight:900}
+#write tr:nth-child(even) td{background:var(--atelier-wash)}
+#write hr{height:9px;border:0;margin:2.2em 0;background:var(--atelier-stripe);border-radius:0}
+#write ul,#write ol{padding-left:1.5em}
+#write li{margin:.34em 0}
+#write ol > li::before,
+#write ul > li:not([data-item-type="task"])::before{color:var(--g1)}
+#write li[data-item-type="task"]::before{border-color:var(--editor-border);background-color:var(--editor-code-bg)}
+#write li[data-item-type="task"][data-checked="true"]::before{border-color:var(--editor-accent);background-color:var(--editor-accent)}
+#write sup{color:var(--g3)}
+#write ::selection{background:var(--editor-highlight-bg)}

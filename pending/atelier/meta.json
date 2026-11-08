@@ -1,0 +1,23 @@
+{
+  "id": "atelier",
+  "name": "Atelier",
+  "author": "AkiraYuki587",
+  "author_id": 31276408,
+  "description": "Atelier is a Bauhaus Textus theme: primary-color hard stops, bold black outlines, hard shadows and a striped grid, with a conic color wheel and heading gradients. Original palette; the :root:root window-color pin is adapted from Misty (myshzzx / E-Tiger Studio, MIT), with thanks.",
+  "license": "MIT",
+  "issue": 1,
+  "comment_id": 6724172611,
+  "source": "https://github.com/CatVinci-Studio/textus-themes/issues/1#issuecomment-6724172611",
+  "created": "2026-11-08T16:42:18Z",
+  "updated": "2026-11-08T16:42:18Z",
+  "source_updated": "2026-11-08T16:42:18Z",
+  "css": "theme.css",
+  "previews": [
+    "preview.png"
+  ],
+  "l10n": {
+    "zh": {
+      "description": "格构 Atelier：包豪斯三原色硬切、粗黑描边与硬阴影、45 度重复斜条纹网格，锥形色轮与硬色标渐变标题。原创配色与实现；仅借 Misty（myshzzx 投稿 / E-Tiger Studio / Typora Misty，MIT）的 :root:root 钉色技巧并致谢。单一浅色外观，仅一张渲染预览图。"
+    }
+  }
+}
