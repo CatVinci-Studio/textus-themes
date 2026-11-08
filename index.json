@@ -23,8 +23,8 @@
           "description": "像 GitHub 显示 README 那样排版：系统无衬线字体，白底或 GitHub 的深色页面，一、二级标题带分隔线，灰色引用，隔行底色的表格，代码用 GitHub 自己的配色。参照 github-markdown-css 编写，与 GitHub 官方无关。"
         }
       },
-      "installs": 7,
-      "installs30": 7
+      "installs": 15,
+      "installs30": 15
     },
     {
       "id": "one-dark",
@@ -46,8 +46,8 @@
           "description": "写代码的人最爱的写作配色：白天 One Light，夜里 One Dark，蓝色链接，标题依次为紫、蓝、绿、金，代码也用同一套颜色。基于 Atom One 配色。"
         }
       },
-      "installs": 51,
-      "installs30": 51
+      "installs": 56,
+      "installs30": 56
     },
     {
       "id": "rose-pine",
@@ -92,8 +92,8 @@
           "description": "低眩光的平静配色，适合长时间阅读：白天是 Solarized 的暖色浅底，夜里是深蓝绿底，蓝色链接、青绿标题、橙色代码。基于 Solarized 配色。"
         }
       },
-      "installs": 17,
-      "installs30": 17
+      "installs": 18,
+      "installs30": 18
     },
     {
       "id": "tokyo-night",
@@ -115,8 +115,8 @@
           "description": "清爽而明亮：白天是 Tokyo Night Day 的浅蓝页面，夜里换成 Night 配色，蓝色标题、紫与青点缀，代码也用同一套颜色。基于 Tokyo Night 配色。"
         }
       },
-      "installs": 20,
-      "installs30": 20
+      "installs": 21,
+      "installs30": 21
     },
     {
       "id": "cards",
@@ -251,8 +251,8 @@
           "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
         }
       },
-      "installs": 29,
-      "installs30": 29
+      "installs": 31,
+      "installs30": 31
     },
     {
       "id": "article",
@@ -274,8 +274,8 @@
           "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
         }
       },
-      "installs": 21,
-      "installs30": 21
+      "installs": 22,
+      "installs30": 22
     },
     {
       "id": "codex-mono",
@@ -297,8 +297,8 @@
           "description": "写作者的终端：全文用等宽字体，标题居中，各级标题统一用石板灰，引用带底色和彩色竖条，高亮用描边。参考 liangjingkanji 的 Drake。"
         }
       },
-      "installs": 16,
-      "installs30": 16
+      "installs": 18,
+      "installs30": 18
     },
     {
       "id": "fjord",
@@ -366,8 +366,8 @@
           "description": "适合长时间写作的柔和粉彩：白天是清爽的拿铁色，夜里是深摩卡色，淡紫点缀，薰衣草色引用，粗体为宝石蓝。Catppuccin 配色的非官方移植。"
         }
       },
-      "installs": 22,
-      "installs30": 22
+      "installs": 23,
+      "installs30": 23
     },
     {
       "id": "lazuli",
@@ -412,8 +412,8 @@
           "description": "鲜明的夜色：经典的深紫灰夜间页配霓虹色点缀，白天是温暖的奶油色页、点缀更深。基于 Dracula 和 Alucard 配色。"
         }
       },
-      "installs": 12,
-      "installs30": 12
+      "installs": 13,
+      "installs30": 13
     },
     {
       "id": "retro-wood",
@@ -458,8 +458,8 @@
           "description": "清新活泼：二级标题衬在薄荷色胶囊上，较小的标题前有小标记，虚线分隔，引用带底色，夜间是平静的深海色。参考 sumruler 的 Phycat。"
         }
       },
-      "installs": 17,
-      "installs30": 17
+      "installs": 19,
+      "installs30": 19
     },
     {
       "id": "plain",
@@ -504,8 +504,8 @@
           "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
         }
       },
-      "installs": 12,
-      "installs30": 12
+      "installs": 14,
+      "installs30": 14
     }
   ]
 }
