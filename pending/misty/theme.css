@@ -46,8 +46,14 @@
  *   5. 表头：Milkdown 把表头行放在 <tbody> 里，用 tr[data-is-header] 选中。
  *   6. 任务清单：Textus 用 li[data-item-type="task"]::before 画方框，这里把
  *      它调成 Misty 的浅灰方块，勾选后变绿。
+ *   7. 正文图片的圆角与三层投影移植自 Trilium Blue 主题（见
+ *      --misty-img-radius / --misty-img-shadow，深浅各一套），只作用于
+ *      #write 内的 <img>，打印 / 导出 PDF 时自动去掉投影。
+ *      表格 / 引用块 / 代码块共用同一套三层投影（--misty-shadow-block），
+ *      各层尺寸整体缩到 70%，取代原先向右下 45° 的硬投影。
  *
- * 想微调？看下面「可调参数」两条，或直接改色板里的值。
+ * 想微调？看下面「可调参数」两条、色板里的 --misty-img-* 变量，
+ * 或直接改色板里的值。
  */
 
 /* =============================================================
@@ -134,6 +140,25 @@
   --misty-shadow-dialog: 0 16px 48px rgb(20 27 40 / 16%);
   --misty-shadow-sheet: 0 -8px 24px rgb(20 27 40 / 14%);
   --misty-shadow-drawer: 8px 0 24px rgb(20 27 40 / 16%);
+  /* 表格 / 引用块 / 代码块：与正文图片同一套三层投影（描边环 + 近距贴合 +
+     远距扩散），但各层尺寸整体 ×0.7 —— 比图片的阴影收窄 30%，块级元素在
+     正文里更收敛，不会显得比图片还「浮」。
+     想整体再调：所有偏移/模糊/扩散乘同一个系数即可（0.5 更平，0.9 接近图片）。 */
+  --misty-shadow-block:
+    0 0 0 0.7px rgb(20 27 40 / 6%),
+    0 1.4px 3.5px rgb(20 27 40 / 10%),
+    0 7px 16.8px rgb(20 27 40 / 12%);
+  /* 正文图片：圆角半径 + 三层立体投影（移植自 Trilium Blue 主题）
+     第 1 层 0 0 0 1px —— 极细描边环，压住圆角边缘，白底上边界才不会发虚；
+     第 2 层 近距小投影 —— 贴合感，让图片「坐在」纸上；
+     第 3 层 远距大扩散 —— 浮起感，这才是立体感的来源。
+     想要更平：把第 3 层删掉；想要更浮：把第 3 层的 24px / 12% 调大。
+     投影颜色沿用本主题的墨色 rgb(20 27 40)，比纯黑更贴冷调色板。 */
+  --misty-img-radius: 10px;
+  --misty-img-shadow:
+    0 0 0 1px rgb(20 27 40 / 6%),
+    0 2px 5px rgb(20 27 40 / 10%),
+    0 10px 24px rgb(20 27 40 / 12%);
   --misty-scheme: light;
 
   /* 代码高亮、提示块 */
@@ -245,6 +270,19 @@
     --misty-shadow-dialog: 0 16px 48px rgb(0 0 0 / 32%);
     --misty-shadow-sheet: 0 -8px 24px rgb(0 0 0 / 40%);
     --misty-shadow-drawer: 8px 0 24px rgb(0 0 0 / 40%);
+    /* 表格 / 引用块 / 代码块：图片同款三层投影的 70% 尺寸版（深色：纯黑
+       投影在暗底上几乎看不见，所以描边环换成低透明度白色做「受光边」） */
+    --misty-shadow-block:
+      0 0 0 0.7px rgb(255 255 255 / 8%),
+      0 1.4px 4.2px rgb(0 0 0 / 55%),
+      0 8.4px 19.6px rgb(0 0 0 / 45%);
+    /* 正文图片（深色：纯黑投影在暗底上几乎看不见，所以描边环改成低透明度
+       白色做「受光边」，投影同时加深、加宽，才有浮起来的感觉） */
+    --misty-img-radius: 10px;
+    --misty-img-shadow:
+      0 0 0 1px rgb(255 255 255 / 8%),
+      0 2px 6px rgb(0 0 0 / 55%),
+      0 12px 28px rgb(0 0 0 / 45%);
     --misty-scheme: dark;
 
     /* 代码高亮、提示块 */
@@ -352,6 +390,19 @@
     --misty-shadow-dialog: 0 16px 48px rgb(0 0 0 / 32%);
     --misty-shadow-sheet: 0 -8px 24px rgb(0 0 0 / 40%);
     --misty-shadow-drawer: 8px 0 24px rgb(0 0 0 / 40%);
+    /* 表格 / 引用块 / 代码块：图片同款三层投影的 70% 尺寸版（深色：纯黑
+       投影在暗底上几乎看不见，所以描边环换成低透明度白色做「受光边」） */
+    --misty-shadow-block:
+      0 0 0 0.7px rgb(255 255 255 / 8%),
+      0 1.4px 4.2px rgb(0 0 0 / 55%),
+      0 8.4px 19.6px rgb(0 0 0 / 45%);
+    /* 正文图片（深色：纯黑投影在暗底上几乎看不见，所以描边环改成低透明度
+       白色做「受光边」，投影同时加深、加宽，才有浮起来的感觉） */
+    --misty-img-radius: 10px;
+    --misty-img-shadow:
+      0 0 0 1px rgb(255 255 255 / 8%),
+      0 2px 6px rgb(0 0 0 / 55%),
+      0 12px 28px rgb(0 0 0 / 45%);
     --misty-scheme: dark;
 
     /* 代码高亮、提示块 */
@@ -757,6 +808,7 @@
   background-color: var(--misty-tint);
   border-left: 4px solid var(--misty-green);
   border-radius: 0.3rem;
+  box-shadow: var(--misty-shadow-block);
 }
 
 #write blockquote blockquote {
@@ -791,6 +843,17 @@
   padding: 0;
   word-break: initial;
   border-collapse: collapse;
+  box-shadow: var(--misty-shadow-block);
+}
+
+/* Textus 把表格包在 .table-scroll（overflow-x: auto / overflow-y: hidden）
+   里做横向滚动，这个滚动容器会把表格自己的 box-shadow 在「表格底 + 下外边距」
+   处硬切 —— 位置正好落在阴影将尽的 11–13px，看起来像渐变末端被截断。
+   给容器补一条下内边距、再用等量负外边距抵消：布局高度不变，只把裁剪边界
+   推到阴影之外，阴影最深的一段不会溢出到边界，也就裁不到。 */
+#write .table-scroll {
+  padding-bottom: 8px;
+  margin-bottom: -8px;
 }
 
 #write tr {
@@ -851,6 +914,7 @@
   background-color: var(--misty-panel);
   border: 1px solid var(--misty-block-border);
   border-radius: 6px;
+  box-shadow: var(--misty-shadow-block);
 }
 
 #write .md-fences {
@@ -877,7 +941,29 @@
 }
 
 /* =============================================================
-   11. 文档元信息
+   11. 图片：圆角 + 三层立体投影（静态，不做悬浮动效）
+   —— 写法移植自 Trilium Blue 主题，参数在色板的
+      --misty-img-radius / --misty-img-shadow（浅色、深色各一套）。
+   · 作用域只到 #write 内的正文图片，界面图标、侧栏缩略图不受影响；
+   · 三层叠加：描边环 + 近距贴合 + 远距扩散，观感是一张卡片浮在纸面上；
+   · 只加圆角与投影，不清 outline —— Textus 给选中图片节点画的描边是
+     编辑反馈，要保留；鼠标悬浮时也不位移、不缩放、不变投影。
+   ============================================================= */
+#write img {
+  border-radius: var(--misty-img-radius, 10px);
+  box-shadow: var(--misty-img-shadow);
+}
+
+/* 图片外层容器（Milkdown 可能把图片包在 figure / .image 里）：容器自己
+   若带边框或投影，会和图片的圆角投影叠成双重边，这里只清容器、不动 img。
+   用 :has(> img) 精确命中「直接包着图片」的容器，不碰表格、代码块等。 */
+#write :is(figure, .image, .image-inline):has(> img) {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* =============================================================
+   12. 文档元信息
    ============================================================= */
 #write .md-meta {
   color: var(--misty-muted);
@@ -903,6 +989,15 @@
   #write pre,
   #write table {
     page-break-inside: avoid;
+  }
+
+  /* 打印 / 导出 PDF 时去掉投影（表格 / 引用块 / 代码块 / 图片共用的三层
+     投影），避免纸上多出一块灰影；圆角保留。 */
+  #write table,
+  #write blockquote,
+  #write .code-block-wrapper,
+  #write img {
+    box-shadow: none !important;
   }
 
   /* 渐变文字的兜底：标题靠 background-clip: text + 透明文字填充实现，
