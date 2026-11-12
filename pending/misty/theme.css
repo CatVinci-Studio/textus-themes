@@ -49,7 +49,8 @@
  *   7. 正文图片的圆角与三层投影移植自 Trilium Blue 主题（见
  *      --misty-img-radius / --misty-img-shadow，深浅各一套），只作用于
  *      #write 内的 <img>，打印 / 导出 PDF 时自动去掉投影。
- *      表格 / 引用块 / 代码块共用同一套三层投影（--misty-shadow-block），
+ *      表格 / 引用块 / 代码块 / 图表渲染框共用同一套三层投影
+ *      （--misty-shadow-block），
  *      各层尺寸整体缩到 70%，取代原先向右下 45° 的硬投影。
  *
  * 想微调？看下面「可调参数」两条、色板里的 --misty-img-* 变量，
@@ -62,7 +63,7 @@
 :root {
   /* 正文字号与行高（原主题：16px / 1.5；中文长文嫌挤可改 1.65） */
   --misty-font-size: 16px;
-  --misty-leading: 1.5;
+  --misty-leading: 1.8;
   /* 正文列宽交给 Textus 的「文本宽度」设置，这里不写 max-width：
      原主题的 1800px 约等于满宽，在 Textus 里选「宽」更接近原来的观感。 */
 }
@@ -940,6 +941,17 @@
   background-color: var(--misty-panel);
 }
 
+/* ---------- 图表渲染框：```mermaid / ```chart ----------
+   Textus 把画好的图放进代码块下方的 <div class="mermaid-preview md-fences">，
+   光标离开时方块里的源码隐藏、只留这张图。盒子自带 .md-fences，所以灰面板
+   底色、圆角、内边距都由上面的代码块规则和 Textus 自己的样式给出 —— 这里只
+   补表格同款的三层投影，让图和表格 / 引用块 / 代码块一样「坐在」纸面上。
+   不用像表格那样给外层补内边距：这个盒子自己就是横向滚动容器
+   （overflow-x: auto），投影画在盒子外面，不会被自身裁剪。 */
+#write .mermaid-preview {
+  box-shadow: var(--misty-shadow-block);
+}
+
 /* =============================================================
    11. 图片：圆角 + 三层立体投影（静态，不做悬浮动效）
    —— 写法移植自 Trilium Blue 主题，参数在色板的
@@ -991,11 +1003,12 @@
     page-break-inside: avoid;
   }
 
-  /* 打印 / 导出 PDF 时去掉投影（表格 / 引用块 / 代码块 / 图片共用的三层
-     投影），避免纸上多出一块灰影；圆角保留。 */
+  /* 打印 / 导出 PDF 时去掉投影（表格 / 引用块 / 代码块 / 图表渲染框 / 图片
+     共用的三层投影），避免纸上多出一块灰影；圆角保留。 */
   #write table,
   #write blockquote,
   #write .code-block-wrapper,
+  #write .mermaid-preview,
   #write img {
     box-shadow: none !important;
   }
