@@ -23,8 +23,8 @@
           "description": "像 GitHub 显示 README 那样排版：系统无衬线字体，白底或 GitHub 的深色页面，一、二级标题带分隔线，灰色引用，隔行底色的表格，代码用 GitHub 自己的配色。参照 github-markdown-css 编写，与 GitHub 官方无关。"
         }
       },
-      "installs": 56,
-      "installs30": 56
+      "installs": 69,
+      "installs30": 69
     },
     {
       "id": "one-dark",
@@ -46,8 +46,8 @@
           "description": "写代码的人最爱的写作配色：白天 One Light，夜里 One Dark，蓝色链接，标题依次为紫、蓝、绿、金，代码也用同一套颜色。基于 Atom One 配色。"
         }
       },
-      "installs": 83,
-      "installs30": 83
+      "installs": 89,
+      "installs30": 89
     },
     {
       "id": "rose-pine",
@@ -69,8 +69,8 @@
           "description": "柔和自然：白天是 Rosé Pine Dawn 的暖色纸面，夜里换成 Rosé Pine 的深色，鸢尾紫点缀、松绿链接、玫瑰色引用。基于 Rosé Pine 配色。"
         }
       },
-      "installs": 47,
-      "installs30": 47
+      "installs": 49,
+      "installs30": 49
     },
     {
       "id": "solarized",
@@ -92,8 +92,8 @@
           "description": "低眩光的平静配色，适合长时间阅读：白天是 Solarized 的暖色浅底，夜里是深蓝绿底，蓝色链接、青绿标题、橙色代码。基于 Solarized 配色。"
         }
       },
-      "installs": 31,
-      "installs30": 31
+      "installs": 34,
+      "installs30": 34
     },
     {
       "id": "tokyo-night",
@@ -115,8 +115,8 @@
           "description": "清爽而明亮：白天是 Tokyo Night Day 的浅蓝页面，夜里换成 Night 配色，蓝色标题、紫与青点缀，代码也用同一套颜色。基于 Tokyo Night 配色。"
         }
       },
-      "installs": 30,
-      "installs30": 30
+      "installs": 32,
+      "installs30": 32
     },
     {
       "id": "cards",
@@ -138,8 +138,8 @@
           "description": "适合整理笔记：引用、代码、表格和提示块各自放在圆角卡片里，浅灰底色配靛蓝点缀，二级标题下方有分隔线另起一节。版式与配色参考 Border，CSS 为我们自己编写。"
         }
       },
-      "installs": 30,
-      "installs30": 30
+      "installs": 32,
+      "installs30": 32
     },
     {
       "id": "compact",
@@ -161,8 +161,8 @@
           "description": "一屏放下更多内容又不显拥挤：15 px 无衬线字体，行距和段距收紧，底色是 Gruvbox 的暖色纸面，标题靠颜色而不是字号区分。适合清单、日志和速记。密度与配色参考 Shimmering Focus，CSS 为我们自己编写。"
         }
       },
-      "installs": 27,
-      "installs30": 27
+      "installs": 29,
+      "installs30": 29
     },
     {
       "id": "contrast",
@@ -184,8 +184,8 @@
           "description": "长文阅读和研究笔记都清晰：冷白底上的近黑文字，18 px 字号，红色与藏青标题，链接始终带下划线，一级标题下有实线，代码用边框隔开。正文对比度达到 WCAG AAA。配色参考 ITS，CSS 为我们自己编写。"
         }
       },
-      "installs": 31,
-      "installs30": 31
+      "installs": 35,
+      "installs30": 35
     },
     {
       "id": "outline",
@@ -207,8 +207,8 @@
           "description": "适合计划、待办和大纲：冷白底上的简洁无衬线字体，标题按级别换色，粉色粗体、青绿引用，列表项留白宽松。配色参考 Things，CSS 为我们自己编写。"
         }
       },
-      "installs": 35,
-      "installs30": 35
+      "installs": 37,
+      "installs30": 37
     },
     {
       "id": "reading-room",
@@ -230,8 +230,8 @@
           "description": "像在读一本排得很好的书：暖色纸上的大号衬线字，棕色墨迹，行距宽、段落舒展，粗体为红、斜体为蓝、链接为金；夜里是灯下的书页。配色参考 Primary，CSS 为我们自己编写。"
         }
       },
-      "installs": 28,
-      "installs30": 28
+      "installs": 30,
+      "installs30": 30
     },
     {
       "id": "misty",
@@ -251,8 +251,8 @@
           "description": "由 Typora 主题 Misty 改造（E-Tiger Studio, 2017-2020, MIT），同时参考 VLOOK：绿蓝渐变的标题、带编号的章节和柔和的提示块，一个文件跟随浅色与深色。"
         }
       },
-      "installs": 58,
-      "installs30": 58
+      "installs": 65,
+      "installs30": 65
     },
     {
       "id": "article",
@@ -274,8 +274,8 @@
           "description": "像一篇排好版的论文：Computer Modern 风格的衬线字体、带编号的章节、三线表和朴素的链接，白底或黑底。参考 shamsghi 的 LaTeX Typora。"
         }
       },
-      "installs": 35,
-      "installs30": 35
+      "installs": 36,
+      "installs30": 36
     },
     {
       "id": "codex-mono",
@@ -320,8 +320,8 @@
           "description": "极地般平静：白天是雪暴般的浅色页，夜里是极夜，霜蓝色链接，双线引用，夜间标题带极光色。基于 Nord 配色。"
         }
       },
-      "installs": 14,
-      "installs30": 14
+      "installs": 15,
+      "installs30": 15
     },
     {
       "id": "inkpaper",
@@ -343,8 +343,8 @@
           "description": "纸上的墨：温暖的纸色页和近黑的夜间页，标题如墨，链接为青色，代码低调。基于 Steph Ango 的 Flexoki，https://stephango.com/flexoki。"
         }
       },
-      "installs": 24,
-      "installs30": 24
+      "installs": 27,
+      "installs30": 27
     },
     {
       "id": "latte-mocha",
@@ -389,8 +389,8 @@
           "description": "靛蓝而清爽：标题居中，二级标题衬在纯蓝色带上，标题用衬线、正文用无衬线，粗体和列表符号为蓝色。参考 YiNN 的 Lapis。"
         }
       },
-      "installs": 16,
-      "installs30": 16
+      "installs": 17,
+      "installs30": 17
     },
     {
       "id": "nosferatu",
@@ -412,8 +412,8 @@
           "description": "鲜明的夜色：经典的深紫灰夜间页配霓虹色点缀，白天是温暖的奶油色页、点缀更深。基于 Dracula 和 Alucard 配色。"
         }
       },
-      "installs": 18,
-      "installs30": 18
+      "installs": 19,
+      "installs30": 19
     },
     {
       "id": "retro-wood",
@@ -458,8 +458,8 @@
           "description": "清新活泼：二级标题衬在薄荷色胶囊上，较小的标题前有小标记，虚线分隔，引用带底色，夜间是平静的深海色。参考 sumruler 的 Phycat。"
         }
       },
-      "installs": 26,
-      "installs30": 26
+      "installs": 27,
+      "installs30": 27
     },
     {
       "id": "plain",
@@ -481,8 +481,8 @@
           "description": "Textus 默认外观去掉标题标记：字体和颜色相同，三级和四级标题不带标记。"
         }
       },
-      "installs": 25,
-      "installs30": 25
+      "installs": 26,
+      "installs30": 26
     },
     {
       "id": "manuscript",
@@ -504,8 +504,8 @@
           "description": "打字机草稿：米白纸上的打字机字体，页面窄，标题大写并带章节符号，点缀色为色带红。"
         }
       },
-      "installs": 24,
-      "installs30": 24
+      "installs": 25,
+      "installs30": 25
     }
   ]
 }
