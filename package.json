@@ -5,7 +5,7 @@
   "description": "Community themes for the Textus Markdown editor, published from comments on the gallery issue.",
   "license": "MIT",
   "engines": {
-    "node": ">=22"
+    "node": ">=26"
   },
   "scripts": {
     "test": "node --test",
